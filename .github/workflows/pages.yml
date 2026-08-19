@@ -57,6 +57,33 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # Требует однократного включения: Settings → Pages → Source: GitHub Actions.
+      # Pages включаются однократно вручную (Settings → Pages → Source: GitHub
+      # Actions) — токен workflow этого сделать не может. Пока не включены,
+      # деплой пропускается с понятным сообщением, а не роняет проверки PR.
+      - id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/pages")
+          if [ "$code" = "200" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            {
+              echo "### GitHub Pages ещё не включены"
+              echo ""
+              echo "Сборка прошла, статика собрана и лежит в артефакте \`github-pages\` этого запуска."
+              echo "Чтобы сайт открылся по адресу, включите Pages один раз:"
+              echo "**Settings → Pages → Source: GitHub Actions**, затем перезапустите этот workflow."
+              echo ""
+              echo "Для приватного репозитория Pages доступны на платных планах GitHub;"
+              echo "на бесплатном — сделайте репозиторий публичным."
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - id: deployment
+        if: steps.check.outputs.enabled == 'true'
         uses: actions/deploy-pages@v4
