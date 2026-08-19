@@ -1,0 +1,459 @@
+{
+  "big-five": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "e",
+          "raw": 8,
+          "max": 16,
+          "percent": 50,
+          "band": "средняя"
+        },
+        {
+          "id": "a",
+          "raw": 8,
+          "max": 16,
+          "percent": 50,
+          "band": "средняя"
+        },
+        {
+          "id": "c",
+          "raw": 8,
+          "max": 16,
+          "percent": 50,
+          "band": "средняя"
+        },
+        {
+          "id": "n",
+          "raw": 8,
+          "max": 16,
+          "percent": 50,
+          "band": "средняя"
+        },
+        {
+          "id": "o",
+          "raw": 12,
+          "max": 16,
+          "percent": 75,
+          "band": "высокая"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "e",
+          "raw": 8,
+          "max": 16,
+          "percent": 50,
+          "band": "средняя"
+        },
+        {
+          "id": "a",
+          "raw": 8,
+          "max": 16,
+          "percent": 50,
+          "band": "средняя"
+        },
+        {
+          "id": "c",
+          "raw": 8,
+          "max": 16,
+          "percent": 50,
+          "band": "средняя"
+        },
+        {
+          "id": "n",
+          "raw": 8,
+          "max": 16,
+          "percent": 50,
+          "band": "средняя"
+        },
+        {
+          "id": "o",
+          "raw": 4,
+          "max": 16,
+          "percent": 25,
+          "band": "низкая"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "e",
+          "raw": 0,
+          "max": 16,
+          "percent": 0,
+          "band": "низкая"
+        },
+        {
+          "id": "a",
+          "raw": 16,
+          "max": 16,
+          "percent": 100,
+          "band": "высокая"
+        },
+        {
+          "id": "c",
+          "raw": 0,
+          "max": 16,
+          "percent": 0,
+          "band": "низкая"
+        },
+        {
+          "id": "n",
+          "raw": 16,
+          "max": 16,
+          "percent": 100,
+          "band": "высокая"
+        },
+        {
+          "id": "o",
+          "raw": 4,
+          "max": 16,
+          "percent": 25,
+          "band": "низкая"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "e",
+          "raw": 8,
+          "max": 16,
+          "percent": 50,
+          "band": "средняя"
+        },
+        {
+          "id": "a",
+          "raw": 8,
+          "max": 16,
+          "percent": 50,
+          "band": "средняя"
+        },
+        {
+          "id": "c",
+          "raw": 8,
+          "max": 16,
+          "percent": 50,
+          "band": "средняя"
+        },
+        {
+          "id": "n",
+          "raw": 8,
+          "max": 16,
+          "percent": 50,
+          "band": "средняя"
+        },
+        {
+          "id": "o",
+          "raw": 4,
+          "max": 16,
+          "percent": 25,
+          "band": "низкая"
+        }
+      ]
+    }
+  },
+  "burnout": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "exhaustion",
+          "raw": 4,
+          "max": 20,
+          "percent": 20,
+          "band": "в норме"
+        },
+        {
+          "id": "detachment",
+          "raw": 4,
+          "max": 20,
+          "percent": 20,
+          "band": "в норме"
+        },
+        {
+          "id": "efficacy",
+          "raw": 4,
+          "max": 20,
+          "percent": 20,
+          "band": "в норме"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "exhaustion",
+          "raw": 16,
+          "max": 20,
+          "percent": 80,
+          "band": "высокое"
+        },
+        {
+          "id": "detachment",
+          "raw": 16,
+          "max": 20,
+          "percent": 80,
+          "band": "высокая"
+        },
+        {
+          "id": "efficacy",
+          "raw": 16,
+          "max": 20,
+          "percent": 80,
+          "band": "высокая"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "exhaustion",
+          "raw": 12,
+          "max": 20,
+          "percent": 60,
+          "band": "заметное"
+        },
+        {
+          "id": "detachment",
+          "raw": 8,
+          "max": 20,
+          "percent": 40,
+          "band": "заметная"
+        },
+        {
+          "id": "efficacy",
+          "raw": 4,
+          "max": 20,
+          "percent": 20,
+          "band": "в норме"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "exhaustion",
+          "raw": 10,
+          "max": 20,
+          "percent": 50,
+          "band": "заметное"
+        },
+        {
+          "id": "detachment",
+          "raw": 10,
+          "max": 20,
+          "percent": 50,
+          "band": "заметная"
+        },
+        {
+          "id": "efficacy",
+          "raw": 12,
+          "max": 20,
+          "percent": 60,
+          "band": "заметная"
+        }
+      ]
+    }
+  },
+  "attachment": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "anxiety",
+          "raw": 6,
+          "max": 18,
+          "percent": 33,
+          "band": "низкая"
+        },
+        {
+          "id": "avoidance",
+          "raw": 6,
+          "max": 18,
+          "percent": 33,
+          "band": "низкое"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "anxiety",
+          "raw": 12,
+          "max": 18,
+          "percent": 67,
+          "band": "умеренная"
+        },
+        {
+          "id": "avoidance",
+          "raw": 12,
+          "max": 18,
+          "percent": 67,
+          "band": "умеренное"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "anxiety",
+          "raw": 9,
+          "max": 18,
+          "percent": 50,
+          "band": "умеренная"
+        },
+        {
+          "id": "avoidance",
+          "raw": 9,
+          "max": 18,
+          "percent": 50,
+          "band": "умеренное"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "anxiety",
+          "raw": 11,
+          "max": 18,
+          "percent": 61,
+          "band": "умеренная"
+        },
+        {
+          "id": "avoidance",
+          "raw": 7,
+          "max": 18,
+          "percent": 39,
+          "band": "низкое"
+        }
+      ]
+    }
+  },
+  "stress": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "worry",
+          "raw": 0,
+          "max": 15,
+          "percent": 0,
+          "band": "низкий"
+        },
+        {
+          "id": "body",
+          "raw": 0,
+          "max": 15,
+          "percent": 0,
+          "band": "низкий"
+        },
+        {
+          "id": "sleep",
+          "raw": 3,
+          "max": 12,
+          "percent": 25,
+          "band": "низкий"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "worry",
+          "raw": 15,
+          "max": 15,
+          "percent": 100,
+          "band": "высокий"
+        },
+        {
+          "id": "body",
+          "raw": 15,
+          "max": 15,
+          "percent": 100,
+          "band": "высокий"
+        },
+        {
+          "id": "sleep",
+          "raw": 9,
+          "max": 12,
+          "percent": 75,
+          "band": "высокий"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "worry",
+          "raw": 6,
+          "max": 15,
+          "percent": 40,
+          "band": "умеренный"
+        },
+        {
+          "id": "body",
+          "raw": 9,
+          "max": 15,
+          "percent": 60,
+          "band": "умеренный"
+        },
+        {
+          "id": "sleep",
+          "raw": 3,
+          "max": 12,
+          "percent": 25,
+          "band": "низкий"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "worry",
+          "raw": 6,
+          "max": 15,
+          "percent": 40,
+          "band": "умеренный"
+        },
+        {
+          "id": "body",
+          "raw": 7,
+          "max": 15,
+          "percent": 47,
+          "band": "умеренный"
+        },
+        {
+          "id": "sleep",
+          "raw": 7,
+          "max": 12,
+          "percent": 58,
+          "band": "умеренный"
+        }
+      ]
+    }
+  },
+  "self-esteem": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 15,
+          "max": 30,
+          "percent": 50,
+          "band": "среднее"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 15,
+          "max": 30,
+          "percent": 50,
+          "band": "среднее"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 12,
+          "max": 30,
+          "percent": 40,
+          "band": "среднее"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 18,
+          "max": 30,
+          "percent": 60,
+          "band": "среднее"
+        }
+      ]
+    }
+  }
+}
