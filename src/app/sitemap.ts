@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import type { MetadataRoute } from "next";
 import { getAllTests } from "@/lib/content";
 import { SITE } from "@/lib/site";

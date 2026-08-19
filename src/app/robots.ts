@@ -1,5 +1,9 @@
+export const dynamic = "force-static";
+
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
+
+const base = process.env.BASE_PATH || "";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -10,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "*",
         allow: "/",
         // Результаты персональные, прохождение — служебное; в индексе им нечего делать.
-        disallow: ["/result/", "/tests/*/run"],
+        disallow: [`${base}/result/`, `${base}/tests/*/run`],
       },
     ],
     sitemap: `${SITE.url}/sitemap.xml`,

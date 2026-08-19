@@ -68,7 +68,7 @@ export default function TestRunner({ test }: { test: Test }) {
     } catch {
       /* ignore */
     }
-    router.push(`/result/${test.slug}/${token}`);
+    router.push(`/result/${test.slug}?r=${encodeURIComponent(token)}`);
   }
 
   return (

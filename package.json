@@ -11,7 +11,9 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "validate:content": "tsx scripts/validate-content.ts"
+    "validate:content": "tsx scripts/validate-content.ts",
+    "build:static": "EXPORT=1 next build",
+    "preview:static": "EXPORT=1 BASE_PATH=/psy next build && npx serve out"
   },
   "dependencies": {
     "next": "^16.3.1",
