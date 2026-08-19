@@ -22,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {SITE.name}
             </Link>
             <nav>
+              <Link href="/tests">Тесты</Link>
               <Link href="/constructs">Темы</Link>
               <Link href="/methods">Методики</Link>
               <Link href="/my">Мои тесты</Link>

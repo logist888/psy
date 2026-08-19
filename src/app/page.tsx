@@ -24,7 +24,7 @@ export default function HomePage() {
           <section key={category}>
             <h2>{meta.title}</h2>
             <div className="grid">
-              {items.map((test) => (
+              {items.slice(0, 6).map((test) => (
                 <Link key={test.slug} href={`/tests/${test.slug}`} className="card">
                   <h3>{test.title}</h3>
                   <p className="small muted" style={{ margin: 0 }}>
@@ -33,9 +33,20 @@ export default function HomePage() {
                 </Link>
               ))}
             </div>
+            {items.length > 6 && (
+              <p className="small">
+                <Link href="/tests">Ещё {items.length - 6} в этой категории</Link>
+              </p>
+            )}
           </section>
         );
       })}
+
+      <p>
+        <Link href="/tests" className="btn secondary">
+          Все {tests.length} тестов
+        </Link>
+      </p>
 
       {constructs.length > 0 && (
         <section>

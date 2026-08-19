@@ -109,11 +109,24 @@ function main() {
   for (const scales of Object.values(source)) for (const s of scales) alphaByScale.set(s.name, s.alpha);
 
   const registry: string[] = [];
+  const seen = new Set(
+    fs.readdirSync(path.join(process.cwd(), "content/tests")).map((f) => f.replace(/\.yaml$/, ""))
+  );
   let written = 0;
 
   for (const file of files) {
     const translated = JSON.parse(fs.readFileSync(file, "utf8")) as Translated[];
     for (const t of translated) {
+      // Тексты называют число вопросов — оно должно совпадать с фактическим.
+      // Ловилось руками дважды, теперь ловится здесь.
+      const declared = [t.seoTitle, t.description]
+        .flatMap((s) => [...s.matchAll(/(\d+)\s+(?:вопрос|утвержд)/g)].map((m) => Number(m[1])));
+      const mismatch = declared.find((n) => n !== t.items.length);
+      if (mismatch !== undefined) {
+        console.error(`✗ ${t.scale}: в тексте ${mismatch} вопросов, а пунктов ${t.items.length}`);
+        continue;
+      }
+
       const test = build(t, alphaByScale);
       const parsed = testSchema.safeParse(test);
       if (!parsed.success) {
@@ -121,10 +134,11 @@ function main() {
         continue;
       }
       const target = path.join(process.cwd(), "content/tests", `${test.slug}.yaml`);
-      if (fs.existsSync(target)) {
-        console.error(`✗ ${t.scale}: slug ${test.slug} уже занят — пропускаю`);
+      if (seen.has(test.slug)) {
+        console.error(`✗ ${t.scale}: конструкт ${test.slug} уже опубликован — пропускаю, чтобы страницы не конкурировали за один запрос`);
         continue;
       }
+      seen.add(test.slug);
       fs.writeFileSync(target, dump(test, { lineWidth: 120, noRefs: true }));
       registry.push(
         [
