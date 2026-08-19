@@ -66,8 +66,17 @@ def parse_page(path: pathlib.Path) -> list[dict]:
         nonlocal buffer
         text = re.sub(r"\s+", " ", buffer).strip()
         buffer = ""
-        if current and keying and 8 < len(text) < 200 and text.endswith("."):
-            current["items"].append({"text": text, "key": keying})
+        if not (current and keying and re.search(r'[.!?]["\u201d]?$', text)):
+            return
+        # Служебные примечания под блоком ключей — не пункты опросника
+        if re.match(r"^\(?No |^For further information|^see |^Note", text, re.I):
+            return
+        # Вёрстка местами склеивает два пункта в одну строку — разделяем обратно
+        for part in re.split(r'(?<=[.!?"])\s+(?=[A-Z])', text):
+            part = part.strip()
+            # Пункт может оканчиваться кавычкой после точки: Want it "just right."
+            if 8 < len(part) < 200 and re.search(r'[.!?]["\u201d]?$', part):
+                current["items"].append({"text": part, "key": keying})
 
     for line in lines:
         if KEYED_PLUS.match(line) or KEYED_MINUS.match(line):

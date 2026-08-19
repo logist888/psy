@@ -152,6 +152,129 @@
       ]
     }
   },
+  "akkuratnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "voobrazhenie": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренное"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 40,
+          "percent": 60,
+          "band": "умеренное"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренное"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренное"
+        }
+      ]
+    }
+  },
+  "vspylchivost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
   "burnout": {
     "version": "1.0.0",
     "patterns": {
@@ -249,6 +372,457 @@
       ]
     }
   },
+  "doverie-k-lyudyam": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренное"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 40,
+          "percent": 60,
+          "band": "умеренное"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренное"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренное"
+        }
+      ]
+    }
+  },
+  "druzhelyubie": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "среднее"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "среднее"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "среднее"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "среднее"
+        }
+      ]
+    }
+  },
+  "zhizneradostnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 8,
+          "max": 40,
+          "percent": 20,
+          "band": "сдержанная"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 32,
+          "max": 40,
+          "percent": 80,
+          "band": "высокая"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 14,
+          "max": 40,
+          "percent": 35,
+          "band": "сдержанная"
+        }
+      ]
+    }
+  },
+  "zastenchivost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 40,
+          "percent": 60,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "interes-k-iskusstvu": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренный"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренный"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренный"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренный"
+        }
+      ]
+    }
+  },
+  "liberalnost-vzglyadov": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 28,
+          "max": 40,
+          "percent": 70,
+          "band": "высокая"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 12,
+          "max": 40,
+          "percent": 30,
+          "band": "низкая"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренная"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 14,
+          "max": 40,
+          "percent": 35,
+          "band": "низкая"
+        }
+      ]
+    }
+  },
+  "naporistost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "nekonfliktnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 28,
+          "max": 40,
+          "percent": 70,
+          "band": "высокая"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 12,
+          "max": 40,
+          "percent": 30,
+          "band": "низкая"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 14,
+          "max": 40,
+          "percent": 35,
+          "band": "низкая"
+        }
+      ]
+    }
+  },
+  "neumerennost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "obschitelnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "obyazatelnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
   "loneliness": {
     "version": "1.0.0",
     "patterns": {
@@ -314,6 +888,252 @@
           "max": 21,
           "percent": 33,
           "band": "низкая"
+        }
+      ]
+    }
+  },
+  "osmotritelnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 28,
+          "max": 40,
+          "percent": 70,
+          "band": "высокая"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 12,
+          "max": 40,
+          "percent": 30,
+          "band": "низкая"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 14,
+          "max": 40,
+          "percent": 35,
+          "band": "низкая"
+        }
+      ]
+    }
+  },
+  "otzyvchivost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "otkrytost-novomu": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 40,
+          "percent": 60,
+          "band": "умеренная"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренная"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренная"
+        }
+      ]
+    }
+  },
+  "podavlennost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 12,
+          "max": 40,
+          "percent": 30,
+          "band": "низкая"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 28,
+          "max": 40,
+          "percent": 70,
+          "band": "высокая"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 14,
+          "max": 40,
+          "percent": 35,
+          "band": "низкая"
+        }
+      ]
+    }
+  },
+  "poisk-ostryh-oschuscheniy": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 8,
+          "max": 40,
+          "percent": 20,
+          "band": "низкий"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 32,
+          "max": 40,
+          "percent": 80,
+          "band": "высокий"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренный"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 14,
+          "max": 40,
+          "percent": 35,
+          "band": "низкий"
+        }
+      ]
+    }
+  },
+  "poryadochnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 32,
+          "max": 40,
+          "percent": 80,
+          "band": "строгая"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 8,
+          "max": 40,
+          "percent": 20,
+          "band": "гибкая"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 14,
+          "max": 40,
+          "percent": 35,
+          "band": "гибкая"
         }
       ]
     }
@@ -596,6 +1416,47 @@
       ]
     }
   },
+  "samodisciplina": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
   "impostor": {
     "version": "1.0.0",
     "patterns": {
@@ -633,6 +1494,88 @@
           "max": 42,
           "percent": 64,
           "band": "заметное"
+        }
+      ]
+    }
+  },
+  "skromnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 40,
+          "percent": 60,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "sochuvstvie": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 40,
+          "percent": 60,
+          "band": "среднее"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "среднее"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "среднее"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "среднее"
         }
       ]
     }
@@ -997,6 +1940,129 @@
       ]
     }
   },
+  "trevozhnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "tyaga-k-slozhnym-ideyam": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренная"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная"
+        }
+      ]
+    }
+  },
+  "uverennost-v-svoih-silah": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 40,
+          "percent": 60,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
   "stress": {
     "version": "1.0.0",
     "patterns": {
@@ -1090,6 +2156,129 @@
           "max": 12,
           "percent": 58,
           "band": "умеренный"
+        }
+      ]
+    }
+  },
+  "uyazvimost-k-stressu": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "celeustremlennost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 12,
+          "max": 40,
+          "percent": 30,
+          "band": "низкая"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 28,
+          "max": 40,
+          "percent": 70,
+          "band": "высокая"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 14,
+          "max": 40,
+          "percent": 35,
+          "band": "низкая"
+        }
+      ]
+    }
+  },
+  "emocionalnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренная"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная"
         }
       ]
     }
@@ -1215,6 +2404,47 @@
           "max": 15,
           "percent": 73,
           "band": "высокое"
+        }
+      ]
+    }
+  },
+  "energichnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
         }
       ]
     }

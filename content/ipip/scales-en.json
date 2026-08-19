@@ -1049,7 +1049,11 @@
      "key": "+"
     },
     {
-     "text": "Want everything to be \"just right.\" Want things to proceed according to plan.",
+     "text": "Want everything to be \"just right.\"",
+     "key": "+"
+    },
+    {
+     "text": "Want things to proceed according to plan.",
      "key": "+"
     },
     {
@@ -1100,10 +1104,6 @@
     },
     {
      "text": "Take good care of my belongings.",
-     "key": "+"
-    },
-    {
-     "text": "See that rules are observed.",
      "key": "+"
     },
     {
@@ -1566,10 +1566,6 @@
    "name": "REFLECTION",
    "alpha": 0.75,
    "items": [
-    {
-     "text": "See beauty in things that others might not notice.",
-     "key": "+"
-    },
     {
      "text": "Take time to reflect on things.",
      "key": "+"
@@ -2361,7 +2357,11 @@
      "key": "+"
     },
     {
-     "text": "Feel guilty when I say \"no.\" Feel crushed by setbacks.",
+     "text": "Feel guilty when I say \"no.\"",
+     "key": "+"
+    },
+    {
+     "text": "Feel crushed by setbacks.",
      "key": "+"
     },
     {
@@ -2475,7 +2475,11 @@
    "alpha": null,
    "items": [
     {
-     "text": "Want everything to be \"just right.\" Get chores done right away.",
+     "text": "Want everything to be \"just right.\"",
+     "key": "+"
+    },
+    {
+     "text": "Get chores done right away.",
      "key": "+"
     },
     {
@@ -2670,6 +2674,10 @@
     },
     {
      "text": "Pay attention to details.",
+     "key": "+"
+    },
+    {
+     "text": "Want everything to be \"just right.\"",
      "key": "+"
     },
     {
@@ -2878,10 +2886,6 @@
    "items": [
     {
      "text": "Like having authority over others.",
-     "key": "+"
-    },
-    {
-     "text": "See myself as a good leader.",
      "key": "+"
     },
     {
@@ -3949,10 +3953,6 @@
      "key": "+"
     },
     {
-     "text": "(No negatively-keyed items) For further information about the 7 Factors, see Saucier, G. (1997). Effects of variable selection on the factor structure of person descriptors.",
-     "key": "-"
-    },
-    {
      "text": "Journal of Personality and Social Psychology , 73, 1296-1312.",
      "key": "-"
     }
@@ -5017,10 +5017,6 @@
      "key": "+"
     },
     {
-     "text": "See the humor in situations.",
-     "key": "+"
-    },
-    {
      "text": "Make people feel at ease.",
      "key": "+"
     },
@@ -5260,10 +5256,6 @@
     },
     {
      "text": "Feel short-changed in life.",
-     "key": "-"
-    },
-    {
-     "text": "See difficulties everywhere.",
      "key": "-"
     },
     {
@@ -5531,7 +5523,11 @@
      "key": "+"
     },
     {
-     "text": "Want everything to be \"just right.\" Love order and regularity.",
+     "text": "Want everything to be \"just right.\"",
+     "key": "-"
+    },
+    {
+     "text": "Love order and regularity.",
      "key": "-"
     },
     {
@@ -5540,10 +5536,6 @@
     },
     {
      "text": "Want everything to add up perfectly.",
-     "key": "-"
-    },
-    {
-     "text": "See that rules are observed.",
      "key": "-"
     },
     {
@@ -5736,10 +5728,6 @@
     },
     {
      "text": "Am put off by unexpected events.",
-     "key": "-"
-    },
-    {
-     "text": "See other people as my competitors.",
      "key": "-"
     }
    ]
@@ -6701,10 +6689,6 @@
      "key": "+"
     },
     {
-     "text": "See myself as an average person.",
-     "key": "+"
-    },
-    {
      "text": "Am just an ordinary person.",
      "key": "+"
     },
@@ -7233,6 +7217,10 @@
      "key": "+"
     },
     {
+     "text": "Want everything to be \"just right.\"",
+     "key": "+"
+    },
+    {
      "text": "Leave a mess in my room.",
      "key": "-"
     },
@@ -7381,11 +7369,11 @@
      "key": "+"
     },
     {
-     "text": "See beauty in things that others might not notice.",
+     "text": "Enjoy feeling \"close to the earth.\"",
      "key": "+"
     },
     {
-     "text": "Enjoy feeling \"close to the earth.\" Have read the great literary classics.",
+     "text": "Have read the great literary classics.",
      "key": "+"
     },
     {
@@ -7537,7 +7525,19 @@
      "key": "-"
     },
     {
-     "text": "Ashton, M. C., Lee, K., & Goldberg, L. R. (2007). The IPIP�HEXACO scales: An alternative, public-domain measure of the personality constructs in the HEXACO model.",
+     "text": "Ashton, M.",
+     "key": "-"
+    },
+    {
+     "text": "C., Lee, K., & Goldberg, L.",
+     "key": "-"
+    },
+    {
+     "text": "R. (2007).",
+     "key": "-"
+    },
+    {
+     "text": "The IPIP�HEXACO scales: An alternative, public-domain measure of the personality constructs in the HEXACO model.",
      "key": "-"
     },
     {
@@ -7545,7 +7545,15 @@
      "key": "-"
     },
     {
-     "text": "Lee, K., & Ashton, M. C. (2004). Psychometric properties of the HEXACO personality inventory.",
+     "text": "Lee, K., & Ashton, M.",
+     "key": "-"
+    },
+    {
+     "text": "C. (2004).",
+     "key": "-"
+    },
+    {
+     "text": "Psychometric properties of the HEXACO personality inventory.",
      "key": "-"
     },
     {
@@ -8929,10 +8937,6 @@
      "key": "+"
     },
     {
-     "text": "See beauty in things that others might not notice.",
-     "key": "+"
-    },
-    {
      "text": "Do not like poetry.",
      "key": "-"
     },
@@ -9657,7 +9661,11 @@
      "key": "+"
     },
     {
-     "text": "Want everything to be \"just right.\" Like order.",
+     "text": "Want everything to be \"just right.\"",
+     "key": "+"
+    },
+    {
+     "text": "Like order.",
      "key": "+"
     },
     {
@@ -9832,10 +9840,6 @@
     },
     {
      "text": "Take charge.",
-     "key": "+"
-    },
-    {
-     "text": "See myself as a good leader.",
      "key": "+"
     },
     {
@@ -10240,10 +10244,6 @@
    "name": "Absorption )",
    "alpha": 0.78,
    "items": [
-    {
-     "text": "See beauty in things that others might not notice.",
-     "key": "+"
-    },
     {
      "text": "Enjoy wild flights of fantasy.",
      "key": "+"
@@ -10969,10 +10969,6 @@
      "key": "+"
     },
     {
-     "text": "See beauty in things that others might not notice.",
-     "key": "+"
-    },
-    {
      "text": "Love flowers.",
      "key": "+"
     },
@@ -11521,7 +11517,11 @@
      "key": "+"
     },
     {
-     "text": "Want everything to be \"just right.\" Love order and regularity.",
+     "text": "Want everything to be \"just right.\"",
+     "key": "+"
+    },
+    {
+     "text": "Love order and regularity.",
      "key": "+"
     },
     {
@@ -12429,10 +12429,6 @@
      "key": "+"
     },
     {
-     "text": "See difficulties everywhere.",
-     "key": "-"
-    },
-    {
      "text": "Believe that unfortunate events occur because of bad luck.",
      "key": "-"
     },
@@ -12454,10 +12450,6 @@
     },
     {
      "text": "Feel short-changed in life.",
-     "key": "+"
-    },
-    {
-     "text": "See difficulties everywhere.",
      "key": "+"
     },
     {
@@ -12577,10 +12569,6 @@
      "key": "-"
     },
     {
-     "text": "See difficulties everywhere.",
-     "key": "-"
-    },
-    {
      "text": "Habitually blow my chances.",
      "key": "-"
     },
@@ -12665,7 +12653,11 @@
      "key": "-"
     },
     {
-     "text": "Want everything to be \"just right.\" Like order.",
+     "text": "Want everything to be \"just right.\"",
+     "key": "+"
+    },
+    {
+     "text": "Like order.",
      "key": "+"
     },
     {
@@ -12770,10 +12762,6 @@
     },
     {
      "text": "Often feel blue.",
-     "key": "-"
-    },
-    {
-     "text": "See difficulties everywhere.",
      "key": "-"
     },
     {
@@ -14403,10 +14391,6 @@
     {
      "text": "Withhold information from others.",
      "key": "-"
-    },
-    {
-     "text": "See events as unavoidable.",
-     "key": "-"
     }
    ]
   },
@@ -14516,10 +14500,6 @@
     },
     {
      "text": "Am out for my own personal gain.",
-     "key": "-"
-    },
-    {
-     "text": "See other people as my competitors.",
      "key": "-"
     },
     {
@@ -14872,10 +14852,6 @@
    "name": "ROMANTICISM",
    "alpha": 0.74,
    "items": [
-    {
-     "text": "See beauty in things that others might not notice.",
-     "key": "+"
-    },
     {
      "text": "Am passionate about causes.",
      "key": "+"
