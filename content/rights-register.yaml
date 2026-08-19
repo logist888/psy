@@ -568,3 +568,60 @@ rasseyannost:
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
+
+interes-k-rukovodyaschey-rabote:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала ORVIS/Leadership"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+interes-k-pomogayuschim-professiyam:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала ORVIS/Altruism"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+interes-k-issledovatelskoy-rabote:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала ORVIS/Analysis"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+interes-k-rabote-s-riskom:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала ORVIS/Adventure"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+interes-k-organizatorskoy-rabote:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала ORVIS/Organization"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+interes-k-tvorcheskim-professiyam:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала ORVIS/Creativity"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+interes-k-rabote-rukami:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала ORVIS/Production"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+interes-k-rabote-s-tekstami:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала ORVIS/Erudition"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19

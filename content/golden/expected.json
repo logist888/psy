@@ -946,6 +946,334 @@
       ]
     }
   },
+  "interes-k-issledovatelskoy-rabote": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 0,
+          "max": 30,
+          "percent": 0,
+          "band": "низкий"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 30,
+          "max": 30,
+          "percent": 100,
+          "band": "высокий"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 15,
+          "max": 30,
+          "percent": 50,
+          "band": "средний"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 13,
+          "max": 30,
+          "percent": 43,
+          "band": "средний"
+        }
+      ]
+    }
+  },
+  "interes-k-organizatorskoy-rabote": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 0,
+          "max": 39,
+          "percent": 0,
+          "band": "низкий"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 39,
+          "max": 39,
+          "percent": 100,
+          "band": "высокий"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 18,
+          "max": 39,
+          "percent": 46,
+          "band": "средний"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 18,
+          "max": 39,
+          "percent": 46,
+          "band": "средний"
+        }
+      ]
+    }
+  },
+  "interes-k-pomogayuschim-professiyam": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 0,
+          "max": 39,
+          "percent": 0,
+          "band": "низкий"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 39,
+          "max": 39,
+          "percent": 100,
+          "band": "высокий"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 18,
+          "max": 39,
+          "percent": 46,
+          "band": "средний"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 18,
+          "max": 39,
+          "percent": 46,
+          "band": "средний"
+        }
+      ]
+    }
+  },
+  "interes-k-rabote-rukami": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 0,
+          "max": 30,
+          "percent": 0,
+          "band": "низкий"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 30,
+          "max": 30,
+          "percent": 100,
+          "band": "высокий"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 15,
+          "max": 30,
+          "percent": 50,
+          "band": "средний"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 13,
+          "max": 30,
+          "percent": 43,
+          "band": "средний"
+        }
+      ]
+    }
+  },
+  "interes-k-rabote-s-riskom": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 0,
+          "max": 30,
+          "percent": 0,
+          "band": "низкий"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 30,
+          "max": 30,
+          "percent": 100,
+          "band": "высокий"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 15,
+          "max": 30,
+          "percent": 50,
+          "band": "средний"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 13,
+          "max": 30,
+          "percent": 43,
+          "band": "средний"
+        }
+      ]
+    }
+  },
+  "interes-k-rabote-s-tekstami": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 0,
+          "max": 30,
+          "percent": 0,
+          "band": "низкий"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 30,
+          "max": 30,
+          "percent": 100,
+          "band": "высокий"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 15,
+          "max": 30,
+          "percent": 50,
+          "band": "средний"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 13,
+          "max": 30,
+          "percent": 43,
+          "band": "средний"
+        }
+      ]
+    }
+  },
+  "interes-k-rukovodyaschey-rabote": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 0,
+          "max": 36,
+          "percent": 0,
+          "band": "низкий"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 36,
+          "max": 36,
+          "percent": 100,
+          "band": "высокий"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 18,
+          "max": 36,
+          "percent": 50,
+          "band": "средний"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 18,
+          "max": 36,
+          "percent": 50,
+          "band": "средний"
+        }
+      ]
+    }
+  },
+  "interes-k-tvorcheskim-professiyam": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 0,
+          "max": 42,
+          "percent": 0,
+          "band": "низкий"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 42,
+          "max": 42,
+          "percent": 100,
+          "band": "высокий"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 21,
+          "max": 42,
+          "percent": 50,
+          "band": "средний"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 19,
+          "max": 42,
+          "percent": 45,
+          "band": "средний"
+        }
+      ]
+    }
+  },
   "konservativnost-vzglyadov": {
     "version": "1.0.0",
     "patterns": {

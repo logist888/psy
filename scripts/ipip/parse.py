@@ -26,8 +26,27 @@ ALPHA = re.compile(
 )
 NOISE = re.compile(r"^(mso-|/\*|table\.|\d+$|\d{4}-\d{2}-\d{2}|Clean$|Microsoft)", re.I)
 
+def read_page(path: pathlib.Path) -> str:
+    """Страницы ключей выгружены из Word и объявляют windows-1252, а не UTF-8.
+    Чтение как UTF-8 с заменой ломало апострофы и неразрывные пробелы прямо
+    внутри пунктов («company\ufffds inventory»)."""
+    raw = path.read_bytes()
+    m = re.search(rb"charset=([\w-]+)", raw[:4000], re.I)
+    declared = m.group(1).decode("ascii", "ignore").lower() if m else ""
+    for encoding in (declared, "utf8", "cp1252"):
+        if not encoding:
+            continue
+        try:
+            return raw.decode(encoding)
+        except (UnicodeDecodeError, LookupError):
+            continue
+    return raw.decode("cp1252", errors="replace")
+
+
 def clean_lines(path: pathlib.Path) -> list[str]:
-    text = html.unescape(re.sub(r"<[^>]+>", "\n", path.read_text(encoding="utf8", errors="replace")))
+    text = html.unescape(re.sub(r"<[^>]+>", "\n", read_page(path)))
+    # Неразрывный пробел из Word — обычный пробел, иначе он рвёт пункты
+    text = text.replace("\xa0", " ")
     return [l.strip() for l in text.split("\n") if l.strip() and not NOISE.match(l.strip())]
 
 # Служебные слова внутри названия пишутся строчными: "Locus of Control",
@@ -125,6 +144,57 @@ def looks_like_heading(line: str) -> bool:
     return upper_ratio > 0.8 or bool(ALPHA.search(line)) or bool(re.match(r"^[A-Za-z]{1,4}\d?\s*[:.]", line))
 
 
+# Часть страниц ключей устроена иначе: вместо блоков «+ keyed» / «– keyed»
+# сверху стоит «All items are +keyed», дальше идёт имя шкалы, а пункты
+# пронумерованы («1.» отдельной строкой, следом текст). Так свёрстаны ORVIS
+# (профессиональные интересы) и IPIP-IPC (межличностный круг).
+NUMBERED_MARK = re.compile(r"all items are\s*\+\s*keyed", re.I)
+ITEM_NUMBER = re.compile(r"^\d+\.$")
+# Хвост страницы: ссылка на статью, навигация, выходные данные журнала
+TAIL = re.compile(r"^(For additional information|Return to|Multiple|Constructs$|[A-Z][a-z]+, [A-Z]\.)|\(\d{4}\)")
+
+
+def parse_numbered_page(path: pathlib.Path) -> list[dict]:
+    lines = clean_lines(path)
+    start = next((i for i, l in enumerate(lines) if NUMBERED_MARK.search(l)), None)
+    if start is None:
+        return []
+
+    scales: list[dict] = []
+    current: dict | None = None
+    expect_item = False
+    for line in lines[start + 1 :]:
+        if TAIL.match(line):
+            break
+        if ITEM_NUMBER.match(line):
+            expect_item = True
+            continue
+        if expect_item:
+            # Длинный пункт вёрстка переносит на следующую строку — дописываем
+            if current is not None:
+                current["items"].append({"text": line, "key": "+"})
+            expect_item = False
+            continue
+        if current is not None and current["items"] and not line[:1].isupper():
+            current["items"][-1]["text"] += f" {line}"
+            continue
+        # Под именем шкалы стоит строка со статистикой — «(6 items [Alpha = .73])».
+        # Это не новая шкала: забираем из неё альфу и оставляем имя прежним.
+        if re.match(r"^\(?\s*\d+\s+items", line, re.I) or "Alpha" in line:
+            if current is not None and not current["items"]:
+                m = ALPHA.search(line)
+                if m:
+                    current["alpha"] = float("0." + (m.group(1) or m.group(2) or m.group(3)))
+            continue
+        current = {"name": line, "alpha": None, "items": []}
+        scales.append(current)
+
+    for s in scales:
+        for item in s["items"]:
+            item["text"] = re.sub(r"\s+", " ", item["text"]).strip()
+    return [s for s in scales if len(s["items"]) >= 4]
+
+
 def parse_page(path: pathlib.Path) -> list[dict]:
     lines = clean_lines(path)
     scales: list[dict] = []
@@ -199,7 +269,7 @@ def main() -> None:
     out: dict[str, list[dict]] = {}
     total_scales = total_items = 0
     for path in sorted(RAW.glob("*.htm")):
-        scales = parse_page(path)
+        scales = parse_page(path) or parse_numbered_page(path)
         if not scales:
             print(f"{path.stem:28} — не разобрано")
             continue
