@@ -34,20 +34,18 @@ jobs:
       - run: pnpm validate:content
       - run: pnpm test
 
-      - uses: actions/configure-pages@v5
-        id: pages
-        with:
-          enablement: true
-
+      # Путь выводим из имени репозитория, а не из Pages API: сборка не должна
+      # падать из-за того, что Pages ещё не включены в настройках репозитория.
       - name: Build static export
         env:
           EXPORT: "1"
-          BASE_PATH: ${{ steps.pages.outputs.base_path }}
-          SITE_URL: ${{ steps.pages.outputs.origin }}${{ steps.pages.outputs.base_path }}
+          BASE_PATH: /${{ github.event.repository.name }}
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
         run: |
           pnpm build
           touch out/.nojekyll
 
+      # Артефакт можно скачать из вкладки Actions даже без включённых Pages.
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
@@ -59,5 +57,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # Требует однократного включения: Settings → Pages → Source: GitHub Actions.
       - id: deployment
         uses: actions/deploy-pages@v4
