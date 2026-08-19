@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getAllTests, getTest } from "@/lib/content";
 import { SITE, platformLink } from "@/lib/site";
+import ExpertCta from "@/components/ExpertCta";
 
 export function generateStaticParams() {
   return getAllTests().map((t) => ({ slug: t.slug }));
@@ -85,9 +86,9 @@ export default async function MethodPage({ params }: { params: Promise<{ slug: s
           профилем. Консультации можно вести на {SITE.platform.name}.
         </p>
         <p>
-          <a className="btn" href={platformLink({ campaign: `method_${test.slug}`, content: "expert" })} rel="noopener">
+          <ExpertCta href={platformLink({ campaign: `method_${test.slug}`, content: "expert" })} placement="method_passport">
             Подробнее для специалистов
-          </a>
+          </ExpertCta>
         </p>
       </div>
 
