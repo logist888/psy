@@ -102,3 +102,7 @@ footer.site { border-top: 1px solid var(--border); padding: 24px 0 40px; color: 
 footer.site a { color: var(--muted); margin-right: 16px; }
 ul.clean { padding-left: 20px; }
 ul.clean li { margin-bottom: 8px; }
+
+.crumbs { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+.crumbs a { color: var(--muted); text-decoration: none; }
+.crumbs a:hover { color: var(--accent); text-decoration: underline; }

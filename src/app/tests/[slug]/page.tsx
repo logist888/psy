@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getAllTests, getTest } from "@/lib/content";
+import { getAllTests, getTest, getRelatedTests, getConstructsForTest } from "@/lib/content";
 import { SITE } from "@/lib/site";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedTests from "@/components/RelatedTests";
 
 export function generateStaticParams() {
   return getAllTests().map((t) => ({ slug: t.slug }));
@@ -25,6 +27,9 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
   const test = getTest(slug);
   if (!test) notFound();
 
+  const related = getRelatedTests(test.slug);
+  const hubs = getConstructsForTest(test.slug);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Quiz",
@@ -38,6 +43,12 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <Breadcrumbs
+        items={[
+          { name: "Главная", href: "/" },
+          { name: test.title, href: `/tests/${test.slug}` },
+        ]}
+      />
       <h1>{test.title}</h1>
       <div className="meta">
         <span>{test.questions.length} утверждений</span>
@@ -84,6 +95,20 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
       <p className="small muted">
         Подробный научный паспорт методики — на <Link href={`/methods/${test.slug}`}>отдельной странице</Link>.
       </p>
+
+      {hubs.length > 0 && (
+        <p className="small">
+          Разбор темы:{" "}
+          {hubs.map((hub, i) => (
+            <span key={hub.slug}>
+              {i > 0 && ", "}
+              <Link href={`/constructs/${hub.slug}`}>{hub.title}</Link>
+            </span>
+          ))}
+        </p>
+      )}
+
+      <RelatedTests tests={related} />
     </>
   );
 }

@@ -73,3 +73,18 @@ export const testSchema = z.object({
 export type Test = z.infer<typeof testSchema>;
 export type Scale = z.infer<typeof scaleSchema>;
 export type Question = z.infer<typeof questionSchema>;
+
+/** Конструкт-хаб: забирает информационный интент и перелинковывает тесты. */
+export const constructSchema = z.object({
+  slug: z.string().regex(/^[a-z0-9-]+$/),
+  title: z.string().min(1),
+  seoTitle: z.string().min(1),
+  description: z.string().min(1),
+  intro: z.string().min(1),
+  sections: z.array(z.object({ heading: z.string().min(1), body: z.string().min(1) })).min(2),
+  faq: z.array(z.object({ q: z.string().min(1), a: z.string().min(1) })).min(2),
+  /** Слаги тестов; проверяются на существование при загрузке. */
+  tests: z.array(z.string()).min(1),
+});
+
+export type Construct = z.infer<typeof constructSchema>;

@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { getAllTests, CATEGORIES } from "@/lib/content";
+import { getAllTests, getAllConstructs, CATEGORIES } from "@/lib/content";
 import type { Test } from "@/lib/engine/schema";
 
 export default function HomePage() {
   const tests = getAllTests();
+  const constructs = getAllConstructs();
   const byCategory = tests.reduce<Record<string, Test[]>>((acc, test) => {
     (acc[test.category] ||= []).push(test);
     return acc;
@@ -35,6 +36,26 @@ export default function HomePage() {
           </section>
         );
       })}
+
+      {constructs.length > 0 && (
+        <section>
+          <h2>Разборы тем</h2>
+          <p className="muted">
+            Что стоит за состоянием: как устроено, чем отличается от похожего, что помогает и когда пора к
+            специалисту.
+          </p>
+          <div className="grid">
+            {constructs.map((c) => (
+              <Link key={c.slug} href={`/constructs/${c.slug}`} className="card">
+                <h3>{c.title}</h3>
+                <p className="small muted" style={{ margin: 0 }}>
+                  {c.tests.length} теста по теме
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section>
         <h2>Почему тестам здесь можно доверять больше, чем среднему сайту</h2>

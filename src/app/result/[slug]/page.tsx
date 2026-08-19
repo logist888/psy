@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getAllTests, getTest } from "@/lib/content";
+import { getAllTests, getTest, getRelatedTests } from "@/lib/content";
 import ResultView from "@/components/ResultView";
 
 export function generateStaticParams() {
@@ -21,7 +21,7 @@ export default async function ResultPage({ params }: { params: Promise<{ slug: s
 
   return (
     <Suspense fallback={<p className="muted">Считаем результат…</p>}>
-      <ResultView test={test} />
+      <ResultView test={test} related={getRelatedTests(test.slug)} />
     </Suspense>
   );
 }
