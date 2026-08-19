@@ -830,35 +830,35 @@
         {
           "id": "total",
           "raw": 20,
-          "max": 40,
-          "percent": 50,
+          "max": 36,
+          "percent": 56,
           "band": "умеренный"
         }
       ],
       "allMax": [
         {
           "id": "total",
-          "raw": 20,
-          "max": 40,
-          "percent": 50,
+          "raw": 16,
+          "max": 36,
+          "percent": 44,
           "band": "умеренный"
         }
       ],
       "alternating": [
         {
           "id": "total",
-          "raw": 16,
-          "max": 40,
-          "percent": 40,
+          "raw": 20,
+          "max": 36,
+          "percent": 56,
           "band": "умеренный"
         }
       ],
       "ascending": [
         {
           "id": "total",
-          "raw": 20,
-          "max": 40,
-          "percent": 50,
+          "raw": 16,
+          "max": 36,
+          "percent": 44,
           "band": "умеренный"
         }
       ]
