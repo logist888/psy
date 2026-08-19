@@ -85,91 +85,91 @@ dark-triad:
 
 trevozhnost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала ANXIETY
+  source: IPIP (International Personality Item Pool), шкала NEO/ANXIETY
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 vspylchivost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала ANGER
+  source: IPIP (International Personality Item Pool), шкала NEO/ANGER
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 podavlennost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала DEPRESSION
+  source: IPIP (International Personality Item Pool), шкала NEO/DEPRESSION
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 zastenchivost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала SELF-CONSCIOUSNESS
+  source: IPIP (International Personality Item Pool), шкала NEO/SELF-CONSCIOUSNESS
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 neumerennost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала IMMODERATION
+  source: IPIP (International Personality Item Pool), шкала NEO/IMMODERATION
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 uyazvimost-k-stressu:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала VULNERABILITY
+  source: IPIP (International Personality Item Pool), шкала NEO/VULNERABILITY
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 druzhelyubie:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала FRIENDLINESS
+  source: IPIP (International Personality Item Pool), шкала NEO/FRIENDLINESS
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 obschitelnost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала GREGARIOUSNESS
+  source: IPIP (International Personality Item Pool), шкала NEO/GREGARIOUSNESS
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 naporistost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала ASSERTIVENESS
+  source: IPIP (International Personality Item Pool), шкала NEO/ASSERTIVENESS
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 energichnost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала ACTIVITY LEVEL
+  source: IPIP (International Personality Item Pool), шкала NEO/ACTIVITY LEVEL
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 poisk-ostryh-oschuscheniy:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала EXCITEMENT-SEEKING
+  source: IPIP (International Personality Item Pool), шкала NEO/EXCITEMENT-SEEKING
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 zhizneradostnost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала CHEERFULNESS
+  source: IPIP (International Personality Item Pool), шкала NEO/CHEERFULNESS
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 voobrazhenie:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала IMAGINATION
+  source: IPIP (International Personality Item Pool), шкала NEO/IMAGINATION
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
@@ -183,112 +183,112 @@ interes-k-iskusstvu:
   verified: 2026-08-19
 emocionalnost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала EMOTIONALITY
+  source: IPIP (International Personality Item Pool), шкала NEO/EMOTIONALITY
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 otkrytost-novomu:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала ADVENTUROUSNESS
+  source: IPIP (International Personality Item Pool), шкала NEO/ADVENTUROUSNESS
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 tyaga-k-slozhnym-ideyam:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала INTELLECT
+  source: IPIP (International Personality Item Pool), шкала NEO/INTELLECT
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 liberalnost-vzglyadov:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала LIBERALISM
+  source: IPIP (International Personality Item Pool), шкала NEO/LIBERALISM
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 doverie-k-lyudyam:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала TRUST
+  source: IPIP (International Personality Item Pool), шкала NEO/TRUST
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 poryadochnost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала MORALITY
+  source: IPIP (International Personality Item Pool), шкала NEO/MORALITY
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 otzyvchivost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала ALTRUISM
+  source: IPIP (International Personality Item Pool), шкала NEO/ALTRUISM
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 nekonfliktnost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала COOPERATION
+  source: IPIP (International Personality Item Pool), шкала NEO/COOPERATION
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 skromnost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала MODESTY
+  source: IPIP (International Personality Item Pool), шкала NEO/MODESTY
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 sochuvstvie:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала SYMPATHY
+  source: IPIP (International Personality Item Pool), шкала NEO/SYMPATHY
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 uverennost-v-svoih-silah:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала SELF-EFFICACY
+  source: IPIP (International Personality Item Pool), шкала NEO/SELF-EFFICACY
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 akkuratnost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала ORDERLINESS
+  source: IPIP (International Personality Item Pool), шкала NEO/ORDERLINESS
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 obyazatelnost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала DUTIFULNESS
+  source: IPIP (International Personality Item Pool), шкала NEO/DUTIFULNESS
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 celeustremlennost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала ACHIEVEMENT-STRIVING
+  source: IPIP (International Personality Item Pool), шкала NEO/ACHIEVEMENT-STRIVING
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 samodisciplina:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала SELF-DISCIPLINE
+  source: IPIP (International Personality Item Pool), шкала NEO/SELF-DISCIPLINE
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
 osmotritelnost:
   basis: public_domain
-  source: IPIP (International Personality Item Pool), шкала CAUTIOUSNESS
+  source: IPIP (International Personality Item Pool), шкала NEO/CAUTIOUSNESS
   evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
   translation: собственный перевод проекта
   commercial: allowed

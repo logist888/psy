@@ -1,9 +1,9 @@
 slug: interes-k-iskusstvu
 version: 1.0.0
 title: Тест на интерес к искусству
-seoTitle: Тест на интерес к искусству онлайн — бесплатно, 10 вопросов
+seoTitle: Тест на интерес к искусству онлайн — бесплатно, 9 вопросов
 description: >-
-  Шкала IPIP из 10 утверждений: насколько вас трогают музыка, искусство и красота вокруг. Занимает около 2 минут,
+  Шкала IPIP из 9 утверждений: насколько вас трогают музыка, искусство и красота вокруг. Занимает около 2 минут,
   результат — сразу с пояснением.
 category: personality
 ctaCluster: self
@@ -69,38 +69,34 @@ questions:
     scales:
       - scale: total
   - id: q3
-    text: Замечаю красоту там, где другие проходят мимо.
-    scales:
-      - scale: total
-  - id: q4
     text: Люблю цветы.
     scales:
       - scale: total
-  - id: q5
+  - id: q4
     text: Любуюсь красотой природы.
     scales:
       - scale: total
-  - id: q6
+  - id: q5
     text: Не люблю искусство.
     scales:
       - scale: total
         reverse: true
-  - id: q7
+  - id: q6
     text: Не люблю стихи.
     scales:
       - scale: total
         reverse: true
-  - id: q8
+  - id: q7
     text: Не получаю удовольствия от походов в музеи.
     scales:
       - scale: total
         reverse: true
-  - id: q9
+  - id: q8
     text: Не люблю концерты.
     scales:
       - scale: total
         reverse: true
-  - id: q10
+  - id: q9
     text: Скучаю на танцевальных выступлениях.
     scales:
       - scale: total

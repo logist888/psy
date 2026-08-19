@@ -16,12 +16,16 @@ import { getAllTests } from "../src/lib/content";
 const root = path.resolve(__dirname, "..");
 const corpus = JSON.parse(
   fs.readFileSync(path.join(root, "content/ipip/scales-en.json"), "utf8")
-) as Record<string, { name: string; alpha: number | null; items: unknown[] }[]>;
+) as Record<string, { name: string; alpha: number | null; items: { key: string }[] }[]>;
 const register = fs.readFileSync(path.join(root, "content/rights-register.yaml"), "utf8");
 
 const byQualified = new Map<string, { alpha: number | null; items: number }>();
+const rawItems = new Map<string, { key: string }[]>();
 for (const [page, scales] of Object.entries(corpus)) {
-  for (const s of scales) byQualified.set(`${page}/${s.name}`, { alpha: s.alpha, items: s.items.length });
+  for (const s of scales) {
+    byQualified.set(`${page}/${s.name}`, { alpha: s.alpha, items: s.items.length });
+    rawItems.set(`${page}/${s.name}`, s.items);
+  }
 }
 
 /** Записи реестра вида "slug:\n  source: ... шкала PAGE/NAME" */
@@ -69,6 +73,21 @@ describe("происхождение методик IPIP", () => {
         expect(claimed, `${t.slug}: паспорт не называет альфу источника`).not.toBeNull();
         expect(Number(claimed![1]), `${t.slug}: альфа не от шкалы-источника`).toBeCloseTo(source.alpha, 2);
       }
+    }
+  });
+
+  it("направления ключа совпадают с шкалой-источником", () => {
+    // Число вопросов ловит вставленный пункт только если оно разошлось.
+    // Расклад «прямые/обратные» — второй отпечаток: вставка или потеря пункта
+    // почти всегда его ломает. Так нашёлся дописанный вручную пункт в шкале
+    // ARTISTIC INTERESTS, из-за которого паспорт обещал чужую надёжность.
+    for (const t of ipipTests) {
+      const key = sources.get(t.slug)!;
+      const raw = rawItems.get(key);
+      if (!raw) continue;
+      const expected = raw.filter((i) => i.key === "-").length;
+      const actual = t.questions.filter((q) => q.scales.some((s) => s.reverse)).length;
+      expect(actual, `${t.slug}: обратных вопросов ${actual}, а в источнике ${expected}`).toBe(expected);
     }
   });
 
