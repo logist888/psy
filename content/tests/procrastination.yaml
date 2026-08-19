@@ -93,7 +93,7 @@ questions:
   scales:
   - scale: total
 - id: q6
-  text: Вечером я жалею, что за день сделал мало.
+  text: Вечером жалею, что за день успеваю мало.
   scales:
   - scale: total
 - id: q7

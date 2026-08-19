@@ -476,3 +476,95 @@ zavisimost-ot-drugih-lyudey:
   translation: собственный перевод проекта
   commercial: allowed
   verified: 2026-08-19
+
+nevrotizm:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала NEO/NEUROTICISM (20-item)"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+otkrytost-opytu:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала NEO/OPENNESS TO EXPERIENCE (20-item)"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+kreativnost:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала HPI/Creativity"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+samomonitoring:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала SingleConstructs/Self-Monitoring"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+otkrytost-v-obschenii:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала TCI/SELF-DISCLOSURE"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+ekstraversiya:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала NEO/EXTRAVERSION (20-item)"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+dobrozhelatelnost:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала NEO/AGREEABLENESS (20-item)"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+liderskie-kachestva:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала 6FPQ/LEADERSHIP"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+perfekcionizm:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала AB5C/PERFECTIONISM"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+dobrosovestnost:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала NEO/CONSCIENTIOUSNESS (20-item)"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+empatiya:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала JPI-R/EMPATHY"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+lokus-kontrolya:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала SingleConstructs/Locus of Control: Total"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+rasseyannost:
+  basis: public_domain
+  source: "IPIP (International Personality Item Pool), шкала SingleConstructs/Cognitive Failures"
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19

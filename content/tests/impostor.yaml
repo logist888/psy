@@ -79,7 +79,7 @@ questions:
   scales:
   - scale: total
 - id: q9
-  text: Я берусь за сложные задачи, потому что уверен, что справлюсь.
+  text: Я берусь за сложные задачи, потому что не сомневаюсь, что справлюсь.
   scales:
   - scale: total
     reverse: true

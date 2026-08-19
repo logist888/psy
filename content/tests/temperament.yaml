@@ -131,7 +131,7 @@ questions:
   scales:
   - scale: stability
 - id: q17
-  text: Я склонен долго прокручивать в голове неприятные разговоры.
+  text: Подолгу прокручиваю в голове неприятные разговоры.
   scales:
   - scale: stability
     reverse: true

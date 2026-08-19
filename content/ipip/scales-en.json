@@ -6727,7 +6727,7 @@
    ]
   },
   {
-   "name": "Alpha =",
+   "name": "Fairness",
    "alpha": 0.77,
    "items": [
     {
@@ -6773,7 +6773,7 @@
    ]
   },
   {
-   "name": "Alpha =",
+   "name": "Greed Avoidance",
    "alpha": 0.69,
    "items": [
     {
@@ -6819,7 +6819,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Modesty",
    "alpha": 0.81,
    "items": [
     {
@@ -6861,7 +6861,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Fearfulness",
    "alpha": 0.84,
    "items": [
     {
@@ -6907,7 +6907,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Anxiety",
    "alpha": 0.85,
    "items": [
     {
@@ -6953,7 +6953,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Dependence",
    "alpha": 0.73,
    "items": [
     {
@@ -6999,7 +6999,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Sentimentality",
    "alpha": 0.79,
    "items": [
     {
@@ -7045,7 +7045,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Expressiveness",
    "alpha": 0.84,
    "items": [
     {
@@ -7091,7 +7091,7 @@
    ]
   },
   {
-   "name": "Alpha =",
+   "name": "Social Boldness",
    "alpha": 0.86,
    "items": [
     {
@@ -7137,7 +7137,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Sociability",
    "alpha": 0.85,
    "items": [
     {
@@ -7183,7 +7183,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Liveliness",
    "alpha": 0.82,
    "items": [
     {
@@ -7229,7 +7229,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Forgiveness",
    "alpha": 0.78,
    "items": [
     {
@@ -7275,7 +7275,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Gentleness",
    "alpha": 0.81,
    "items": [
     {
@@ -7321,7 +7321,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Flexibility",
    "alpha": 0.73,
    "items": [
     {
@@ -7367,7 +7367,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Patience",
    "alpha": 0.88,
    "items": [
     {
@@ -7413,7 +7413,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Organization",
    "alpha": 0.85,
    "items": [
     {
@@ -7459,7 +7459,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Diligence",
    "alpha": 0.81,
    "items": [
     {
@@ -7505,7 +7505,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Perfectionism",
    "alpha": 0.8,
    "items": [
     {
@@ -7551,7 +7551,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Prudence",
    "alpha": 0.8,
    "items": [
     {
@@ -7597,7 +7597,7 @@
    ]
   },
   {
-   "name": "Alpha =",
+   "name": "Aesthetic Appreciation",
    "alpha": 0.83,
    "items": [
     {
@@ -7639,7 +7639,7 @@
    ]
   },
   {
-   "name": "Alpha =",
+   "name": "Inquisitiveness",
    "alpha": 0.78,
    "items": [
     {
@@ -7685,7 +7685,7 @@
    ]
   },
   {
-   "name": "Alpha",
+   "name": "Creativity",
    "alpha": 0.85,
    "items": [
     {
@@ -7731,7 +7731,7 @@
    ]
   },
   {
-   "name": "Alpha =",
+   "name": "Unconventionality",
    "alpha": 0.84,
    "items": [
     {
@@ -13381,7 +13381,7 @@
    ]
   },
   {
-   "name": "Scale",
+   "name": "Rational Scale",
    "alpha": 0.61,
    "items": [
     {

@@ -52,7 +52,7 @@ def scale_name(heading: list[str]) -> str | None:
     шкалы — поэтому кандидаты с непарной скобкой отбрасываются, а имя IPIP,
     набранное капсом, имеет приоритет над оставшимися.
     """
-    window = heading[-5:]
+    window = heading[-7:]
 
     # AB5C/HEXACO: "vs I-/I- (Alpha = .83) GREGARIOUSNESS" — имя после скобки
     for line in reversed(window):
@@ -61,8 +61,15 @@ def scale_name(heading: list[str]) -> str | None:
             return m.group(1).strip()
 
     upper: list[str] = []
-    titled: list[str] = []
-    for line in window:
+    titled: list[tuple[int, str]] = []
+    for pos, line in enumerate(window):
+        # Обрывок строки с альфой («Alpha =») проходит как Title Case и раньше
+        # подменял собой имя шкалы на всей странице HEXACO
+        if re.match(r"^\s*\[?\s*alpha\b", line, re.I):
+            continue
+        # «Facets» — подзаголовок раздела на странице HEXACO, а не имя шкалы
+        if line.strip() in ("Facets", "Facet"):
+            continue
         stripped = re.sub(r"\(.*?\)|\[.*?\]", "", line).strip(" :.-")
         if not stripped or len(stripped) > 70:
             continue
@@ -79,13 +86,21 @@ def scale_name(heading: list[str]) -> str | None:
         if stripped.isupper():
             upper.append(stripped)
         elif is_name_case(stripped):
-            titled.append(stripped)
+            titled.append((pos, stripped))
 
     # Имя шкалы IPIP набрано капсом; Title Case остаётся для страниц без капса
     if upper:
         return upper[-1]
     if titled:
-        return titled[-1]
+        # HEXACO рвёт имя из двух слов на соседние строки («Greed» / «Avoidance»).
+        # Склеиваем только соседние строки и только одиночные слова: иначе к имени
+        # прилипнет заголовок раздела («Honesty-Humility») или название исходного
+        # опросника («Balanced Inventory of Desirable Responding»).
+        if len(titled) >= 2:
+            (p1, w1), (p2, w2) = titled[-2], titled[-1]
+            if p2 == p1 + 1 and len(w1.split()) == 1 and len(w2.split()) == 1:
+                return f"{w1} {w2}"
+        return titled[-1][1]
     return None
 
 
@@ -194,7 +209,10 @@ def main() -> None:
         total_scales += len(scales)
         total_items += items
         unnamed = sum(1 for x in scales if x["name"].startswith("?"))
+        # Шкалы IPIP не длиннее 20 пунктов: больше — почти наверняка две слитые
+        long = [x["name"] for x in scales if len(x["items"]) > 20]
         flag = f"  ⚠ без имени: {unnamed}" if unnamed else ""
+        flag += f"  ⚠ длиннее 20 пунктов: {', '.join(long)}" if long else ""
         print(f"{inv:28} шкал: {len(scales):3}  пунктов: {items:5}{flag}")
     print(f"\nИТОГО: {total_scales} шкал, {total_items} пунктов")
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf8")

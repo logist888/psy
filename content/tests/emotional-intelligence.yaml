@@ -127,7 +127,7 @@ questions:
   scales:
   - scale: self_reg
 - id: q10
-  text: Я срываюсь на близких, когда устал.
+  text: Я срываюсь на близких от усталости.
   scales:
   - scale: self_reg
     reverse: true

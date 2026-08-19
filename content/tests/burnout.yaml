@@ -91,7 +91,7 @@ questions:
     scales:
       - scale: exhaustion
   - id: q6
-    text: "Я стал раздражаться на людей, с которыми работаю."
+    text: "Меня стали раздражать люди, с которыми работаю."
     scales:
       - scale: detachment
   - id: q7
@@ -116,7 +116,7 @@ questions:
     scales:
       - scale: efficacy
   - id: q12
-    text: "Я доволен тем, чего добиваюсь в работе."
+    text: "Меня радует то, чего я добиваюсь в работе."
     scales:
       - scale: efficacy
         reverse: true
