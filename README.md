@@ -52,5 +52,27 @@ scripts/                   валидация контента, перегене
 2. Добавить запись в `content/rights-register.yaml` с основанием и подтверждением.
 3. `pnpm validate:content` → `pnpm tsx scripts/generate-golden.ts` → `pnpm test`.
 
-Домен настраивается при деплое через `BASE_PATH` и `SITE_URL` — приложение
-домен-агностично (подпапка `mainexperts.online/tests`, поддомен или отдельный домен).
+## Деплой
+
+Приложение домен-агностично: путь задаётся через `BASE_PATH`, канонические ссылки — через
+`SITE_URL`. Поддерживаются подпапка `mainexperts.online/tests`, поддомен и отдельный домен.
+
+| Режим | Команда | Когда |
+|---|---|---|
+| Сервер | `pnpm build && pnpm start` | Продакшен на mainexperts.online |
+| Статика | `EXPORT=1 BASE_PATH=/psy pnpm build` | GitHub Pages, любой статический хостинг |
+
+Workflow `.github/workflows/pages.yml` публикует статику на GitHub Pages при пуше в `main`
+или рабочую ветку. Перед публикацией прогоняются те же гейты, что в CI: правовой реестр,
+golden-тесты скоринга, typecheck.
+
+Требования на стороне GitHub:
+
+1. **Settings → Pages → Source: GitHub Actions** — включается один раз вручную,
+   токен workflow этого сделать не может.
+2. **Settings → Environments → `github-pages` → Deployment branches** — ветка, с которой
+   идёт деплой, должна быть в списке разрешённых.
+3. Для приватного репозитория Pages доступны на платных планах GitHub.
+
+Пока Pages не включены, workflow не падает: он собирает статику, кладёт её в артефакт
+`github-pages` и пишет инструкцию в сводку запуска.
