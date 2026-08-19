@@ -41,6 +41,9 @@ jobs:
           EXPORT: "1"
           BASE_PATH: /${{ github.event.repository.name }}
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          # Счётчик задаётся переменной репозитория (Settings → Variables).
+          # Пока она пуста, аналитика инертна и баннер согласия не показывается.
+          NEXT_PUBLIC_METRIKA_ID: ${{ vars.NEXT_PUBLIC_METRIKA_ID }}
         run: |
           pnpm build
           touch out/.nojekyll
