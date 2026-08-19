@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import fs from "node:fs";
+import { load as loadYaml } from "js-yaml";
 import path from "node:path";
 import { getAllTests } from "../src/lib/content";
 
@@ -17,7 +18,10 @@ const root = path.resolve(__dirname, "..");
 const corpus = JSON.parse(
   fs.readFileSync(path.join(root, "content/ipip/scales-en.json"), "utf8")
 ) as Record<string, { name: string; alpha: number | null; items: { key: string }[] }[]>;
-const register = fs.readFileSync(path.join(root, "content/rights-register.yaml"), "utf8");
+const register = loadYaml(fs.readFileSync(path.join(root, "content/rights-register.yaml"), "utf8")) as Record<
+  string,
+  { source?: string }
+>;
 
 const byQualified = new Map<string, { alpha: number | null; items: number }>();
 const rawItems = new Map<string, { key: string }[]>();
@@ -28,14 +32,11 @@ for (const [page, scales] of Object.entries(corpus)) {
   }
 }
 
-/** Записи реестра вида "slug:\n  source: ... шкала PAGE/NAME" */
+/** Записи реестра вида "slug: { source: '... шкала PAGE/NAME' }" */
 const sources = new Map<string, string>();
-let slug = "";
-for (const line of register.split("\n")) {
-  const head = /^([a-z0-9-]+):\s*$/.exec(line);
-  if (head) slug = head[1];
-  const src = /^\s+source:.*шкала\s+(.+?)\s*$/.exec(line);
-  if (src && slug) sources.set(slug, src[1]);
+for (const [slug, entry] of Object.entries(register)) {
+  const m = /шкала\s+(.+?)\s*$/.exec(entry?.source ?? "");
+  if (m) sources.set(slug, m[1]);
 }
 
 const ipipTests = getAllTests().filter((t) => sources.has(t.slug) && sources.get(t.slug)!.includes("/"));

@@ -86,7 +86,7 @@ questions:
     scales:
       - scale: total
   - id: q7
-    text: Готов попробовать что угодно хотя бы раз.
+    text: Не против попробовать что угодно хотя бы раз.
     scales:
       - scale: total
   - id: q8

@@ -200,7 +200,9 @@ function main() {
         [
           `${test.slug}:`,
           `  basis: public_domain`,
-          `  source: IPIP (International Personality Item Pool), шкала ${resolved.key}`,
+                    // Имя шкалы может содержать двоеточие («Locus of Control: Total»),
+          // а незакавыченное двоеточие с пробелом YAML читает как вложенный ключ
+          `  source: ${JSON.stringify(`IPIP (International Personality Item Pool), шкала ${resolved.key}`)}`,
           `  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно`,
           `  translation: собственный перевод проекта`,
           `  commercial: allowed`,

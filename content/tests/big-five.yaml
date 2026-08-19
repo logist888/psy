@@ -133,7 +133,7 @@ questions:
       - scale: c
         reverse: true
   - id: q9
-    text: "Большую часть времени я спокоен."
+    text: "Большую часть времени сохраняю спокойствие."
     scales:
       - scale: n
         reverse: true
