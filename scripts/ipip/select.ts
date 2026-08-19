@@ -9,6 +9,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { load as loadYaml } from "js-yaml";
 
 interface Scale {
   name: string;
@@ -21,12 +22,20 @@ const corpus = JSON.parse(fs.readFileSync(path.join(root, "content/ipip/scales-e
   string,
   Scale[]
 >;
-const register = fs.readFileSync(path.join(root, "content/rights-register.yaml"), "utf8");
+// Реестр читается как YAML, а не регуляркой: значение source закавычено, и
+// текстовый разбор притаскивал в имя шкалы закрывающую кавычку — партия
+// переставала видеть уже опубликованные конструкты.
+const register = loadYaml(fs.readFileSync(path.join(root, "content/rights-register.yaml"), "utf8")) as Record<
+  string,
+  { source?: string }
+>;
 
 /** Уже опубликованные шкалы — и по полной ссылке, и по голому имени. */
 const publishedKeys = new Set<string>();
 const publishedConstructs = new Set<string>();
-for (const m of register.matchAll(/source:.*шкала\s+(.+?)\s*$/gm)) {
+for (const entry of Object.values(register)) {
+  const m = /шкала\s+(.+?)\s*$/.exec(entry?.source ?? "");
+  if (!m) continue;
   publishedKeys.add(m[1]);
   const bare = m[1].includes("/") ? m[1].split("/").slice(1).join("/") : m[1];
   publishedConstructs.add(constructKey(bare));
@@ -116,15 +125,27 @@ for (const group of byName.values()) {
 }
 picked.sort((a, b) => b.alpha - a.alpha);
 
-const limit = Number(process.argv[2] || 40);
-const tranche = picked.slice(0, limit);
+export function selectTranche(limit = 40): Candidate[] {
+  return picked.slice(0, limit);
+}
 
-process.stdout.write(JSON.stringify(tranche, null, 1));
-console.error(
-  `кандидатов после дедупликации: ${picked.length}, отобрано: ${tranche.length}\n` +
-    `по страницам: ${Object.entries(
-      tranche.reduce<Record<string, number>>((acc, c) => ({ ...acc, [c.page]: (acc[c.page] ?? 0) + 1 }), {})
-    )
-      .map(([p, n]) => `${p} ${n}`)
-      .join(", ")}`
-);
+/** Конструкты, уже занятые опубликованными методиками — для проверки отбора. */
+export function publishedConstructKeys(): Set<string> {
+  return publishedConstructs;
+}
+
+export { constructKey };
+
+// Запуск как скрипт: партия в stdout, сводка в stderr
+if (process.argv[1]?.endsWith("select.ts")) {
+  const tranche = selectTranche(Number(process.argv[2] || 40));
+  process.stdout.write(JSON.stringify(tranche, null, 1));
+  console.error(
+    `кандидатов после дедупликации: ${picked.length}, отобрано: ${tranche.length}\n` +
+      `по страницам: ${Object.entries(
+        tranche.reduce<Record<string, number>>((acc, c) => ({ ...acc, [c.page]: (acc[c.page] ?? 0) + 1 }), {})
+      )
+        .map(([p, n]) => `${p} ${n}`)
+        .join(", ")}`
+  );
+}

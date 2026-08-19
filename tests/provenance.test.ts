@@ -104,3 +104,18 @@ describe("происхождение методик IPIP", () => {
     }
   });
 });
+
+describe("отбор следующей партии", () => {
+  it("не предлагает конструкты, которые уже опубликованы", async () => {
+    // Реестр читается как YAML: когда отбор разбирал его регуляркой, в имя
+    // шкалы попадала закрывающая кавычка, и партия предлагала к переводу уже
+    // опубликованные конструкты — целая партия работы ушла бы впустую.
+    const { selectTranche, publishedConstructKeys, constructKey } = await import("../scripts/ipip/select");
+    const taken = publishedConstructKeys();
+    expect(taken.size).toBeGreaterThan(50);
+    const clashes = selectTranche(500)
+      .filter((c) => taken.has(constructKey(c.name)))
+      .map((c) => c.key);
+    expect(clashes, `отбор предлагает уже опубликованное:\n${clashes.join("\n")}`).toEqual([]);
+  });
+});
