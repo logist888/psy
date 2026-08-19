@@ -93,6 +93,54 @@ describe("Лидген-разметка", () => {
   });
 });
 
+describe("Каталог при росте библиотеки", () => {
+  it("конструкты не дублируются: две страницы на одну черту конкурировали бы за один запрос", () => {
+    const constructs = tests.map((t) => t.scales.map((s) => s.name.toLowerCase()).join("+"));
+    const seen = new Map<string, string>();
+    for (const [i, key] of constructs.entries()) {
+      const previous = seen.get(key);
+      expect(previous, `${tests[i].slug} измеряет то же, что ${previous}`).toBeUndefined();
+      seen.set(key, tests[i].slug);
+    }
+  });
+
+  it("число вопросов в текстах совпадает с фактическим", () => {
+    for (const t of tests) {
+      for (const field of [t.seoTitle, t.description]) {
+        for (const match of field.matchAll(/(\d+)\s+(?:вопрос|утвержд)/g)) {
+          expect(Number(match[1]), `${t.slug}: в тексте ${match[1]}, а пунктов ${t.questions.length}`).toBe(
+            t.questions.length
+          );
+        }
+      }
+    }
+  });
+
+  it("у каждой методики есть шкалы и ни одна не пуста", () => {
+    for (const t of tests) {
+      expect(t.scales.length, `${t.slug}: нет шкал`).toBeGreaterThan(0);
+      for (const scale of t.scales) {
+        const items = t.questions.filter((q) => q.scales.some((s) => s.scale === scale.id));
+        expect(items.length, `${t.slug}/${scale.id}: пустая шкала`).toBeGreaterThanOrEqual(4);
+      }
+    }
+  });
+
+  it("в шкалах черт есть обратные пункты", () => {
+    // Шкала без обратных пунктов уязвима к согласительному смещению: человек
+    // отвечает «да» на всё и получает высокий балл ни о чём.
+    //
+    // Опросники интересов — законное исключение: там оценивают привлекательность
+    // занятия, и «не нравится» это просто низкая оценка, а не инвертированный
+    // пункт. Так устроен и O*NET Interest Profiler, на котором основан наш
+    // карьерный тест.
+    for (const t of tests.filter((x) => x.questions.length > 6 && x.category !== "career")) {
+      const reversed = t.questions.filter((q) => q.scales.some((s) => s.reverse));
+      expect(reversed.length, `${t.slug}: нет обратных пунктов`).toBeGreaterThan(0);
+    }
+  });
+});
+
 describe("Перелинковка", () => {
   it("каждый тест получает родственные, и себя в них нет", () => {
     for (const t of tests) {

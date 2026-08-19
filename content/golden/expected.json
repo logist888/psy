@@ -152,6 +152,47 @@
       ]
     }
   },
+  "agressivnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная агрессивность"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная агрессивность"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренная агрессивность"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная агрессивность"
+        }
+      ]
+    }
+  },
   "akkuratnost": {
     "version": "1.0.0",
     "patterns": {
@@ -188,6 +229,129 @@
           "raw": 20,
           "max": 40,
           "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "bezrassudstvo": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 40,
+          "percent": 60,
+          "band": "умеренное безрассудство"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренное безрассудство"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренное безрассудство"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренное безрассудство"
+        }
+      ]
+    }
+  },
+  "buntarstvo": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренное бунтарство"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 40,
+          "percent": 60,
+          "band": "умеренное бунтарство"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренное бунтарство"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренное бунтарство"
+        }
+      ]
+    }
+  },
+  "vliyatelnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 36,
+          "percent": 56,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 36,
+          "percent": 44,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 36,
+          "percent": 56,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 36,
+          "percent": 44,
           "band": "средняя"
         }
       ]
@@ -495,7 +659,130 @@
       ]
     }
   },
+  "zavisimost-ot-drugih-lyudey": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная потребность в опоре"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная потребность в опоре"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренная потребность в опоре"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренная потребность в опоре"
+        }
+      ]
+    }
+  },
   "zastenchivost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 40,
+          "percent": 60,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "izbeganie-riska": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 28,
+          "max": 40,
+          "percent": 70,
+          "band": "выраженное избегание риска"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 12,
+          "max": 40,
+          "percent": 30,
+          "band": "низкое избегание риска"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренное избегание риска"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 14,
+          "max": 40,
+          "percent": 35,
+          "band": "низкое избегание риска"
+        }
+      ]
+    }
+  },
+  "iniciativnost": {
     "version": "1.0.0",
     "patterns": {
       "allMin": [
@@ -573,6 +860,88 @@
           "max": 40,
           "percent": 50,
           "band": "умеренный"
+        }
+      ]
+    }
+  },
+  "konservativnost-vzglyadov": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 12,
+          "max": 36,
+          "percent": 33,
+          "band": "невысокая консервативность"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 36,
+          "percent": 67,
+          "band": "умеренная консервативность"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 36,
+          "percent": 56,
+          "band": "умеренная консервативность"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 36,
+          "percent": 44,
+          "band": "умеренная консервативность"
+        }
+      ]
+    }
+  },
+  "kontrol-impulsov": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренный контроль импульсов"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренный контроль импульсов"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренный контроль импульсов"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренный контроль импульсов"
         }
       ]
     }
@@ -655,6 +1024,88 @@
           "max": 40,
           "percent": 50,
           "band": "средняя"
+        }
+      ]
+    }
+  },
+  "nahodchivost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "nedoverchivost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 12,
+          "max": 40,
+          "percent": 30,
+          "band": "низкая"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 28,
+          "max": 40,
+          "percent": 70,
+          "band": "высокая"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 14,
+          "max": 40,
+          "percent": 35,
+          "band": "низкая"
         }
       ]
     }
@@ -892,6 +1343,47 @@
       ]
     }
   },
+  "optimizm": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средний оптимизм"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средний оптимизм"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средний оптимизм"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средний оптимизм"
+        }
+      ]
+    }
+  },
   "osmotritelnost": {
     "version": "1.0.0",
     "patterns": {
@@ -1015,6 +1507,47 @@
       ]
     }
   },
+  "pogruzhennost-v-perezhivaniya": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 36,
+          "percent": 44,
+          "band": "умеренная погружённость"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 36,
+          "percent": 56,
+          "band": "умеренная погружённость"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 36,
+          "percent": 44,
+          "band": "умеренная погружённость"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 36,
+          "percent": 56,
+          "band": "умеренная погружённость"
+        }
+      ]
+    }
+  },
   "podavlennost": {
     "version": "1.0.0",
     "patterns": {
@@ -1134,6 +1667,129 @@
           "max": 40,
           "percent": 35,
           "band": "гибкая"
+        }
+      ]
+    }
+  },
+  "potrebnost-v-blizosti": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "priverzhennost-tradiciyam": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "prinyatie-sebya": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 28,
+          "percent": 71,
+          "band": "высокое принятие себя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 8,
+          "max": 28,
+          "percent": 29,
+          "band": "невысокое принятие себя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 28,
+          "percent": 57,
+          "band": "среднее принятие себя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 11,
+          "max": 28,
+          "percent": 39,
+          "band": "невысокое принятие себя"
         }
       ]
     }
@@ -1416,6 +2072,47 @@
       ]
     }
   },
+  "romantichnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 8,
+          "max": 32,
+          "percent": 25,
+          "band": "низкая романтичность"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 32,
+          "percent": 75,
+          "band": "высокая романтичность"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 32,
+          "percent": 50,
+          "band": "умеренная романтичность"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 15,
+          "max": 32,
+          "percent": 47,
+          "band": "умеренная романтичность"
+        }
+      ]
+    }
+  },
   "samodisciplina": {
     "version": "1.0.0",
     "patterns": {
@@ -1453,6 +2150,129 @@
           "max": 40,
           "percent": 50,
           "band": "средняя"
+        }
+      ]
+    }
+  },
+  "samokontrol": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренный самоконтроль"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренный самоконтроль"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренный самоконтроль"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "умеренный самоконтроль"
+        }
+      ]
+    }
+  },
+  "samonablyudenie": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 8,
+          "max": 32,
+          "percent": 25,
+          "band": "невысокое самонаблюдение"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 32,
+          "percent": 75,
+          "band": "выраженное самонаблюдение"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 32,
+          "percent": 50,
+          "band": "среднее самонаблюдение"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 15,
+          "max": 32,
+          "percent": 47,
+          "band": "среднее самонаблюдение"
+        }
+      ]
+    }
+  },
+  "sentimentalnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 12,
+          "max": 40,
+          "percent": 30,
+          "band": "низкая сентиментальность"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 28,
+          "max": 40,
+          "percent": 70,
+          "band": "высокая сентиментальность"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренная сентиментальность"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 14,
+          "max": 40,
+          "percent": 35,
+          "band": "низкая сентиментальность"
         }
       ]
     }
@@ -1534,6 +2354,47 @@
           "raw": 16,
           "max": 40,
           "percent": 40,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "socialnaya-trevozhnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
           "band": "средняя"
         }
       ]
@@ -1815,6 +2676,47 @@
       ]
     }
   },
+  "terpimost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 48,
+          "percent": 50,
+          "band": "средняя терпимость"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 48,
+          "percent": 50,
+          "band": "средняя терпимость"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 48,
+          "percent": 50,
+          "band": "средняя терпимость"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 23,
+          "max": 48,
+          "percent": 48,
+          "band": "средняя терпимость"
+        }
+      ]
+    }
+  },
   "personality-type": {
     "version": "1.0.0",
     "patterns": {
@@ -1981,6 +2883,88 @@
       ]
     }
   },
+  "tyaga-k-raznoobraziyu": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 12,
+          "max": 40,
+          "percent": 30,
+          "band": "низкая тяга к новизне"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 28,
+          "max": 40,
+          "percent": 70,
+          "band": "высокая тяга к новизне"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "умеренная тяга к новизне"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 14,
+          "max": 40,
+          "percent": 35,
+          "band": "низкая тяга к новизне"
+        }
+      ]
+    }
+  },
+  "tyaga-k-slozhnomu": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 40,
+          "percent": 40,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 40,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
   "tyaga-k-slozhnym-ideyam": {
     "version": "1.0.0",
     "patterns": {
@@ -2059,6 +3043,47 @@
           "max": 40,
           "percent": 40,
           "band": "средняя"
+        }
+      ]
+    }
+  },
+  "udovletvorennost-zhiznyu": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 32,
+          "max": 36,
+          "percent": 89,
+          "band": "высокая удовлетворённость"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 4,
+          "max": 36,
+          "percent": 11,
+          "band": "невысокая удовлетворённость"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 36,
+          "percent": 44,
+          "band": "средняя удовлетворённость"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 36,
+          "percent": 44,
+          "band": "средняя удовлетворённость"
         }
       ]
     }
@@ -2279,6 +3304,47 @@
           "max": 40,
           "percent": 50,
           "band": "умеренная"
+        }
+      ]
+    }
+  },
+  "emocionalnaya-vyrazitelnost": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 12,
+          "max": 36,
+          "percent": 33,
+          "band": "низкая"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 24,
+          "max": 36,
+          "percent": 67,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 20,
+          "max": 36,
+          "percent": 56,
+          "band": "средняя"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 16,
+          "max": 36,
+          "percent": 44,
+          "band": "средняя"
         }
       ]
     }
