@@ -249,6 +249,394 @@
       ]
     }
   },
+  "loneliness": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "intimacy",
+          "raw": 9,
+          "max": 21,
+          "percent": 43,
+          "band": "заметная"
+        },
+        {
+          "id": "belonging",
+          "raw": 9,
+          "max": 21,
+          "percent": 43,
+          "band": "заметная"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "intimacy",
+          "raw": 12,
+          "max": 21,
+          "percent": 57,
+          "band": "заметная"
+        },
+        {
+          "id": "belonging",
+          "raw": 12,
+          "max": 21,
+          "percent": 57,
+          "band": "заметная"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "intimacy",
+          "raw": 0,
+          "max": 21,
+          "percent": 0,
+          "band": "низкая"
+        },
+        {
+          "id": "belonging",
+          "raw": 9,
+          "max": 21,
+          "percent": 43,
+          "band": "заметная"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "intimacy",
+          "raw": 8,
+          "max": 21,
+          "percent": 38,
+          "band": "низкая"
+        },
+        {
+          "id": "belonging",
+          "raw": 7,
+          "max": 21,
+          "percent": 33,
+          "band": "низкая"
+        }
+      ]
+    }
+  },
+  "procrastination": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 3,
+          "max": 24,
+          "percent": 13,
+          "band": "низкий"
+        },
+        {
+          "id": "start",
+          "raw": 0,
+          "max": 12,
+          "percent": 0,
+          "band": "низкая"
+        },
+        {
+          "id": "perfect",
+          "raw": 0,
+          "max": 12,
+          "percent": 0,
+          "band": "низкий"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 21,
+          "max": 24,
+          "percent": 88,
+          "band": "высокий"
+        },
+        {
+          "id": "start",
+          "raw": 12,
+          "max": 12,
+          "percent": 100,
+          "band": "высокая"
+        },
+        {
+          "id": "perfect",
+          "raw": 12,
+          "max": 12,
+          "percent": 100,
+          "band": "высокий"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 9,
+          "max": 24,
+          "percent": 38,
+          "band": "низкий"
+        },
+        {
+          "id": "start",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "заметная"
+        },
+        {
+          "id": "perfect",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "заметный"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 13,
+          "max": 24,
+          "percent": 54,
+          "band": "заметный"
+        },
+        {
+          "id": "start",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "заметная"
+        },
+        {
+          "id": "perfect",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "заметный"
+        }
+      ]
+    }
+  },
+  "career-interests": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "r",
+          "raw": 0,
+          "max": 12,
+          "percent": 0,
+          "band": "низкий"
+        },
+        {
+          "id": "i",
+          "raw": 0,
+          "max": 12,
+          "percent": 0,
+          "band": "низкий"
+        },
+        {
+          "id": "a",
+          "raw": 0,
+          "max": 12,
+          "percent": 0,
+          "band": "низкий"
+        },
+        {
+          "id": "s",
+          "raw": 0,
+          "max": 12,
+          "percent": 0,
+          "band": "низкий"
+        },
+        {
+          "id": "e",
+          "raw": 0,
+          "max": 12,
+          "percent": 0,
+          "band": "низкий"
+        },
+        {
+          "id": "c",
+          "raw": 0,
+          "max": 12,
+          "percent": 0,
+          "band": "низкий"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "r",
+          "raw": 12,
+          "max": 12,
+          "percent": 100,
+          "band": "высокий"
+        },
+        {
+          "id": "i",
+          "raw": 12,
+          "max": 12,
+          "percent": 100,
+          "band": "высокий"
+        },
+        {
+          "id": "a",
+          "raw": 12,
+          "max": 12,
+          "percent": 100,
+          "band": "высокий"
+        },
+        {
+          "id": "s",
+          "raw": 12,
+          "max": 12,
+          "percent": 100,
+          "band": "высокий"
+        },
+        {
+          "id": "e",
+          "raw": 12,
+          "max": 12,
+          "percent": 100,
+          "band": "высокий"
+        },
+        {
+          "id": "c",
+          "raw": 12,
+          "max": 12,
+          "percent": 100,
+          "band": "высокий"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "r",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "средний"
+        },
+        {
+          "id": "i",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "средний"
+        },
+        {
+          "id": "a",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "средний"
+        },
+        {
+          "id": "s",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "средний"
+        },
+        {
+          "id": "e",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "средний"
+        },
+        {
+          "id": "c",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "средний"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "r",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "средний"
+        },
+        {
+          "id": "i",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "средний"
+        },
+        {
+          "id": "a",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "средний"
+        },
+        {
+          "id": "s",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "средний"
+        },
+        {
+          "id": "e",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "средний"
+        },
+        {
+          "id": "c",
+          "raw": 6,
+          "max": 12,
+          "percent": 50,
+          "band": "средний"
+        }
+      ]
+    }
+  },
+  "impostor": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "total",
+          "raw": 12,
+          "max": 42,
+          "percent": 29,
+          "band": "низкое"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "total",
+          "raw": 30,
+          "max": 42,
+          "percent": 71,
+          "band": "выраженное"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "total",
+          "raw": 33,
+          "max": 42,
+          "percent": 79,
+          "band": "выраженное"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "total",
+          "raw": 27,
+          "max": 42,
+          "percent": 64,
+          "band": "заметное"
+        }
+      ]
+    }
+  },
   "attachment": {
     "version": "1.0.0",
     "patterns": {
@@ -314,6 +702,297 @@
           "max": 18,
           "percent": 39,
           "band": "низкое"
+        }
+      ]
+    }
+  },
+  "dark-triad": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "narc",
+          "raw": 6,
+          "max": 18,
+          "percent": 33,
+          "band": "низкий"
+        },
+        {
+          "id": "mach",
+          "raw": 6,
+          "max": 18,
+          "percent": 33,
+          "band": "низкий"
+        },
+        {
+          "id": "callous",
+          "raw": 9,
+          "max": 18,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "narc",
+          "raw": 12,
+          "max": 18,
+          "percent": 67,
+          "band": "средний"
+        },
+        {
+          "id": "mach",
+          "raw": 12,
+          "max": 18,
+          "percent": 67,
+          "band": "средний"
+        },
+        {
+          "id": "callous",
+          "raw": 9,
+          "max": 18,
+          "percent": 50,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "narc",
+          "raw": 9,
+          "max": 18,
+          "percent": 50,
+          "band": "средний"
+        },
+        {
+          "id": "mach",
+          "raw": 9,
+          "max": 18,
+          "percent": 50,
+          "band": "средний"
+        },
+        {
+          "id": "callous",
+          "raw": 0,
+          "max": 18,
+          "percent": 0,
+          "band": "низкая"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "narc",
+          "raw": 7,
+          "max": 18,
+          "percent": 39,
+          "band": "низкий"
+        },
+        {
+          "id": "mach",
+          "raw": 11,
+          "max": 18,
+          "percent": 61,
+          "band": "средний"
+        },
+        {
+          "id": "callous",
+          "raw": 6,
+          "max": 18,
+          "percent": 33,
+          "band": "низкая"
+        }
+      ]
+    }
+  },
+  "temperament": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "activity",
+          "raw": 9,
+          "max": 27,
+          "percent": 33,
+          "band": "низкая"
+        },
+        {
+          "id": "stability",
+          "raw": 15,
+          "max": 33,
+          "percent": 45,
+          "band": "средняя"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "activity",
+          "raw": 18,
+          "max": 27,
+          "percent": 67,
+          "band": "средняя"
+        },
+        {
+          "id": "stability",
+          "raw": 18,
+          "max": 33,
+          "percent": 55,
+          "band": "средняя"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "activity",
+          "raw": 9,
+          "max": 27,
+          "percent": 33,
+          "band": "низкая"
+        },
+        {
+          "id": "stability",
+          "raw": 33,
+          "max": 33,
+          "percent": 100,
+          "band": "высокая"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "activity",
+          "raw": 13,
+          "max": 27,
+          "percent": 48,
+          "band": "средняя"
+        },
+        {
+          "id": "stability",
+          "raw": 21,
+          "max": 33,
+          "percent": 64,
+          "band": "средняя"
+        }
+      ]
+    }
+  },
+  "personality-type": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "ei",
+          "raw": 9,
+          "max": 18,
+          "percent": 50,
+          "band": "баланс"
+        },
+        {
+          "id": "sn",
+          "raw": 9,
+          "max": 18,
+          "percent": 50,
+          "band": "баланс"
+        },
+        {
+          "id": "tf",
+          "raw": 9,
+          "max": 18,
+          "percent": 50,
+          "band": "баланс"
+        },
+        {
+          "id": "jp",
+          "raw": 9,
+          "max": 18,
+          "percent": 50,
+          "band": "баланс"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "ei",
+          "raw": 9,
+          "max": 18,
+          "percent": 50,
+          "band": "баланс"
+        },
+        {
+          "id": "sn",
+          "raw": 9,
+          "max": 18,
+          "percent": 50,
+          "band": "баланс"
+        },
+        {
+          "id": "tf",
+          "raw": 9,
+          "max": 18,
+          "percent": 50,
+          "band": "баланс"
+        },
+        {
+          "id": "jp",
+          "raw": 9,
+          "max": 18,
+          "percent": 50,
+          "band": "баланс"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "ei",
+          "raw": 0,
+          "max": 18,
+          "percent": 0,
+          "band": "интроверсия"
+        },
+        {
+          "id": "sn",
+          "raw": 0,
+          "max": 18,
+          "percent": 0,
+          "band": "конкретика"
+        },
+        {
+          "id": "tf",
+          "raw": 18,
+          "max": 18,
+          "percent": 100,
+          "band": "чувства"
+        },
+        {
+          "id": "jp",
+          "raw": 18,
+          "max": 18,
+          "percent": 100,
+          "band": "гибкость"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "ei",
+          "raw": 6,
+          "max": 18,
+          "percent": 33,
+          "band": "интроверсия"
+        },
+        {
+          "id": "sn",
+          "raw": 6,
+          "max": 18,
+          "percent": 33,
+          "band": "конкретика"
+        },
+        {
+          "id": "tf",
+          "raw": 12,
+          "max": 18,
+          "percent": 67,
+          "band": "чувства"
+        },
+        {
+          "id": "jp",
+          "raw": 12,
+          "max": 18,
+          "percent": 67,
+          "band": "гибкость"
         }
       ]
     }
@@ -411,6 +1090,131 @@
           "max": 12,
           "percent": 58,
           "band": "умеренный"
+        }
+      ]
+    }
+  },
+  "emotional-intelligence": {
+    "version": "1.0.0",
+    "patterns": {
+      "allMin": [
+        {
+          "id": "self_aware",
+          "raw": 6,
+          "max": 15,
+          "percent": 40,
+          "band": "среднее"
+        },
+        {
+          "id": "self_reg",
+          "raw": 9,
+          "max": 15,
+          "percent": 60,
+          "band": "среднее"
+        },
+        {
+          "id": "empathy",
+          "raw": 6,
+          "max": 15,
+          "percent": 40,
+          "band": "среднее"
+        },
+        {
+          "id": "social",
+          "raw": 6,
+          "max": 15,
+          "percent": 40,
+          "band": "среднее"
+        }
+      ],
+      "allMax": [
+        {
+          "id": "self_aware",
+          "raw": 9,
+          "max": 15,
+          "percent": 60,
+          "band": "среднее"
+        },
+        {
+          "id": "self_reg",
+          "raw": 6,
+          "max": 15,
+          "percent": 40,
+          "band": "среднее"
+        },
+        {
+          "id": "empathy",
+          "raw": 9,
+          "max": 15,
+          "percent": 60,
+          "band": "среднее"
+        },
+        {
+          "id": "social",
+          "raw": 9,
+          "max": 15,
+          "percent": 60,
+          "band": "среднее"
+        }
+      ],
+      "alternating": [
+        {
+          "id": "self_aware",
+          "raw": 12,
+          "max": 15,
+          "percent": 80,
+          "band": "высокое"
+        },
+        {
+          "id": "self_reg",
+          "raw": 0,
+          "max": 15,
+          "percent": 0,
+          "band": "низкое"
+        },
+        {
+          "id": "empathy",
+          "raw": 0,
+          "max": 15,
+          "percent": 0,
+          "band": "низкое"
+        },
+        {
+          "id": "social",
+          "raw": 15,
+          "max": 15,
+          "percent": 100,
+          "band": "высокое"
+        }
+      ],
+      "ascending": [
+        {
+          "id": "self_aware",
+          "raw": 8,
+          "max": 15,
+          "percent": 53,
+          "band": "среднее"
+        },
+        {
+          "id": "self_reg",
+          "raw": 6,
+          "max": 15,
+          "percent": 40,
+          "band": "среднее"
+        },
+        {
+          "id": "empathy",
+          "raw": 6,
+          "max": 15,
+          "percent": 40,
+          "band": "среднее"
+        },
+        {
+          "id": "social",
+          "raw": 11,
+          "max": 15,
+          "percent": 73,
+          "band": "высокое"
         }
       ]
     }

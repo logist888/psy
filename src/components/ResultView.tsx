@@ -6,13 +6,14 @@ import { useSearchParams } from "next/navigation";
 import type { Test } from "@/lib/engine/schema";
 import { decodeAnswers, score } from "@/lib/engine/score";
 import { CRISIS_CONTACTS, CTA_COPY, SITE, platformLink } from "@/lib/site";
+import RelatedTests from "./RelatedTests";
 
 /**
  * Результат считается в браузере из токена в адресе: ответы никогда не уходят
  * на сервер. Ключи методик и без того опубликованы на страницах паспортов —
  * скрывать в этом продукте нечего (в отличие от профессионального кабинета).
  */
-export default function ResultView({ test }: { test: Test }) {
+export default function ResultView({ test, related = [] }: { test: Test; related?: Test[] }) {
   const params = useSearchParams();
   const token = params.get("r");
   const answers = token ? decodeAnswers(test, token) : null;
@@ -122,9 +123,11 @@ export default function ResultView({ test }: { test: Test }) {
       </p>
       <CopyLink url={shareUrl} sensitive={sensitive} />
 
+      <RelatedTests tests={related} title="Пройдите также" />
+
       <p style={{ marginTop: 24 }}>
         <Link href="/" className="btn secondary">
-          Другие тесты
+          Все тесты
         </Link>
       </p>
     </>

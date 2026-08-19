@@ -55,8 +55,23 @@ for (const file of files) {
   }
 }
 
+// Хабы: ссылки на тесты должны существовать (иначе битая перелинковка в выдаче)
+const constructsDir = path.join(root, "content", "constructs");
+let constructCount = 0;
+if (fs.existsSync(constructsDir)) {
+  const slugs = new Set(files.map((f) => f.replace(/\.yaml$/, "")));
+  for (const file of fs.readdirSync(constructsDir).filter((f) => f.endsWith(".yaml"))) {
+    constructCount++;
+    const hub = loadYaml(fs.readFileSync(path.join(constructsDir, file), "utf8")) as { slug?: string; tests?: string[] };
+    if (hub.slug !== file.replace(/\.yaml$/, "")) errors.push(`constructs/${file}: slug не совпадает с именем файла`);
+    for (const slug of hub.tests ?? []) {
+      if (!slugs.has(slug)) errors.push(`constructs/${file}: ссылка на несуществующий тест ${slug}`);
+    }
+  }
+}
+
 if (errors.length) {
   console.error("Проверка контента не пройдена:\n" + errors.map((e) => `  ✗ ${e}`).join("\n"));
   process.exit(1);
 }
-console.log(`✓ Контент валиден: ${files.length} методик, у всех есть правовое основание`);
+console.log(`✓ Контент валиден: ${files.length} методик (все с правовым основанием), ${constructCount} тематических хабов`);
