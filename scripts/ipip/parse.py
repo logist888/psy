@@ -18,33 +18,89 @@ OUT = pathlib.Path("/tmp/ipip_parsed.json")
 
 KEYED_PLUS = re.compile(r"^\+\s*keyed", re.I)
 KEYED_MINUS = re.compile(r"^[–\-−]\s*keyed", re.I)
-ALPHA = re.compile(r"\(\s*(?:IPIP\s*Scale\s*)?(?:Alpha\s*=\s*)?\.(\d{2})\s*\)|Alpha\s*=\s*\.(\d{2})")
+# Альфа записана по-разному: "(Alpha = .83)", "Alpha = .84", а на CPI — просто "[.73]"
+ALPHA = re.compile(
+    r"\(\s*(?:IPIP\s*Scale\s*)?(?:Alpha\s*=\s*)?\.(\d{2})\s*\)"
+    r"|Alpha\s*=\s*\.(\d{2})"
+    r"|\[\s*\.(\d{2})\s*\]"
+)
 NOISE = re.compile(r"^(mso-|/\*|table\.|\d+$|\d{4}-\d{2}-\d{2}|Clean$|Microsoft)", re.I)
 
 def clean_lines(path: pathlib.Path) -> list[str]:
     text = html.unescape(re.sub(r"<[^>]+>", "\n", path.read_text(encoding="utf8", errors="replace")))
     return [l.strip() for l in text.split("\n") if l.strip() and not NOISE.match(l.strip())]
 
+# Служебные слова внутри названия пишутся строчными: "Locus of Control",
+# "Need for Cognition". str.istitle() их не пропускает, поэтому свой тест.
+PARTICLES = {"of", "for", "and", "to", "in", "on", "or", "the", "a", "an", "with", "via"}
+
+
+def is_name_case(text: str) -> bool:
+    words = re.findall(r"[A-Za-z][A-Za-z'\-/]*", text)
+    if not words or not text[:1].isupper():
+        return False
+    return all(w[:1].isupper() or w.lower() in PARTICLES for w in words)
+
+
 def scale_name(heading: list[str]) -> str | None:
-    """Имя шкалы — самая «названиеподобная» строка из накопленных перед '+ keyed'."""
-    for line in reversed(heading[-4:]):
-        # AB5C: "vs I-/I- (Alpha = .83) GREGARIOUSNESS" — имя после скобки
+    """Имя шкалы — та строка перед «+ keyed», что называет саму шкалу IPIP.
+
+    Рядом с ней страница ставит ссылку на исходный опросник в скобках
+    («POWER-SEEKING (MPQ Social Potency [SP])», «COMPLEXITY (CPI: Capacity
+    for Status [Cs])»), а вёрстка рвёт эту скобку на несколько строк. Обрывок
+    скобки читается как название («Social Potency )») и раньше подменял имя
+    шкалы — поэтому кандидаты с непарной скобкой отбрасываются, а имя IPIP,
+    набранное капсом, имеет приоритет над оставшимися.
+    """
+    window = heading[-5:]
+
+    # AB5C/HEXACO: "vs I-/I- (Alpha = .83) GREGARIOUSNESS" — имя после скобки
+    for line in reversed(window):
         m = re.search(r"\)\s*([A-Z][A-Z \-/&']{3,60})$", line)
         if m:
             return m.group(1).strip()
+
+    upper: list[str] = []
+    titled: list[str] = []
+    for line in window:
         stripped = re.sub(r"\(.*?\)|\[.*?\]", "", line).strip(" :.-")
         if not stripped or len(stripped) > 70:
             continue
-        # "N1: ANXIETY" -> ANXIETY
-        if ":" in stripped:
-            tail = stripped.split(":", 1)[1].strip()
-            if 2 < len(tail) < 60 and not tail.endswith("."):
-                return tail
-        if stripped.isupper() and 2 < len(stripped) < 60:
-            return stripped
-        if stripped.istitle() and 2 < len(stripped) < 60 and not stripped.endswith("."):
-            return stripped
+        # Скобка открылась или закрылась на другой строке — это обрывок ссылки, не имя
+        if re.search(r"[()\[\]]", stripped):
+            continue
+        # NEO: "N1: ANXIETY" -> ANXIETY. Режем только по короткому коду слева,
+        # иначе теряется половина имени ("Locus of Control: Internality").
+        m = re.match(r"^[A-Za-z]{1,4}\d?\s*:\s*(.+)$", stripped)
+        if m:
+            stripped = m.group(1).strip()
+        if not (2 < len(stripped) < 60) or stripped.endswith("."):
+            continue
+        if stripped.isupper():
+            upper.append(stripped)
+        elif is_name_case(stripped):
+            titled.append(stripped)
+
+    # Имя шкалы IPIP набрано капсом; Title Case остаётся для страниц без капса
+    if upper:
+        return upper[-1]
+    if titled:
+        return titled[-1]
     return None
+
+
+def heading_ahead(lines: list[str], i: int) -> bool:
+    """Заголовок шкалы узнаётся по тому, что за ним следует: строка с альфой
+    в скобках либо сразу блок ключей. На части страниц имя набрано Title Case
+    («Leadership», «Cognitive Failures»), и по одному виду строки его не отличить
+    от обрывка пункта, разорванного вёрсткой."""
+    for nxt in lines[i + 1 : i + 3]:
+        if re.match(r"^[\(\[]", nxt) or "Alpha" in nxt or ALPHA.search(nxt):
+            return True
+        if KEYED_PLUS.match(nxt):
+            return True
+    return False
+
 
 def looks_like_heading(line: str) -> bool:
     if line.endswith(".") or not line[:1].isupper() or len(line) > 90:
@@ -78,20 +134,30 @@ def parse_page(path: pathlib.Path) -> list[dict]:
             if 8 < len(part) < 200 and re.search(r'[.!?]["\u201d]?$', part):
                 current["items"].append({"text": part, "key": keying})
 
-    for line in lines:
+    for i, line in enumerate(lines):
         if KEYED_PLUS.match(line) or KEYED_MINUS.match(line):
             flush_item()
             plus = bool(KEYED_PLUS.match(line))
             if plus and (current is None or current["items"]):
+                # NEO даёт домен дважды: "NEUROTICISM / 10-item scale" и следом
+                # безымянный "20-item scale" — это тот же конструкт длиннее.
                 name = scale_name(heading)
-                if name:
-                    alpha = None
-                    for h in heading[-3:]:
-                        m = ALPHA.search(h)
-                        if m:
-                            alpha = float("0." + (m.group(1) or m.group(2)))
-                    current = {"name": name, "alpha": alpha, "items": []}
-                    scales.append(current)
+                if not name:
+                    m = re.search(r"(\d+)-item scale", " ".join(heading[-3:]))
+                    if m and scales:
+                        base = re.sub(r" \(\d+-item\)$", "", scales[-1]["name"])
+                        name = f"{base} ({m.group(1)}-item)"
+                # Имя так и не опознано — заводим шкалу с меткой «?»: пункты не должны
+                # молча дописываться к предыдущей шкале, это порча данных.
+                name = name or f"?{path.stem}-{len(scales) + 1}"
+                # Скобка с альфой тоже рвётся вёрсткой ("(Alpha" / "= .83)"),
+                # поэтому ищем в склейке последних строк заголовка, а не построчно.
+                alpha = None
+                joined = " ".join(heading[-3:])
+                for m in ALPHA.finditer(joined):
+                    alpha = float("0." + (m.group(1) or m.group(2) or m.group(3)))
+                current = {"name": name, "alpha": alpha, "items": []}
+                scales.append(current)
                 heading = []
             keying = "+" if plus else "-"
             continue
@@ -100,7 +166,7 @@ def parse_page(path: pathlib.Path) -> list[dict]:
             # Между блоками пунктов встречается заголовок следующей шкалы. Отличаем
             # его от разорванного вёрсткой пункта: заголовок не заканчивается точкой,
             # начинается с заглавной и либо набран капсом, либо несёт альфу или код.
-            if not buffer and looks_like_heading(line):
+            if not buffer and not line.endswith(".") and (looks_like_heading(line) or heading_ahead(lines, i)):
                 keying = None
                 heading = [line]
                 continue
@@ -127,7 +193,9 @@ def main() -> None:
         items = sum(len(s["items"]) for s in scales)
         total_scales += len(scales)
         total_items += items
-        print(f"{inv:28} шкал: {len(scales):3}  пунктов: {items:5}")
+        unnamed = sum(1 for x in scales if x["name"].startswith("?"))
+        flag = f"  ⚠ без имени: {unnamed}" if unnamed else ""
+        print(f"{inv:28} шкал: {len(scales):3}  пунктов: {items:5}{flag}")
     print(f"\nИТОГО: {total_scales} шкал, {total_items} пунктов")
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf8")
 

@@ -143,7 +143,13 @@
     {
      "text": "Need a lot of time to do things.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "POISE",
+   "alpha": 0.82,
+   "items": [
     {
      "text": "Feel comfortable around people.",
      "key": "+"
@@ -229,7 +235,13 @@
     {
      "text": "Let others make the decisions.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "PROVOCATIVENESS",
+   "alpha": 0.72,
+   "items": [
     {
      "text": "Dare to say anything.",
      "key": "+"
@@ -249,7 +261,13 @@
     {
      "text": "Wait for my turn.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "SELF-DISCLOSURE",
+   "alpha": 0.78,
+   "items": [
     {
      "text": "Act wild and crazy.",
      "key": "+"
@@ -357,7 +375,13 @@
     {
      "text": "Enjoy silence.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "UNDERSTANDING",
+   "alpha": 0.81,
+   "items": [
     {
      "text": "Sympathize with others' feelings.",
      "key": "+"
@@ -485,7 +509,13 @@
     {
      "text": "Scheme against others.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "PLEASANTNESS",
+   "alpha": 0.76,
+   "items": [
     {
      "text": "Am easy to satisfy.",
      "key": "+"
@@ -537,21 +567,9 @@
    ]
   },
   {
-   "name": "EMPATHY",
-   "alpha": 0.7,
+   "name": "COOPERATION",
+   "alpha": 0.73,
    "items": [
-    {
-     "text": "Anticipate the needs of others.",
-     "key": "+"
-    },
-    {
-     "text": "Sense others' wishes.",
-     "key": "+"
-    },
-    {
-     "text": "Pretend to be concerned for others.",
-     "key": "-"
-    },
     {
      "text": "Value cooperation over competition.",
      "key": "+"
@@ -587,7 +605,13 @@
     {
      "text": "Enjoy crude jokes.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "SYMPATHY",
+   "alpha": 0.74,
+   "items": [
     {
      "text": "Am concerned about others.",
      "key": "+"
@@ -665,7 +689,13 @@
     {
      "text": "Don't understand people who get emotional.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "NURTURANCE",
+   "alpha": 0.71,
+   "items": [
     {
      "text": "Have a soft heart.",
      "key": "+"
@@ -863,7 +893,13 @@
     {
      "text": "Pay no attention to my appearance.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "PURPOSEFULNESS",
+   "alpha": 0.81,
+   "items": [
     {
      "text": "Am always prepared.",
      "key": "+"
@@ -1003,7 +1039,13 @@
     {
      "text": "Like to laugh out loud.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "RATIONALITY",
+   "alpha": 0.67,
+   "items": [
     {
      "text": "Do things in a logical order.",
      "key": "+"
@@ -1039,7 +1081,13 @@
     {
      "text": "Let people pull my leg.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "PERFECTIONISM",
+   "alpha": 0.76,
+   "items": [
     {
      "text": "Continue until everything is perfect.",
      "key": "+"
@@ -1355,7 +1403,13 @@
     {
      "text": "Am easily confused.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "IMPULSE CONTROL",
+   "alpha": 0.78,
+   "items": [
     {
      "text": "Keep my emotions under control.",
      "key": "+"
@@ -1399,7 +1453,13 @@
     {
      "text": "Like to gossip.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "IMPERTURBABILITY",
+   "alpha": 0.84,
+   "items": [
     {
      "text": "Seldom get emotional.",
      "key": "+"
@@ -1439,21 +1499,9 @@
    ]
   },
   {
-   "name": "COOL-HEADEDNESS",
-   "alpha": 0.73,
+   "name": "TRANQUILITY",
+   "alpha": 0.76,
    "items": [
-    {
-     "text": "Want everything to add up perfectly.",
-     "key": "-"
-    },
-    {
-     "text": "Demand obedience.",
-     "key": "-"
-    },
-    {
-     "text": "Keep up an appearance.",
-     "key": "-"
-    },
     {
      "text": "Experience very few emotional highs and lows.",
      "key": "+"
@@ -1473,7 +1521,13 @@
     {
      "text": "Experience my emotions intensely.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "INTELLECT",
+   "alpha": 0.81,
+   "items": [
     {
      "text": "Have a rich vocabulary.",
      "key": "+"
@@ -1585,7 +1639,13 @@
     {
      "text": "Do not like concerts.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "COMPETENCE",
+   "alpha": 0.74,
+   "items": [
     {
      "text": "Learn quickly.",
      "key": "+"
@@ -1613,7 +1673,13 @@
     {
      "text": "Need things explained only once.",
      "key": "+"
-    },
+    }
+   ]
+  },
+  {
+   "name": "QUICKNESS",
+   "alpha": 0.84,
+   "items": [
     {
      "text": "Can handle complex problems.",
      "key": "+"
@@ -1805,17 +1871,13 @@
     {
      "text": "Need to understand my motives.",
      "key": "+"
-    },
-    {
-     "text": "[Rarely look for a deeper meaning in things.] [Never challenge things.] Note.",
-     "key": "-"
     }
    ]
   }
  ],
  "16PF": [
   {
-   "name": "Warmth)",
+   "name": "WARMTH",
    "alpha": 0.8,
    "items": [
     {
@@ -1861,8 +1923,8 @@
    ]
   },
   {
-   "name": "Reasoning)",
-   "alpha": null,
+   "name": "INTELLECT",
+   "alpha": 0.76,
    "items": [
     {
      "text": "Make insightful remarks.",
@@ -1920,7 +1982,7 @@
   },
   {
    "name": "EMOTIONAL STABILITY",
-   "alpha": null,
+   "alpha": 0.85,
    "items": [
     {
      "text": "Seldom feel blue.",
@@ -1965,8 +2027,8 @@
    ]
   },
   {
-   "name": "Dominance)",
-   "alpha": null,
+   "name": "ASSERTIVENESS",
+   "alpha": 0.81,
    "items": [
     {
      "text": "Take charge.",
@@ -2012,7 +2074,7 @@
   },
   {
    "name": "GREGARIOUSNESS",
-   "alpha": null,
+   "alpha": 0.78,
    "items": [
     {
      "text": "Am the life of the party.",
@@ -2057,8 +2119,8 @@
    ]
   },
   {
-   "name": "Rule-Consciousness)",
-   "alpha": null,
+   "name": "DUTIFULNESS",
+   "alpha": 0.84,
    "items": [
     {
      "text": "Believe laws should be strictly enforced.",
@@ -2103,8 +2165,8 @@
    ]
   },
   {
-   "name": "Social Boldness)",
-   "alpha": null,
+   "name": "FRIENDLINESS",
+   "alpha": 0.8,
    "items": [
     {
      "text": "Feel comfortable around people.",
@@ -2149,8 +2211,8 @@
    ]
   },
   {
-   "name": "Sensitivity)",
-   "alpha": null,
+   "name": "SENSITIVITY",
+   "alpha": 0.73,
    "items": [
     {
      "text": "Like to read.",
@@ -2196,7 +2258,7 @@
   },
   {
    "name": "DISTRUST",
-   "alpha": null,
+   "alpha": 0.8,
    "items": [
     {
      "text": "Find it hard to forgive others.",
@@ -2241,8 +2303,8 @@
    ]
   },
   {
-   "name": "Abstractedness)",
-   "alpha": null,
+   "name": "IMAGINATION",
+   "alpha": 0.8,
    "items": [
     {
      "text": "Do things that others find strange.",
@@ -2288,7 +2350,7 @@
   },
   {
    "name": "RESERVE",
-   "alpha": null,
+   "alpha": 0.86,
    "items": [
     {
      "text": "Reveal little about myself.",
@@ -2333,8 +2395,8 @@
    ]
   },
   {
-   "name": "Apprehension)",
-   "alpha": null,
+   "name": "ANXIETY",
+   "alpha": 0.8,
    "items": [
     {
      "text": "Am afraid that I will do the wrong thing.",
@@ -2379,8 +2441,8 @@
    ]
   },
   {
-   "name": "Openness to Change)",
-   "alpha": null,
+   "name": "COMPLEXITY",
+   "alpha": 0.82,
    "items": [
     {
      "text": "Believe in the importance of art.",
@@ -2425,8 +2487,8 @@
    ]
   },
   {
-   "name": "Self-Reliance)",
-   "alpha": null,
+   "name": "INTROVERSION",
+   "alpha": 0.73,
    "items": [
     {
      "text": "Want to be left alone.",
@@ -2471,8 +2533,8 @@
    ]
   },
   {
-   "name": "Perfectionism)",
-   "alpha": null,
+   "name": "ORDERLINESS",
+   "alpha": 0.81,
    "items": [
     {
      "text": "Want everything to be \"just right.\"",
@@ -2518,7 +2580,7 @@
   },
   {
    "name": "EMOTIONALITY",
-   "alpha": null,
+   "alpha": 0.76,
    "items": [
     {
      "text": "Get irritated easily.",
@@ -2565,7 +2627,7 @@
  ],
  "6FPQ": [
   {
-   "name": "Extraversion)",
+   "name": "6FPQ",
    "alpha": 0.85,
    "items": [
     {
@@ -2611,8 +2673,8 @@
    ]
   },
   {
-   "name": "Agreeableness )",
-   "alpha": null,
+   "name": "AGREEABLENESS",
+   "alpha": 0.73,
    "items": [
     {
      "text": "Take things as they come.",
@@ -2657,8 +2719,8 @@
    ]
   },
   {
-   "name": "Methodicalness )",
-   "alpha": null,
+   "name": "METHODICALNESS",
+   "alpha": 0.78,
    "items": [
     {
      "text": "Like order.",
@@ -2703,8 +2765,8 @@
    ]
   },
   {
-   "name": "Independence )",
-   "alpha": null,
+   "name": "6FPQ",
+   "alpha": 0.69,
    "items": [
     {
      "text": "Don't care what others think.",
@@ -2750,7 +2812,7 @@
   },
   {
    "name": "INTELLECTUAL OPENNESS",
-   "alpha": null,
+   "alpha": 0.8,
    "items": [
     {
      "text": "Carry the conversation to a higher level.",
@@ -2795,8 +2857,8 @@
    ]
   },
   {
-   "name": "Industriousness )",
-   "alpha": null,
+   "name": "6FPQ",
+   "alpha": 0.75,
    "items": [
     {
      "text": "Work hard.",
@@ -2837,7 +2899,13 @@
     {
      "text": "Put little time and effort into my work.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "GREGARIOUSNESS",
+   "alpha": 0.87,
+   "items": [
     {
      "text": "Talk to a lot of different people at parties.",
      "key": "+"
@@ -2881,8 +2949,8 @@
    ]
   },
   {
-   "name": "Dominance )",
-   "alpha": null,
+   "name": "LEADERSHIP",
+   "alpha": 0.85,
    "items": [
     {
      "text": "Like having authority over others.",
@@ -2923,8 +2991,8 @@
    ]
   },
   {
-   "name": "Exhibition )",
-   "alpha": null,
+   "name": "EXHIBITIONISM",
+   "alpha": 0.83,
    "items": [
     {
      "text": "Don't mind being the center of attention.",
@@ -2969,8 +3037,8 @@
    ]
   },
   {
-   "name": "Abasement",
-   "alpha": null,
+   "name": "DOCILITY",
+   "alpha": 0.7,
    "items": [
     {
      "text": "Let other people take the credit for my work.",
@@ -3007,8 +3075,8 @@
    ]
   },
   {
-   "name": "Even-tempered",
-   "alpha": null,
+   "name": "CALMNESS",
+   "alpha": 0.87,
    "items": [
     {
      "text": "Rarely get irritated.",
@@ -3053,8 +3121,8 @@
    ]
   },
   {
-   "name": "(6FPQ",
-   "alpha": null,
+   "name": "ADAPTABILITY",
+   "alpha": 0.67,
    "items": [
     {
      "text": "Am good at taking advice.",
@@ -3091,8 +3159,8 @@
    ]
   },
   {
-   "name": "Cognitive Structure )",
-   "alpha": null,
+   "name": "6FPQ",
+   "alpha": 0.61,
    "items": [
     {
      "text": "Want things to proceed according to plan.",
@@ -3129,8 +3197,8 @@
    ]
   },
   {
-   "name": "Deliberateness )",
-   "alpha": null,
+   "name": "DELIBERATENESS",
+   "alpha": 0.76,
    "items": [
     {
      "text": "Choose my words with care.",
@@ -3175,8 +3243,8 @@
    ]
   },
   {
-   "name": "Order )",
-   "alpha": null,
+   "name": "ORDERLINESS",
+   "alpha": 0.81,
    "items": [
     {
      "text": "Get chores done right away.",
@@ -3221,8 +3289,8 @@
    ]
   },
   {
-   "name": "Autonomy )",
-   "alpha": null,
+   "name": "RECLUSIVENESS",
+   "alpha": 0.66,
    "items": [
     {
      "text": "Like to be alone.",
@@ -3268,7 +3336,7 @@
   },
   {
    "name": "UNPRETENTIOUSNESS",
-   "alpha": null,
+   "alpha": 0.74,
    "items": [
     {
      "text": "Am not concerned with making a good impression.",
@@ -3309,8 +3377,8 @@
    ]
   },
   {
-   "name": "Self Reliance )",
-   "alpha": null,
+   "name": "SELF-SUFFICIENCY",
+   "alpha": 0.59,
    "items": [
     {
      "text": "Act without consulting others.",
@@ -3355,8 +3423,8 @@
    ]
   },
   {
-   "name": "Change )",
-   "alpha": null,
+   "name": "ADVENTUROUSNESS",
+   "alpha": 0.7,
    "items": [
     {
      "text": "Would like to live for awhile in a different country.",
@@ -3401,8 +3469,8 @@
    ]
   },
   {
-   "name": "Understanding )",
-   "alpha": null,
+   "name": "COMPREHENSION",
+   "alpha": 0.82,
    "items": [
     {
      "text": "Love to read challenging material.",
@@ -3447,8 +3515,8 @@
    ]
   },
   {
-   "name": "Breadth",
-   "alpha": null,
+   "name": "CULTURE",
+   "alpha": 0.8,
    "items": [
     {
      "text": "Believe in the importance of art.",
@@ -3494,7 +3562,7 @@
   },
   {
    "name": "ACHIEVEMENT-STRIVING",
-   "alpha": null,
+   "alpha": 0.82,
    "items": [
     {
      "text": "Do more than what's expected of me.",
@@ -3539,8 +3607,8 @@
    ]
   },
   {
-   "name": "Endurance )",
-   "alpha": null,
+   "name": "RESOURCEFULNESS",
+   "alpha": 0.81,
    "items": [
     {
      "text": "Like to solve complex problems.",
@@ -3585,8 +3653,8 @@
    ]
   },
   {
-   "name": "(6FPQ",
-   "alpha": null,
+   "name": "PLAYFULNESS",
+   "alpha": 0.73,
    "items": [
     {
      "text": "Have a lot of fun.",
@@ -3680,7 +3748,7 @@
   },
   {
    "name": "FACTOR II",
-   "alpha": null,
+   "alpha": 0.77,
    "items": [
     {
      "text": "Feel others' emotions.",
@@ -3726,7 +3794,7 @@
   },
   {
    "name": "FACTOR III",
-   "alpha": null,
+   "alpha": 0.75,
    "items": [
     {
      "text": "Do things by the book.",
@@ -3772,7 +3840,7 @@
   },
   {
    "name": "FACTOR IV",
-   "alpha": null,
+   "alpha": 0.86,
    "items": [
     {
      "text": "Seldom feel blue.",
@@ -3818,7 +3886,7 @@
   },
   {
    "name": "FACTOR V",
-   "alpha": null,
+   "alpha": 0.84,
    "items": [
     {
      "text": "Have excellent ideas.",
@@ -3864,7 +3932,7 @@
   },
   {
    "name": "ATTRACTIVENESS",
-   "alpha": null,
+   "alpha": 0.66,
    "items": [
     {
      "text": "Keep myself well-groomed.",
@@ -3910,7 +3978,7 @@
   },
   {
    "name": "NEGATIVE VALENCE",
-   "alpha": null,
+   "alpha": 0.72,
    "items": [
     {
      "text": "Copy others.",
@@ -3961,7 +4029,7 @@
  ],
  "BIS BASkey": [
   {
-   "name": "[Alpha = .84)",
+   "name": "BIS",
    "alpha": 0.84,
    "items": [
     {
@@ -4095,7 +4163,13 @@
     {
      "text": "Hate being the center of attention.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "?newBIS_BASkey-4",
+   "alpha": 0.68,
+   "items": [
     {
      "text": "Feel excited or happy for no apparent reason.",
      "key": "+"
@@ -4125,7 +4199,7 @@
  ],
  "BigFive5broad": [
   {
-   "name": "Factor I (Surgency",
+   "name": "Big-Five Factor Markers",
    "alpha": 0.87,
    "items": [
     {
@@ -4167,7 +4241,13 @@
     {
      "text": "Am quiet around strangers.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Big-Five Factor Markers (20-item)",
+   "alpha": 0.91,
+   "items": [
     {
      "text": "Am the life of the party.",
      "key": "+"
@@ -4247,7 +4327,13 @@
     {
      "text": "Wait for others to lead the way.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Factor II",
+   "alpha": 0.82,
+   "items": [
     {
      "text": "Am interested in people.",
      "key": "+"
@@ -4283,11 +4369,13 @@
     {
      "text": "Am not interested in other people's problems.",
      "key": "-"
-    },
-    {
-     "text": "Feel little concern for others.",
-     "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Factor II (20-item)",
+   "alpha": 0.88,
+   "items": [
     {
      "text": "Am interested in people.",
      "key": "+"
@@ -4367,7 +4455,13 @@
     {
      "text": "Am indifferent to the feelings of others.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Factor III",
+   "alpha": 0.79,
+   "items": [
     {
      "text": "Am always prepared.",
      "key": "+"
@@ -4407,7 +4501,13 @@
     {
      "text": "Shirk my duties.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Factor III (20-item)",
+   "alpha": 0.88,
+   "items": [
     {
      "text": "Am always prepared.",
      "key": "+"
@@ -4487,7 +4587,13 @@
     {
      "text": "Leave a mess in my room.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "?newBigFive5broadKey-7",
+   "alpha": null,
+   "items": [
     {
      "text": "Am relaxed most of the time.",
      "key": "+"
@@ -4527,7 +4633,13 @@
     {
      "text": "Often feel blue.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "?newBigFive5broadKey-7 (20-item)",
+   "alpha": 0.91,
+   "items": [
     {
      "text": "Am relaxed most of the time.",
      "key": "+"
@@ -4607,7 +4719,13 @@
     {
      "text": "Grumble about things.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "?newBigFive5broadKey-7 (10-item)",
+   "alpha": 0.84,
+   "items": [
     {
      "text": "Have a rich vocabulary.",
      "key": "+"
@@ -4643,11 +4761,13 @@
     {
      "text": "Am not interested in abstract ideas.",
      "key": "-"
-    },
-    {
-     "text": "Do not have a good imagination.",
-     "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "?newBigFive5broadKey-7 (20-item)",
+   "alpha": 0.9,
+   "items": [
     {
      "text": "Have a rich vocabulary.",
      "key": "+"
@@ -4779,8 +4899,8 @@
    ]
   },
   {
-   "name": "(Capacity",
-   "alpha": null,
+   "name": "COMPLEXITY",
+   "alpha": 0.73,
    "items": [
     {
      "text": "Carry the conversation to a higher level.",
@@ -4825,8 +4945,8 @@
    ]
   },
   {
-   "name": "(Sociability",
-   "alpha": null,
+   "name": "SOCIABILITY",
+   "alpha": 0.87,
    "items": [
     {
      "text": "Feel comfortable around people.",
@@ -4872,7 +4992,7 @@
   },
   {
    "name": "ADVENTUROUSNESS",
-   "alpha": null,
+   "alpha": 0.71,
    "items": [
     {
      "text": "Amuse my friends.",
@@ -4917,8 +5037,8 @@
    ]
   },
   {
-   "name": "(Self-Acceptance",
-   "alpha": null,
+   "name": "INSIGHT",
+   "alpha": 0.78,
    "items": [
     {
      "text": "Come up with something new.",
@@ -4963,8 +5083,8 @@
    ]
   },
   {
-   "name": "(Independence",
-   "alpha": null,
+   "name": "SELF-EFFICACY",
+   "alpha": 0.81,
    "items": [
     {
      "text": "Can handle complex problems.",
@@ -5010,7 +5130,7 @@
   },
   {
    "name": "DEPTH",
-   "alpha": null,
+   "alpha": 0.69,
    "items": [
     {
      "text": "Am interested in many things.",
@@ -5051,8 +5171,8 @@
    ]
   },
   {
-   "name": "(Responsibility",
-   "alpha": null,
+   "name": "RESPONSIBILITY",
+   "alpha": 0.66,
    "items": [
     {
      "text": "Return extra change when a cashier makes a mistake.",
@@ -5097,8 +5217,8 @@
    ]
   },
   {
-   "name": "(Socialization",
-   "alpha": null,
+   "name": "STABILITY",
+   "alpha": 0.7,
    "items": [
     {
      "text": "Trust others.",
@@ -5143,8 +5263,8 @@
    ]
   },
   {
-   "name": "(Self-Control",
-   "alpha": null,
+   "name": "SELF-CONTROL",
+   "alpha": 0.71,
    "items": [
     {
      "text": "Am not easily affected by my emotions.",
@@ -5189,8 +5309,8 @@
    ]
   },
   {
-   "name": "(Good Impression",
-   "alpha": null,
+   "name": "TEMPERANCE",
+   "alpha": 0.75,
    "items": [
     {
      "text": "Rarely overindulge.",
@@ -5236,7 +5356,7 @@
   },
   {
    "name": "OPTIMISM",
-   "alpha": null,
+   "alpha": 0.8,
    "items": [
     {
      "text": "Am not easily bothered by things.",
@@ -5277,8 +5397,8 @@
    ]
   },
   {
-   "name": "(Tolerance",
-   "alpha": null,
+   "name": "TOLERANCE",
+   "alpha": 0.69,
    "items": [
     {
      "text": "Sympathize with the homeless.",
@@ -5319,8 +5439,8 @@
    ]
   },
   {
-   "name": "(Achievement",
-   "alpha": null,
+   "name": "PLANFULNESS",
+   "alpha": 0.62,
    "items": [
     {
      "text": "Stick to my chosen path.",
@@ -5365,8 +5485,8 @@
    ]
   },
   {
-   "name": "(Achievement",
-   "alpha": null,
+   "name": "INTELLECT",
+   "alpha": 0.85,
    "items": [
     {
      "text": "Find political discussions interesting.",
@@ -5411,8 +5531,8 @@
    ]
   },
   {
-   "name": "Efficiency )",
-   "alpha": null,
+   "name": "COMPREHENSION",
+   "alpha": 0.8,
    "items": [
     {
      "text": "Have a rich vocabulary.",
@@ -5458,7 +5578,7 @@
   },
   {
    "name": "COMPETENCE",
-   "alpha": null,
+   "alpha": 0.74,
    "items": [
     {
      "text": "Come up with good solutions.",
@@ -5503,8 +5623,8 @@
    ]
   },
   {
-   "name": "(Flexibility",
-   "alpha": null,
+   "name": "DISORDER",
+   "alpha": 0.8,
    "items": [
     {
      "text": "Leave a mess in my room.",
@@ -5545,8 +5665,8 @@
    ]
   },
   {
-   "name": "(Femininity",
-   "alpha": null,
+   "name": "SENTIMENTALITY",
+   "alpha": 0.7,
    "items": [
     {
      "text": "Cry during movies.",
@@ -5599,8 +5719,8 @@
    ]
   },
   {
-   "name": "(Vector",
-   "alpha": null,
+   "name": "INTROVERSION",
+   "alpha": 0.85,
    "items": [
     {
      "text": "Don't like to draw attention to myself.",
@@ -5645,8 +5765,8 @@
    ]
   },
   {
-   "name": "(Vector",
-   "alpha": null,
+   "name": "DUTIFULNESS",
+   "alpha": 0.73,
    "items": [
     {
      "text": "Would never cheat on my taxes.",
@@ -5691,8 +5811,8 @@
    ]
   },
   {
-   "name": "(Vector",
-   "alpha": null,
+   "name": "GOOD-NATURE",
+   "alpha": 0.77,
    "items": [
     {
      "text": "Feel lucky most of the time.",
@@ -5733,8 +5853,8 @@
    ]
   },
   {
-   "name": "Potential )",
-   "alpha": null,
+   "name": "HAPPINESS",
+   "alpha": 0.77,
    "items": [
     {
      "text": "Am comfortable in unfamiliar situations.",
@@ -5779,8 +5899,8 @@
    ]
   },
   {
-   "name": "(Work Orientation",
-   "alpha": null,
+   "name": "CALMNESS",
+   "alpha": 0.66,
    "items": [
     {
      "text": "Am relaxed most of the time.",
@@ -5825,8 +5945,8 @@
    ]
   },
   {
-   "name": "Temperament )",
-   "alpha": null,
+   "name": "LIBERALISM",
+   "alpha": 0.85,
    "items": [
     {
      "text": "Believe in the importance of art.",
@@ -5868,7 +5988,7 @@
   },
   {
    "name": "SECURITY",
-   "alpha": null,
+   "alpha": 0.84,
    "items": [
     {
      "text": "Feel comfortable with myself.",
@@ -5913,8 +6033,8 @@
    ]
   },
   {
-   "name": "(Amicability",
-   "alpha": null,
+   "name": "AMIABILITY",
+   "alpha": 0.83,
    "items": [
     {
      "text": "Seldom get mad.",
@@ -5959,8 +6079,8 @@
    ]
   },
   {
-   "name": "Enforcement Orientation )",
-   "alpha": null,
+   "name": "SELF-DISCIPLINE",
+   "alpha": 0.75,
    "items": [
     {
      "text": "Like to organize things.",
@@ -6006,7 +6126,7 @@
   },
   {
    "name": "POISE",
-   "alpha": null,
+   "alpha": 0.79,
    "items": [
     {
      "text": "Remain calm under pressure.",
@@ -6051,8 +6171,8 @@
    ]
   },
   {
-   "name": "(Masculinity",
-   "alpha": null,
+   "name": "FORCEFULNESS",
+   "alpha": 0.82,
    "items": [
     {
      "text": "Take the initiative.",
@@ -6098,7 +6218,7 @@
   },
   {
    "name": "TIMIDITY",
-   "alpha": null,
+   "alpha": 0.77,
    "items": [
     {
      "text": "Would never go hang gliding or bungee jumping.",
@@ -6143,8 +6263,8 @@
    ]
   },
   {
-   "name": "(Narcissism",
-   "alpha": null,
+   "name": "DOMINANCE",
+   "alpha": 0.82,
    "items": [
     {
      "text": "Try to surpass others' accomplishments.",
@@ -6193,8 +6313,8 @@
    ]
   },
   {
-   "name": "(Social Desirability",
-   "alpha": null,
+   "name": "POLITENESS",
+   "alpha": 0.64,
    "items": [
     {
      "text": "Do a lot in my spare time.",
@@ -6603,7 +6723,13 @@
     {
      "text": "Let people push me around to help them feel important.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha =",
+   "alpha": 0.77,
+   "items": [
     {
      "text": "Would never take things that aren't mine.",
      "key": "+"
@@ -6643,7 +6769,13 @@
     {
      "text": "Would not regret my behavior if I were to take advantage of someone impulsively.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha =",
+   "alpha": 0.69,
+   "items": [
     {
      "text": "Would not enjoy being a famous celebrity.",
      "key": "+"
@@ -6683,7 +6815,13 @@
     {
      "text": "Am out for my own personal gain.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.81,
+   "items": [
     {
      "text": "Don't think that I'm better than other people.",
      "key": "+"
@@ -6719,7 +6857,13 @@
     {
      "text": "Boast about my virtues.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.84,
+   "items": [
     {
      "text": "Am a physical coward.",
      "key": "+"
@@ -6759,7 +6903,13 @@
     {
      "text": "Am willing to take risks.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.85,
+   "items": [
     {
      "text": "Often worry about things that turn out to be unimportant.",
      "key": "+"
@@ -6799,7 +6949,13 @@
     {
      "text": "Don't worry about things that have already happened.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.73,
+   "items": [
     {
      "text": "Need reassurance.",
      "key": "+"
@@ -6839,7 +6995,13 @@
     {
      "text": "Want to be liked.",
      "key": "+"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.79,
+   "items": [
     {
      "text": "Feel others' emotions.",
      "key": "+"
@@ -6879,7 +7041,13 @@
     {
      "text": "Seldom get emotional.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.84,
+   "items": [
     {
      "text": "Talk a lot.",
      "key": "+"
@@ -6919,7 +7087,13 @@
     {
      "text": "Speak softly.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha =",
+   "alpha": 0.86,
+   "items": [
     {
      "text": "Am good at making impromptu speeches.",
      "key": "+"
@@ -6959,7 +7133,13 @@
     {
      "text": "Have little to say.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.85,
+   "items": [
     {
      "text": "Usually like to spend my free time with people.",
      "key": "+"
@@ -6999,7 +7179,13 @@
     {
      "text": "Keep others at a distance.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.82,
+   "items": [
     {
      "text": "Maintain high energy throughout the day.",
      "key": "+"
@@ -7039,7 +7225,13 @@
     {
      "text": "Often feel blue.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.78,
+   "items": [
     {
      "text": "Love my enemies.",
      "key": "+"
@@ -7079,7 +7271,13 @@
     {
      "text": "Feel that most people can't be trusted.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.81,
+   "items": [
     {
      "text": "Rarely complain.",
      "key": "+"
@@ -7119,7 +7317,13 @@
     {
      "text": "Criticize others' shortcomings.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.73,
+   "items": [
     {
      "text": "Adjust easily.",
      "key": "+"
@@ -7159,7 +7363,13 @@
     {
      "text": "Am hard to reason with.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.88,
+   "items": [
     {
      "text": "Find that it takes a lot to make me feel angry at someone.",
      "key": "+"
@@ -7199,7 +7409,13 @@
     {
      "text": "Get upset easily.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.85,
+   "items": [
     {
      "text": "Keep things tidy.",
      "key": "+"
@@ -7239,7 +7455,13 @@
     {
      "text": "Am not bothered by disorder.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.81,
+   "items": [
     {
      "text": "Push myself very hard to succeed.",
      "key": "+"
@@ -7279,7 +7501,13 @@
     {
      "text": "Quickly lose interest in the tasks I start.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.8,
+   "items": [
     {
      "text": "Pay attention to details.",
      "key": "+"
@@ -7319,7 +7547,13 @@
     {
      "text": "Prefer to just let things happen.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.8,
+   "items": [
     {
      "text": "Avoid mistakes.",
      "key": "+"
@@ -7359,7 +7593,13 @@
     {
      "text": "Make a fool of myself.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha =",
+   "alpha": 0.83,
+   "items": [
     {
      "text": "Believe in the importance of art.",
      "key": "+"
@@ -7395,7 +7635,13 @@
     {
      "text": "Do not enjoy watching dance performances.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha =",
+   "alpha": 0.78,
+   "items": [
     {
      "text": "Am interested in science.",
      "key": "+"
@@ -7435,7 +7681,13 @@
     {
      "text": "Will not probe deeply into a subject.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha",
+   "alpha": 0.85,
+   "items": [
     {
      "text": "Have a vivid imagination.",
      "key": "+"
@@ -7475,7 +7727,13 @@
     {
      "text": "Seldom experience sudden intuitive insights.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Alpha =",
+   "alpha": 0.84,
+   "items": [
     {
      "text": "Am considered to be kind of eccentric.",
      "key": "+"
@@ -7607,7 +7865,13 @@
     {
      "text": "Get stressed out easily.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Leadership",
+   "alpha": 0.82,
+   "items": [
     {
      "text": "Take charge.",
      "key": "+"
@@ -7647,7 +7911,13 @@
     {
      "text": "Find it difficult to approach others.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Sociability",
+   "alpha": 0.75,
+   "items": [
     {
      "text": "Like to attract attention.",
      "key": "+"
@@ -7687,7 +7957,13 @@
     {
      "text": "Dislike loud music.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Friendliness",
+   "alpha": 0.86,
+   "items": [
     {
      "text": "Make friends easily.",
      "key": "+"
@@ -7727,7 +8003,13 @@
     {
      "text": "Want to be left alone.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Dutifulness",
+   "alpha": 0.78,
+   "items": [
     {
      "text": "Respect authority.",
      "key": "+"
@@ -7767,7 +8049,13 @@
     {
      "text": "Do unexpected things.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Creativity",
+   "alpha": 0.83,
+   "items": [
     {
      "text": "Like to solve complex problems.",
      "key": "+"
@@ -7807,7 +8095,13 @@
     {
      "text": "Do not have a good imagination.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "?newHPIKeys-7",
+   "alpha": 0.82,
+   "items": [
     {
      "text": "Read quickly.",
      "key": "+"
@@ -7847,7 +8141,13 @@
     {
      "text": "Don't understand things.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Calmness",
+   "alpha": 0.76,
+   "items": [
     {
      "text": "Take things as they come.",
      "key": "+"
@@ -7887,7 +8187,13 @@
     {
      "text": "Am quick to judge others.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "?newHPIKeys-9",
+   "alpha": 0.87,
+   "items": [
     {
      "text": "Seldom feel blue.",
      "key": "+"
@@ -7923,7 +8229,13 @@
     {
      "text": "Am filled with doubts about things.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Cooperation",
+   "alpha": 0.76,
+   "items": [
     {
      "text": "Rarely overindulge.",
      "key": "+"
@@ -7963,7 +8275,13 @@
     {
      "text": "Suspect hidden motives in others.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "?newHPIKeys-11",
+   "alpha": 0.77,
+   "items": [
     {
      "text": "Am not embarrassed easily.",
      "key": "+"
@@ -8003,7 +8321,13 @@
     {
      "text": "Feel threatened easily.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "?newHPIKeys-12",
+   "alpha": 0.86,
+   "items": [
     {
      "text": "Don't mind being the center of attention.",
      "key": "+"
@@ -8043,7 +8367,13 @@
     {
      "text": "Keep in the background.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "?newHPIKeys-13",
+   "alpha": 0.8,
+   "items": [
     {
      "text": "Come up with good solutions.",
      "key": "+"
@@ -8083,7 +8413,13 @@
     {
      "text": "Mess things up.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "The 44 Lower-Level HPI Scales",
+   "alpha": 0.79,
+   "items": [
     {
      "text": "Rarely get irritated.",
      "key": "+"
@@ -8107,7 +8443,13 @@
     {
      "text": "Get annoyed with others' behaviors.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Not Anxious",
+   "alpha": 0.79,
+   "items": [
     {
      "text": "Am relaxed most of the time.",
      "key": "+"
@@ -8131,7 +8473,13 @@
     {
      "text": "Get caught up in my problems.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "No Guilt",
+   "alpha": 0.71,
+   "items": [
     {
      "text": "Feel comfortable with myself.",
      "key": "+"
@@ -8155,7 +8503,13 @@
     {
      "text": "Don't know why I do some of the things I do.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Calmness",
+   "alpha": 0.75,
+   "items": [
     {
      "text": "Remain calm under pressure.",
      "key": "+"
@@ -8179,7 +8533,13 @@
     {
      "text": "Get overwhelmed by emotions.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Even-tempered",
+   "alpha": 0.81,
+   "items": [
     {
      "text": "Seldom get mad.",
      "key": "+"
@@ -8203,7 +8563,13 @@
     {
      "text": "Yell at people.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "No Somatic Complaints",
+   "alpha": 0.68,
+   "items": [
     {
      "text": "Often eat too much.",
      "key": "-"
@@ -8227,7 +8593,13 @@
     {
      "text": "Am afraid of many things.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Trusting",
+   "alpha": 0.74,
+   "items": [
     {
      "text": "Trust what people say.",
      "key": "+"
@@ -8247,7 +8619,13 @@
     {
      "text": "Suspect hidden motives in others.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Good Attachment",
+   "alpha": 0.55,
+   "items": [
     {
      "text": "Rarely overindulge.",
      "key": "+"
@@ -8271,7 +8649,13 @@
     {
      "text": "Have days when I'm mad at the world.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Competitive",
+   "alpha": 0.7,
+   "items": [
     {
      "text": "Accept challenging tasks.",
      "key": "+"
@@ -8295,7 +8679,13 @@
     {
      "text": "Undertake few things on my own.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Self-Confidence",
+   "alpha": 0.74,
+   "items": [
     {
      "text": "Am sure of my ground.",
      "key": "+"
@@ -8319,7 +8709,13 @@
     {
      "text": "Feel threatened easily.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "No Depression",
+   "alpha": 0.81,
+   "items": [
     {
      "text": "Seldom feel blue.",
      "key": "+"
@@ -8343,7 +8739,13 @@
     {
      "text": "Have frequent mood swings.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Leadership",
+   "alpha": 0.81,
+   "items": [
     {
      "text": "Take charge.",
      "key": "+"
@@ -8367,7 +8769,13 @@
     {
      "text": "Let others make the decisions.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Identity",
+   "alpha": 0.8,
+   "items": [
     {
      "text": "Feel that my life lacks direction.",
      "key": "-"
@@ -8391,7 +8799,13 @@
     {
      "text": "Feel short-changed in life.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "No Social Anxiety",
+   "alpha": 0.74,
+   "items": [
     {
      "text": "Express myself easily.",
      "key": "+"
@@ -8415,7 +8829,13 @@
     {
      "text": "Am afraid to draw attention to myself.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Likes Parties",
+   "alpha": 0.68,
+   "items": [
     {
      "text": "Love large parties.",
      "key": "+"
@@ -8435,7 +8855,13 @@
     {
      "text": "Don't like to get dressed up.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Likes Crowds",
+   "alpha": 0.64,
+   "items": [
     {
      "text": "Enjoy being part of a loud crowd.",
      "key": "+"
@@ -8455,7 +8881,13 @@
     {
      "text": "Dislike loud music.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Experience-seeking",
+   "alpha": 0.66,
+   "items": [
     {
      "text": "Prefer variety to routine.",
      "key": "+"
@@ -8479,7 +8911,13 @@
     {
      "text": "Dislike new foods.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Exhibitionistic",
+   "alpha": 0.83,
+   "items": [
     {
      "text": "Don't mind being the center of attention.",
      "key": "+"
@@ -8503,7 +8941,13 @@
     {
      "text": "Dislike talking about myself.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Entertaining",
+   "alpha": 0.84,
+   "items": [
     {
      "text": "Amuse my friends.",
      "key": "+"
@@ -8523,7 +8967,13 @@
     {
      "text": "Seldom joke around.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Easy To Live With",
+   "alpha": 0.66,
+   "items": [
     {
      "text": "Accept people as they are Try to forgive and forget.",
      "key": "+"
@@ -8543,7 +8993,13 @@
     {
      "text": "Treat people as inferiors.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Sensitive",
+   "alpha": 0.61,
+   "items": [
     {
      "text": "Am deeply moved by others' misfortunes.",
      "key": "+"
@@ -8567,7 +9023,13 @@
     {
      "text": "Obstruct others' plans.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Caring",
+   "alpha": 0.75,
+   "items": [
     {
      "text": "Feel others' emotions.",
      "key": "+"
@@ -8591,7 +9053,13 @@
     {
      "text": "Feel little concern for others.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Likes People",
+   "alpha": 0.82,
+   "items": [
     {
      "text": "Feel comfortable around people.",
      "key": "+"
@@ -8615,7 +9083,13 @@
     {
      "text": "Avoid contacts with others.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "No Hostility",
+   "alpha": 0.75,
+   "items": [
     {
      "text": "Accept apologies easily.",
      "key": "+"
@@ -8639,7 +9113,13 @@
     {
      "text": "Get even with others.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Moralistic",
+   "alpha": 0.7,
+   "items": [
     {
      "text": "Do unpleasant tasks immediately.",
      "key": "+"
@@ -8659,7 +9139,13 @@
     {
      "text": "Waste my time.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Mastery",
+   "alpha": 0.72,
+   "items": [
     {
      "text": "Continue until everything is perfect.",
      "key": "+"
@@ -8683,7 +9169,13 @@
     {
      "text": "Am not bothered by disorder.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Virtuous",
+   "alpha": 0.7,
+   "items": [
     {
      "text": "Take things as they come.",
      "key": "+"
@@ -8707,7 +9199,13 @@
     {
      "text": "Shoot my mouth off.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Not Autonomous",
+   "alpha": 0.66,
+   "items": [
     {
      "text": "Need the approval of others.",
      "key": "+"
@@ -8727,7 +9225,13 @@
     {
      "text": "Don't care what people think of me.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Not Spontaneous",
+   "alpha": 0.61,
+   "items": [
     {
      "text": "Am easily talked into doing silly things.",
      "key": "-"
@@ -8751,7 +9255,13 @@
     {
      "text": "Like variety.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Impulse Control",
+   "alpha": 0.7,
+   "items": [
     {
      "text": "Do things by the book.",
      "key": "+"
@@ -8775,7 +9285,13 @@
     {
      "text": "Like to act on a whim.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Avoids Trouble",
+   "alpha": 0.64,
+   "items": [
     {
      "text": "Feel that people have a hard time understanding me.",
      "key": "-"
@@ -8799,7 +9315,13 @@
     {
      "text": "Love to come up with objections.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Science Ability",
+   "alpha": 0.6,
+   "items": [
     {
      "text": "Like to solve complex problems.",
      "key": "+"
@@ -8823,7 +9345,13 @@
     {
      "text": "Dislike learning.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Curiosity",
+   "alpha": 0.66,
+   "items": [
     {
      "text": "Like to know how things work.",
      "key": "+"
@@ -8847,7 +9375,13 @@
     {
      "text": "Can perform a wide variety of tasks.",
      "key": "+"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Thrill-seeking",
+   "alpha": 0.72,
+   "items": [
     {
      "text": "Act wild and crazy.",
      "key": "+"
@@ -8875,7 +9409,13 @@
     {
      "text": "Avoid dangerous situations.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Intellectual Games",
+   "alpha": 0.5,
+   "items": [
     {
      "text": "Enjoy games of strategy.",
      "key": "+"
@@ -8903,7 +9443,13 @@
     {
      "text": "Don't like action movies.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Generates Ideas",
+   "alpha": 0.8,
+   "items": [
     {
      "text": "Am full of ideas.",
      "key": "+"
@@ -8927,7 +9473,13 @@
     {
      "text": "Have difficulty imagining things.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Culture",
+   "alpha": 0.77,
+   "items": [
     {
      "text": "Believe in the importance of art.",
      "key": "+"
@@ -8947,7 +9499,13 @@
     {
      "text": "Do not like concerts.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Education",
+   "alpha": 0.79,
+   "items": [
     {
      "text": "Read quickly.",
      "key": "+"
@@ -8975,7 +9533,13 @@
     {
      "text": "Read slowly.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Math Ability",
+   "alpha": 0.44,
+   "items": [
     {
      "text": "Enjoy games of strategy.",
      "key": "+"
@@ -8999,7 +9563,13 @@
     {
      "text": "Inquire about others' well-being.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Good Memory",
+   "alpha": 0.8,
+   "items": [
     {
      "text": "Have a rich vocabulary.",
      "key": "+"
@@ -9019,7 +9589,13 @@
     {
      "text": "Have a poor vocabulary.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Reading",
+   "alpha": 0.8,
+   "items": [
     {
      "text": "Like to read.",
      "key": "+"
@@ -9043,7 +9619,13 @@
     {
      "text": "Avoid difficult reading material.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Self Focus",
+   "alpha": 0.78,
+   "items": [
     {
      "text": "Look for hidden meanings in things.",
      "key": "+"
@@ -9067,7 +9649,13 @@
     {
      "text": "Rarely look for a deeper meaning in things.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Impression Management",
+   "alpha": 0.68,
+   "items": [
     {
      "text": "Spend time thinking about past mistakes.",
      "key": "+"
@@ -9091,7 +9679,13 @@
     {
      "text": "Often express doubts.",
      "key": "+"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Appearance",
+   "alpha": 0.68,
+   "items": [
     {
      "text": "Believe appearances are important.",
      "key": "+"
@@ -9160,7 +9754,7 @@
   },
   {
    "name": "BREADTH",
-   "alpha": null,
+   "alpha": 0.79,
    "items": [
     {
      "text": "Love to read challenging material.",
@@ -9206,7 +9800,7 @@
   },
   {
    "name": "INGENUITY",
-   "alpha": null,
+   "alpha": 0.84,
    "items": [
     {
      "text": "Love to think up new ways of doing things.",
@@ -9251,8 +9845,8 @@
    ]
   },
   {
-   "name": "Tolerance",
-   "alpha": null,
+   "name": "TOLERANCE",
+   "alpha": 0.73,
    "items": [
     {
      "text": "Am open to change.",
@@ -9294,7 +9888,7 @@
   },
   {
    "name": "EMPATHY",
-   "alpha": null,
+   "alpha": 0.8,
    "items": [
     {
      "text": "Feel others' emotions.",
@@ -9340,7 +9934,7 @@
   },
   {
    "name": "ANXIETY",
-   "alpha": null,
+   "alpha": 0.87,
    "items": [
     {
      "text": "Get stressed out easily.",
@@ -9385,8 +9979,8 @@
    ]
   },
   {
-   "name": "Cooperativeness",
-   "alpha": null,
+   "name": "CONFORMITY",
+   "alpha": 0.71,
    "items": [
     {
      "text": "Worry about what people think of me.",
@@ -9431,8 +10025,8 @@
    ]
   },
   {
-   "name": "Sociability )",
-   "alpha": null,
+   "name": "SOCIABILITY",
+   "alpha": 0.78,
    "items": [
     {
      "text": "Enjoy bringing people together.",
@@ -9477,8 +10071,8 @@
    ]
   },
   {
-   "name": "Social Confidence )",
-   "alpha": null,
+   "name": "SOCIAL-CONFIDENCE",
+   "alpha": 0.87,
    "items": [
     {
      "text": "Feel comfortable around people.",
@@ -9524,7 +10118,7 @@
   },
   {
    "name": "ACTIVITY-LEVEL",
-   "alpha": null,
+   "alpha": 0.81,
    "items": [
     {
      "text": "Can manage many things at the same time.",
@@ -9570,7 +10164,7 @@
   },
   {
    "name": "MACHIAVELLIANISM",
-   "alpha": null,
+   "alpha": 0.79,
    "items": [
     {
      "text": "Find it easy to manipulate others.",
@@ -9599,8 +10193,8 @@
    ]
   },
   {
-   "name": "Risk Taking )",
-   "alpha": null,
+   "name": "RISK-TAKING",
+   "alpha": 0.78,
    "items": [
     {
      "text": "Enjoy being reckless.",
@@ -9645,8 +10239,8 @@
    ]
   },
   {
-   "name": "Organization )",
-   "alpha": null,
+   "name": "ORGANIZATION",
+   "alpha": 0.79,
    "items": [
     {
      "text": "Get chores done right away.",
@@ -9692,7 +10286,7 @@
   },
   {
    "name": "TRADITIONALISM",
-   "alpha": null,
+   "alpha": 0.87,
    "items": [
     {
      "text": "Believe in one true religion.",
@@ -9738,7 +10332,7 @@
   },
   {
    "name": "RESPONSIBILITY",
-   "alpha": null,
+   "alpha": 0.69,
    "items": [
     {
      "text": "Would never cheat on my taxes.",
@@ -9831,7 +10425,7 @@
    ]
   },
   {
-   "name": "Social Potency )",
+   "name": "POWER-SEEKING",
    "alpha": 0.85,
    "items": [
     {
@@ -9919,7 +10513,7 @@
    ]
   },
   {
-   "name": "Social Closeness )",
+   "name": "FRIENDLINESS",
    "alpha": 0.85,
    "items": [
     {
@@ -10011,7 +10605,7 @@
    ]
   },
   {
-   "name": "Aggression )",
+   "name": "BELLIGERENCE",
    "alpha": 0.77,
    "items": [
     {
@@ -10103,7 +10697,7 @@
    ]
   },
   {
-   "name": "Control )",
+   "name": "PLANFULNESS",
    "alpha": 0.78,
    "items": [
     {
@@ -10149,7 +10743,7 @@
    ]
   },
   {
-   "name": "Harmavoidance )",
+   "name": "RISK-AVOIDANCE",
    "alpha": 0.8,
    "items": [
     {
@@ -10195,7 +10789,7 @@
    ]
   },
   {
-   "name": "Traditionalism )",
+   "name": "CONSERVATISM",
    "alpha": 0.83,
    "items": [
     {
@@ -10241,7 +10835,7 @@
    ]
   },
   {
-   "name": "Absorption )",
+   "name": "IMAGINATION",
    "alpha": 0.78,
    "items": [
     {
@@ -11735,6 +12329,138 @@
    ]
   },
   {
+   "name": "NEUROTICISM",
+   "alpha": 0.86,
+   "items": [
+    {
+     "text": "Often feel blue.",
+     "key": "+"
+    },
+    {
+     "text": "Dislike myself.",
+     "key": "+"
+    },
+    {
+     "text": "Am often down in the dumps.",
+     "key": "+"
+    },
+    {
+     "text": "Have frequent mood swings.",
+     "key": "+"
+    },
+    {
+     "text": "Panic easily.",
+     "key": "+"
+    },
+    {
+     "text": "Rarely get irritated.",
+     "key": "-"
+    },
+    {
+     "text": "Seldom feel blue.",
+     "key": "-"
+    },
+    {
+     "text": "Feel comfortable with myself.",
+     "key": "-"
+    },
+    {
+     "text": "Am not easily bothered by things.",
+     "key": "-"
+    },
+    {
+     "text": "Am very pleased with myself.",
+     "key": "-"
+    }
+   ]
+  },
+  {
+   "name": "NEUROTICISM (20-item)",
+   "alpha": 0.91,
+   "items": [
+    {
+     "text": "Often feel blue.",
+     "key": "+"
+    },
+    {
+     "text": "Dislike myself.",
+     "key": "+"
+    },
+    {
+     "text": "Am often down in the dumps.",
+     "key": "+"
+    },
+    {
+     "text": "Have frequent mood swings.",
+     "key": "+"
+    },
+    {
+     "text": "Panic easily.",
+     "key": "+"
+    },
+    {
+     "text": "Am filled with doubts about things.",
+     "key": "+"
+    },
+    {
+     "text": "Feel threatened easily.",
+     "key": "+"
+    },
+    {
+     "text": "Get stressed out easily.",
+     "key": "+"
+    },
+    {
+     "text": "Fear for the worst.",
+     "key": "+"
+    },
+    {
+     "text": "Worry about things.",
+     "key": "+"
+    },
+    {
+     "text": "Seldom feel blue.",
+     "key": "-"
+    },
+    {
+     "text": "Feel comfortable with myself.",
+     "key": "-"
+    },
+    {
+     "text": "Rarely get irritated.",
+     "key": "-"
+    },
+    {
+     "text": "Am not easily bothered by things.",
+     "key": "-"
+    },
+    {
+     "text": "Am very pleased with myself.",
+     "key": "-"
+    },
+    {
+     "text": "Am relaxed most of the time.",
+     "key": "-"
+    },
+    {
+     "text": "Seldom get mad.",
+     "key": "-"
+    },
+    {
+     "text": "Am not easily frustrated.",
+     "key": "-"
+    },
+    {
+     "text": "Remain calm under pressure.",
+     "key": "-"
+    },
+    {
+     "text": "Rarely lose my composure.",
+     "key": "-"
+    }
+   ]
+  },
+  {
    "name": "EXTRAVERSION",
    "alpha": 0.86,
    "items": [
@@ -11777,7 +12503,13 @@
     {
      "text": "Don't talk a lot.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "EXTRAVERSION (20-item)",
+   "alpha": 0.91,
+   "items": [
     {
      "text": "Feel comfortable around people.",
      "key": "+"
@@ -11903,7 +12635,13 @@
     {
      "text": "Tend to vote for conservative political candidates.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "OPENNESS TO EXPERIENCE (20-item)",
+   "alpha": 0.89,
+   "items": [
     {
      "text": "Believe in the importance of art.",
      "key": "+"
@@ -12029,7 +12767,13 @@
     {
      "text": "Insult people.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "AGREEABLENESS (20-item)",
+   "alpha": 0.85,
+   "items": [
     {
      "text": "Have a good word for everyone.",
      "key": "+"
@@ -12155,7 +12899,13 @@
     {
      "text": "Shirk my duties.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "CONSCIENTIOUSNESS (20-item)",
+   "alpha": 0.9,
+   "items": [
     {
      "text": "Am always prepared.",
      "key": "+"
@@ -12283,7 +13033,13 @@
     {
      "text": "Pay attention to details.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Impression-Management",
+   "alpha": 0.82,
+   "items": [
     {
      "text": "Would never take things that aren't mine.",
      "key": "+"
@@ -12363,7 +13119,13 @@
     {
      "text": "Am likely to show off if I get the chance.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Self-Deception",
+   "alpha": 0.8,
+   "items": [
     {
      "text": "Always know why I do things.",
      "key": "+"
@@ -12403,7 +13165,13 @@
     {
      "text": "Have a low opinion of myself.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Locus of Control: Internality",
+   "alpha": 0.71,
+   "items": [
     {
      "text": "Believe that my success depends on ability rather than luck.",
      "key": "+"
@@ -12439,7 +13207,13 @@
     {
      "text": "Feel that my life lacks direction.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Locus of Control: Powerful Others",
+   "alpha": 0.81,
+   "items": [
     {
      "text": "Believe that the world is controlled by a few powerful people.",
      "key": "+"
@@ -12475,7 +13249,13 @@
     {
      "text": "Know how to enjoy myself.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Locus of Control: Chance",
+   "alpha": 0.72,
+   "items": [
     {
      "text": "Believe that unfortunate events occur because of bad luck.",
      "key": "+"
@@ -12515,7 +13295,13 @@
     {
      "text": "Come up with good solutions.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Locus of Control: Total",
+   "alpha": 0.86,
+   "items": [
     {
      "text": "Feel comfortable with myself.",
      "key": "+"
@@ -12591,7 +13377,13 @@
     {
      "text": "Feel that I'm unable to deal with things.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Scale",
+   "alpha": 0.61,
+   "items": [
     {
      "text": "Believe that my success depends on ability rather than luck.",
      "key": "+"
@@ -12611,7 +13403,13 @@
     {
      "text": "Believe in the power of fate.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Need for Cognition",
+   "alpha": 0.84,
+   "items": [
     {
      "text": "Like to solve complex problems.",
      "key": "+"
@@ -12651,7 +13449,13 @@
     {
      "text": "Avoid philosophical discussions.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Need for Order and Cleanliness",
+   "alpha": 0.81,
+   "items": [
     {
      "text": "Want everything to be \"just right.\"",
      "key": "+"
@@ -12691,7 +13495,13 @@
     {
      "text": "Leave my belongings around.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Perfectionism and Intrusive Thoughts",
+   "alpha": 0.82,
+   "items": [
     {
      "text": "Question my ability to do my work properly.",
      "key": "+"
@@ -12731,7 +13541,13 @@
     {
      "text": "Complete tasks successfully.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Optimism",
+   "alpha": 0.86,
+   "items": [
     {
      "text": "Just know that I will be a success.",
      "key": "+"
@@ -12767,7 +13583,13 @@
     {
      "text": "Am often in a bad mood.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Private Self-Consciousness",
+   "alpha": 0.81,
+   "items": [
     {
      "text": "Am constantly reflecting about myself.",
      "key": "+"
@@ -12807,7 +13629,13 @@
     {
      "text": "Seldom get lost in thought.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Public Self-Consciousness",
+   "alpha": 0.77,
+   "items": [
     {
      "text": "Worry about what people think of me.",
      "key": "+"
@@ -12855,7 +13683,13 @@
     {
      "text": "Don't worry about things that have already happened.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Self-Esteem",
+   "alpha": 0.84,
+   "items": [
     {
      "text": "Feel comfortable with myself.",
      "key": "+"
@@ -12895,7 +13729,13 @@
     {
      "text": "Feel that I'm unable to deal with things.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Self-Monitoring",
+   "alpha": 0.82,
+   "items": [
     {
      "text": "Would make a good actor.",
      "key": "+"
@@ -12935,7 +13775,13 @@
     {
      "text": "Don't like to draw attention to myself.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "ADHD",
+   "alpha": 0.78,
+   "items": [
     {
      "text": "Forget things.",
      "key": "+"
@@ -12983,7 +13829,13 @@
     {
      "text": "Make careless mistakes.",
      "key": "+"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Depression",
+   "alpha": 0.93,
+   "items": [
     {
      "text": "Was bothered by things that usually don't bother me.",
      "key": "+"
@@ -13071,7 +13923,13 @@
     {
      "text": "Enjoyed life.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Dissociation: Full Scale",
+   "alpha": 0.9,
+   "items": [
     {
      "text": "Drove or rode somewhere without remembering later what happened�during all or part of the trip.",
      "key": "+"
@@ -13195,7 +14053,13 @@
     {
      "text": "Felt that I could not move my hands or feet.",
      "key": "+"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Dissociation: Short Version",
+   "alpha": 0.89,
+   "items": [
     {
      "text": "Had the experience of feeling as though I was standing next to�myself, or watching myself as if I was looking at a different�person.",
      "key": "+"
@@ -13263,7 +14127,13 @@
     {
      "text": "Felt like I was disconnected from my body.",
      "key": "+"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Dissociation: Depersonalization",
+   "alpha": 0.88,
+   "items": [
     {
      "text": "Had the experience of feeling as though I was standing next to�myself, or watching myself as if I was looking at a different�person.",
      "key": "+"
@@ -13295,7 +14165,13 @@
     {
      "text": "Felt like I was disconnected from my body.",
      "key": "+"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Dissociation: Absorption",
+   "alpha": 0.75,
+   "items": [
     {
      "text": "Had the experience of remembering a past event so vividly that it�felt like I was reliving that event.",
      "key": "+"
@@ -13327,7 +14203,13 @@
     {
      "text": "Found that I could not remember whether I had done something or�had just thought about doing that thing.",
      "key": "+"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Dissociation: Amnesia",
+   "alpha": 0.69,
+   "items": [
     {
      "text": "Found new things among my belongings that I didn't remember�buying.",
      "key": "+"
@@ -13347,7 +14229,13 @@
     {
      "text": "Found writings, drawings, or notes among my belongings that I must have done but cannot remember doing.",
      "key": "+"
-    },
+    }
+   ]
+  },
+  {
+   "name": "?newSingleConstructsKey-24",
+   "alpha": null,
+   "items": [
     {
      "text": "Can play many roles convincingly.",
      "key": "+"
@@ -13395,7 +14283,13 @@
     {
      "text": "Like to be thought of as a normal kind of person.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Hypomanic",
+   "alpha": 0.77,
+   "items": [
     {
      "text": "Get into moods where I feel very speeded up and irritable.",
      "key": "+"
@@ -13443,7 +14337,13 @@
     {
      "text": "Can slow myself down when I want to.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Obsessive-Compulsive Symptoms",
+   "alpha": 0.87,
+   "items": [
     {
      "text": "Repeatedly check doors, windows, and drawers.",
      "key": "+"
@@ -13487,7 +14387,13 @@
     {
      "text": "Check on things more often than necessary.",
      "key": "+"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Physical Attractiveness",
+   "alpha": 0.87,
+   "items": [
     {
      "text": "Am considered attractive by others.",
      "key": "+"
@@ -13523,7 +14429,13 @@
     {
      "text": "Dislike looking at my body.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "?newSingleConstructsKey-28",
+   "alpha": null,
+   "items": [
     {
      "text": "Love dangerous situations.",
      "key": "+"
@@ -13563,7 +14475,13 @@
     {
      "text": "Would never go hang gliding or bungee jumping.",
      "key": "-"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Sensation-Seeking",
+   "alpha": 0.84,
+   "items": [
     {
      "text": "Do crazy things.",
      "key": "+"
@@ -13603,7 +14521,13 @@
     {
      "text": "Take risks.",
      "key": "+"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Sensation-Seeking",
+   "alpha": 0.78,
+   "items": [
     {
      "text": "Face danger confidently.",
      "key": "+"
@@ -14655,7 +15579,13 @@
     {
      "text": "Take time out for others.",
      "key": "+"
-    },
+    }
+   ]
+  },
+  {
+   "name": "TRUST",
+   "alpha": 0.73,
+   "items": [
     {
      "text": "Trust what people say.",
      "key": "+"

@@ -50,9 +50,24 @@ export function slugify(input: string): string {
     .replace(/^-|-$/g, "");
 }
 
-function build(t: Translated, alphaByScale: Map<string, number | null>) {
-  const alpha = alphaByScale.get(t.scale) ?? null;
-  const slug = slugify(t.construct);
+/**
+ * Имя конструкта пишется как определение («агрессивность как черта характера»,
+ * «избегание риска и опасности»), а адрес страницы должен быть коротким и
+ * совпадать с поисковым запросом. Режем определение по первому «и»/«как»:
+ * смысл несут title и description, адресу достаточно ядра.
+ */
+export function slugFromConstruct(construct: string): string {
+  const head = construct.split(/\s+(?:и|как)\s+/)[0];
+  return slugify(head);
+}
+
+/** В названии шкалы «как …» — тоже определение, а не имя. В результатах мешает. */
+export function scaleName(construct: string): string {
+  return construct.split(/\s+как\s+/)[0];
+}
+
+function build(t: Translated, alpha: number | null) {
+  const slug = slugFromConstruct(t.construct);
 
   return {
     slug,
@@ -70,8 +85,12 @@ function build(t: Translated, alphaByScale: Map<string, number | null>) {
       rightsNote:
         "Пункты IPIP находятся в общественном достоянии с 1999 года, коммерческое использование разрешено явно. Перевод — собственная работа проекта.",
       reliability: alpha
-        ? `У англоязычного оригинала внутренняя согласованность α ≈ ${alpha.toFixed(2)} (данные IPIP). Русский перевод независимой психометрической проверки не проходил, поэтому относитесь к результату как к ориентиру, а не к измерению.`
-        : "Русский перевод независимой психометрической проверки не проходил — относитесь к результату как к ориентиру.",
+        ? `У англоязычного оригинала внутренняя согласованность α ≈ ${alpha.toFixed(2)} (данные IPIP)${
+            alpha < 0.7
+              ? " — это ниже привычного порога 0,70, то есть пункты шкалы согласуются между собой слабо и результат стоит читать как повод подумать, а не как замер"
+              : ""
+          }. Русский перевод независимой психометрической проверки не проходил, поэтому относитесь к результату как к ориентиру, а не к измерению.`
+        : "Ни коэффициент надёжности англоязычного оригинала, ни проверка русского перевода не опубликованы — относитесь к результату как к поводу подумать, а не к измерению.",
       limitations:
         "Шкала измеряет одну черту и описывает привычный способ вести себя, а не способности и не потолок возможностей. Результат зависит от состояния в момент прохождения, а нормы российской выборки не собраны: вы видите процент от максимума шкалы, а не сравнение с другими людьми.",
     },
@@ -81,7 +100,7 @@ function build(t: Translated, alphaByScale: Map<string, number | null>) {
     scales: [
       {
         id: "total",
-        name: t.construct,
+        name: scaleName(t.construct),
         high: t.high,
         low: t.low,
         bands: t.bands,
@@ -105,8 +124,31 @@ function main() {
     string,
     { name: string; alpha: number | null; items: unknown[] }[]
   >;
-  const alphaByScale = new Map<string, number | null>();
-  for (const scales of Object.values(source)) for (const s of scales) alphaByScale.set(s.name, s.alpha);
+  // Имена шкал не уникальны между страницами IPIP: ANXIETY есть и в NEO, и в 16PF,
+  // PLANFULNESS — и в CPI, и в MPQ. Раньше выигрывала последняя разобранная страница,
+  // и в паспорт методики попадала альфа чужой шкалы. Поэтому ключ — «страница/имя»,
+  // а неоднозначное имя методика не получает вовсе.
+  const byQualified = new Map<string, { alpha: number | null; items: number }>();
+  const byName = new Map<string, string[]>();
+  for (const [page, scales] of Object.entries(source)) {
+    for (const s of scales) {
+      const key = `${page}/${s.name}`;
+      byQualified.set(key, { alpha: s.alpha, items: s.items.length });
+      byName.set(s.name, [...(byName.get(s.name) ?? []), key]);
+    }
+  }
+
+  /** Шкала-источник: либо «страница/имя», либо имя, если оно во всём пуле одно. */
+  function resolve(scale: string): { key: string; alpha: number | null; items: number } | string {
+    if (scale.includes("/")) {
+      const hit = byQualified.get(scale);
+      return hit ? { key: scale, ...hit } : `шкала ${scale} не найдена в пуле IPIP`;
+    }
+    const keys = byName.get(scale) ?? [];
+    if (keys.length === 1) return { key: keys[0], ...byQualified.get(keys[0])! };
+    if (!keys.length) return `шкала ${scale} не найдена в пуле IPIP`;
+    return `имя ${scale} встречается на нескольких страницах (${keys.join(", ")}) — укажите «страница/имя»`;
+  }
 
   const registry: string[] = [];
   const seen = new Set(
@@ -127,7 +169,21 @@ function main() {
         continue;
       }
 
-      const test = build(t, alphaByScale);
+      const resolved = resolve(t.scale);
+      if (typeof resolved === "string") {
+        console.error(`✗ ${t.scale}: ${resolved}`);
+        continue;
+      }
+      // Число пунктов — отпечаток шкалы. Расхождение значит, что перевод сделан
+      // с другой шкалы, и паспорт припишет ему чужую надёжность.
+      if (resolved.items !== t.items.length) {
+        console.error(
+          `✗ ${t.scale}: в источнике ${resolved.items} пунктов, в переводе ${t.items.length} — перевод не от этой шкалы`
+        );
+        continue;
+      }
+
+      const test = build(t, resolved.alpha);
       const parsed = testSchema.safeParse(test);
       if (!parsed.success) {
         console.error(`✗ ${t.scale}: ${parsed.error.issues[0]?.path.join(".")} — ${parsed.error.issues[0]?.message}`);
@@ -144,7 +200,7 @@ function main() {
         [
           `${test.slug}:`,
           `  basis: public_domain`,
-          `  source: IPIP (International Personality Item Pool), шкала ${t.scale}`,
+          `  source: IPIP (International Personality Item Pool), шкала ${resolved.key}`,
           `  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно`,
           `  translation: собственный перевод проекта`,
           `  commercial: allowed`,
