@@ -8,6 +8,7 @@ import { decodeAnswers, score } from "@/lib/engine/score";
 import { CRISIS_CONTACTS, CTA_COPY, SITE, platformLink } from "@/lib/site";
 import RelatedTests from "./RelatedTests";
 import { track } from "@/lib/analytics";
+import { addToHistory, formatSince, getPrevious } from "@/lib/history";
 
 /**
  * Результат считается в браузере из токена в адресе: ответы никогда не уходят
@@ -20,11 +21,24 @@ export default function ResultView({ test, related = [] }: { test: Test; related
   const answers = token ? decodeAnswers(test, token) : null;
   const result = answers ? score(test, answers) : null;
 
+  const [previous, setPrevious] = useState<{ scales: typeof result extends null ? never : ReturnType<typeof score>["scales"]; since: string } | null>(null);
+
   useEffect(() => {
-    if (!result) return;
+    if (!result || !token) return;
     track({ name: "result_view", test: test.slug });
     if (result.crisis) track({ name: "crisis_shown", test: test.slug });
-  }, [result, test.slug]);
+
+    // Динамика: находим прошлый замер этой же методики и пересчитываем его
+    // из сохранённого токена — сравнение появляется без единого запроса.
+    const prev = getPrevious(test.slug, token);
+    if (prev) {
+      const prevAnswers = decodeAnswers(test, prev.token);
+      if (prevAnswers) {
+        setPrevious({ scales: score(test, prevAnswers).scales, since: formatSince(prev.at, Date.now()) });
+      }
+    }
+    addToHistory(test.slug, token, Date.now());
+  }, [result, test, token]);
 
   if (!answers || !result) {
     return (
@@ -71,6 +85,15 @@ export default function ResultView({ test, related = [] }: { test: Test; related
 
       <p className="muted small">Методика: {test.passport.origin}</p>
 
+      {previous && (
+        <div className="note">
+          <p style={{ margin: 0 }}>
+            Вы проходили этот тест {previous.since}. Изменения показаны рядом с каждой шкалой в процентных
+            пунктах. Помните, что часть разницы — обычные колебания состояния, а не устойчивый сдвиг.
+          </p>
+        </div>
+      )}
+
       <section style={{ marginTop: 24 }}>
         {result.scales.map((scale) => (
           <div className="scale" key={scale.id}>
@@ -78,6 +101,19 @@ export default function ResultView({ test, related = [] }: { test: Test; related
               <span className="name">{scale.name}</span>
               <span className="band">
                 {scale.band.label} · {scale.percent}%
+                {(() => {
+                  const before = previous?.scales.find((s) => s.id === scale.id);
+                  if (!before) return null;
+                  const delta = scale.percent - before.percent;
+                  if (delta === 0) return <span className="delta"> · без изменений</span>;
+                  return (
+                    <span className="delta">
+                      {" "}
+                      · {delta > 0 ? "+" : "−"}
+                      {Math.abs(delta)} п. п.
+                    </span>
+                  );
+                })()}
               </span>
             </div>
             <div className="track">

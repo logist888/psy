@@ -112,3 +112,4 @@ ul.clean li { margin-bottom: 8px; }
 .consent p { margin: 0 0 10px; }
 .consent .actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 0; }
 .consent .btn { padding: 10px 18px; font-size: 15px; }
+.scale .delta { color: var(--accent); font-weight: 500; }
