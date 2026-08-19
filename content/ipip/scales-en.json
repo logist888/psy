@@ -7795,7 +7795,7 @@
      "key": "-"
     },
     {
-     "text": "The IPIP�HEXACO scales: An alternative, public-domain measure of the personality constructs in the HEXACO model.",
+     "text": "The IPIP–HEXACO scales: An alternative, public-domain measure of the personality constructs in the HEXACO model.",
      "key": "-"
     },
     {
@@ -7815,7 +7815,7 @@
      "key": "-"
     },
     {
-     "text": "Multivariate Behavioral Research , , 329�358.",
+     "text": "Multivariate Behavioral Research , , 329–358.",
      "key": "-"
     }
    ]
@@ -9701,6 +9701,184 @@
     {
      "text": "Pay no attention to my appearance.",
      "key": "-"
+    }
+   ]
+  }
+ ],
+ "IPIP-IPCScoring": [
+  {
+   "name": "PA (Assured-Dominant)",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Demand to be the center of interest",
+     "key": "+"
+    },
+    {
+     "text": "Do most of the talking",
+     "key": "+"
+    },
+    {
+     "text": "Speak loudly",
+     "key": "+"
+    },
+    {
+     "text": "Demand attention",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "BC (Arrogant-Calculating)",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Cut others to pieces",
+     "key": "+"
+    },
+    {
+     "text": "Contradict others",
+     "key": "+"
+    },
+    {
+     "text": "Snap at people",
+     "key": "+"
+    },
+    {
+     "text": "Have a sharp tongue",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "DE (Cold-Hearted)",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Believe people should fend for themselves",
+     "key": "+"
+    },
+    {
+     "text": "Don't fall for sob-stories",
+     "key": "+"
+    },
+    {
+     "text": "Don't put a lot of thought into things",
+     "key": "+"
+    },
+    {
+     "text": "Am not interested in other people's problems",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "FG (Aloof-Introverted)",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Am quiet around strangers",
+     "key": "+"
+    },
+    {
+     "text": "Am a very private person",
+     "key": "+"
+    },
+    {
+     "text": "Don't talk a lot",
+     "key": "+"
+    },
+    {
+     "text": "Have little to say",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Unassured-Submissive)",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Speak softly",
+     "key": "+"
+    },
+    {
+     "text": "Let others finish what they are saying",
+     "key": "+"
+    },
+    {
+     "text": "Seldom toot my own horn",
+     "key": "+"
+    },
+    {
+     "text": "Dislike being the center of attention",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "(Unassuming-Ingenuous)",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Tolerate a lot from others",
+     "key": "+"
+    },
+    {
+     "text": "Take things as they come",
+     "key": "+"
+    },
+    {
+     "text": "Think of others first",
+     "key": "+"
+    },
+    {
+     "text": "Seldom stretch the truth",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "(Warm-Agreeable)",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Am interested in people",
+     "key": "+"
+    },
+    {
+     "text": "Reassure others",
+     "key": "+"
+    },
+    {
+     "text": "Inquire about others' well-being",
+     "key": "+"
+    },
+    {
+     "text": "Get along well with others",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "(Gregarious-Extraverted)",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Feel comfortable around people",
+     "key": "+"
+    },
+    {
+     "text": "Start conversations",
+     "key": "+"
+    },
+    {
+     "text": "Talk to a lot of different people at parties",
+     "key": "+"
+    },
+    {
+     "text": "Love large parties",
+     "key": "+"
     }
    ]
   }
@@ -12989,6 +13167,1424 @@
    ]
   }
  ],
+ "ORAIS": [
+  {
+   "name": "Being Alone",
+   "alpha": 0.73,
+   "items": [
+    {
+     "text": "Ate dinner alone.",
+     "key": "+"
+    },
+    {
+     "text": "Went to the movies alone.",
+     "key": "+"
+    },
+    {
+     "text": "Went to a concert or theater alone.",
+     "key": "+"
+    },
+    {
+     "text": "Chose to spend a day by myself.",
+     "key": "+"
+    },
+    {
+     "text": "Went on a trip by myself.",
+     "key": "+"
+    },
+    {
+     "text": "Spent an entire vacation by myself.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Child-Related",
+   "alpha": 0.86,
+   "items": [
+    {
+     "text": "Played with a child.",
+     "key": "+"
+    },
+    {
+     "text": "Let a child win a game.",
+     "key": "+"
+    },
+    {
+     "text": "Took a child on an outing.",
+     "key": "+"
+    },
+    {
+     "text": "Served as a baby sitter.",
+     "key": "+"
+    },
+    {
+     "text": "Read a story to a child.",
+     "key": "+"
+    },
+    {
+     "text": "Read the comics to a child.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Collecting",
+   "alpha": 0.84,
+   "items": [
+    {
+     "text": "Worked on my collection.",
+     "key": "+"
+    },
+    {
+     "text": "Bought something for my collection.",
+     "key": "+"
+    },
+    {
+     "text": "Traded something in my collection.",
+     "key": "+"
+    },
+    {
+     "text": "Read a book about the things that I collect.",
+     "key": "+"
+    },
+    {
+     "text": "Bought a book about the things that I collect.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Computing",
+   "alpha": 0.89,
+   "items": [
+    {
+     "text": "Used a computer.",
+     "key": "+"
+    },
+    {
+     "text": "Sent a message by electronic mail (e-mail).",
+     "key": "+"
+    },
+    {
+     "text": "Surfed the Internet.",
+     "key": "+"
+    },
+    {
+     "text": "Read news on the Internet.",
+     "key": "+"
+    },
+    {
+     "text": "Played a computer game.",
+     "key": "+"
+    },
+    {
+     "text": "Looked up information on the Internet.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Creativity",
+   "alpha": 0.69,
+   "items": [
+    {
+     "text": "Tried something completely new.",
+     "key": "+"
+    },
+    {
+     "text": "Produced a work of art.",
+     "key": "+"
+    },
+    {
+     "text": "Wrote poetry.",
+     "key": "+"
+    },
+    {
+     "text": "Acted in a play.",
+     "key": "+"
+    },
+    {
+     "text": "Painted a picture.",
+     "key": "+"
+    },
+    {
+     "text": "Played a musical instrument.",
+     "key": "+"
+    },
+    {
+     "text": "Sang or played an instrument in public.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Culture",
+   "alpha": 0.82,
+   "items": [
+    {
+     "text": "Attended a public lecture.",
+     "key": "+"
+    },
+    {
+     "text": "Visited an art exhibition.",
+     "key": "+"
+    },
+    {
+     "text": "Visited a museum.",
+     "key": "+"
+    },
+    {
+     "text": "Attended a ballet performance.",
+     "key": "+"
+    },
+    {
+     "text": "Attended an opera or a concert.",
+     "key": "+"
+    },
+    {
+     "text": "Attended a stage play or musical.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Drinking",
+   "alpha": 0.84,
+   "items": [
+    {
+     "text": "Drank beer or wine.",
+     "key": "+"
+    },
+    {
+     "text": "Drank whiskey, vodka, gin, or other hard liquor.",
+     "key": "+"
+    },
+    {
+     "text": "Drank in a bar or night club.",
+     "key": "+"
+    },
+    {
+     "text": "Became intoxicated.",
+     "key": "+"
+    },
+    {
+     "text": "Had a hangover.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Exercise",
+   "alpha": 0.85,
+   "items": [
+    {
+     "text": "Went running or jogging.",
+     "key": "+"
+    },
+    {
+     "text": "Lifted weights.",
+     "key": "+"
+    },
+    {
+     "text": "Used an exercise machine.",
+     "key": "+"
+    },
+    {
+     "text": "Exercised for 40 minutes or longer.",
+     "key": "+"
+    },
+    {
+     "text": "Did aerobic exercise.",
+     "key": "+"
+    },
+    {
+     "text": "Did yoga or other movement exercises.",
+     "key": "+"
+    },
+    {
+     "text": "Participated in an exercise program.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Fashion",
+   "alpha": 0.76,
+   "items": [
+    {
+     "text": "Spent more than 10 minutes thinking about what to wear.",
+     "key": "+"
+    },
+    {
+     "text": "Spent more than an hour thinking about what to wear.",
+     "key": "+"
+    },
+    {
+     "text": "Read a fashion-related magazine.",
+     "key": "+"
+    },
+    {
+     "text": "Read a fashion-related book.",
+     "key": "+"
+    },
+    {
+     "text": "Bought a fashionable item of clothing.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Financial",
+   "alpha": 0.75,
+   "items": [
+    {
+     "text": "Obtained stock market prices.",
+     "key": "+"
+    },
+    {
+     "text": "Read a book on a financial topic.",
+     "key": "+"
+    },
+    {
+     "text": "Bought or sold stocks or bonds.",
+     "key": "+"
+    },
+    {
+     "text": "Bought or sold real estate.",
+     "key": "+"
+    },
+    {
+     "text": "Purchased a commodity as an investment.",
+     "key": "+"
+    },
+    {
+     "text": "Worked on a retirement plan.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Food-Related",
+   "alpha": 0.64,
+   "items": [
+    {
+     "text": "Chewed gum.",
+     "key": "+"
+    },
+    {
+     "text": "Ate candy.",
+     "key": "+"
+    },
+    {
+     "text": "Ate in a restaurant.",
+     "key": "+"
+    },
+    {
+     "text": "Ordered food to be delivered.",
+     "key": "+"
+    },
+    {
+     "text": "Ate food while walking or working.",
+     "key": "+"
+    },
+    {
+     "text": "Ate too much.",
+     "key": "+"
+    },
+    {
+     "text": "Ate or drank while driving.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Gambling",
+   "alpha": 0.79,
+   "items": [
+    {
+     "text": "Played bingo for money.",
+     "key": "+"
+    },
+    {
+     "text": "Gambled with cards or dice.",
+     "key": "+"
+    },
+    {
+     "text": "Purchased a scratch ticket.",
+     "key": "+"
+    },
+    {
+     "text": "Gambled on a slot machine or video poker game.",
+     "key": "+"
+    },
+    {
+     "text": "Went to a casino.",
+     "key": "+"
+    },
+    {
+     "text": "Bet money on a sports event.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Game-Playing",
+   "alpha": 0.65,
+   "items": [
+    {
+     "text": "Worked on a jigsaw puzzle.",
+     "key": "+"
+    },
+    {
+     "text": "Played cards.",
+     "key": "+"
+    },
+    {
+     "text": "Played a board game.",
+     "key": "+"
+    },
+    {
+     "text": "Played chess or checkers.",
+     "key": "+"
+    },
+    {
+     "text": "Learned a new board or card game.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Gardening",
+   "alpha": 0.85,
+   "items": [
+    {
+     "text": "Cared for a potted plant.",
+     "key": "+"
+    },
+    {
+     "text": "Gardened.",
+     "key": "+"
+    },
+    {
+     "text": "Did yard work.",
+     "key": "+"
+    },
+    {
+     "text": "Planted or transplanted a plant.",
+     "key": "+"
+    },
+    {
+     "text": "Bought or picked flowers.",
+     "key": "+"
+    },
+    {
+     "text": "Bought plants for a garden or yard.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Green Activities",
+   "alpha": 0.52,
+   "items": [
+    {
+     "text": "Used public transportation.",
+     "key": "+"
+    },
+    {
+     "text": "Composted food scraps or yard waste.",
+     "key": "+"
+    },
+    {
+     "text": "Walked or rode a bicycle to work.",
+     "key": "+"
+    },
+    {
+     "text": "Changed a habit to have less impact on the environment.",
+     "key": "+"
+    },
+    {
+     "text": "Used both sides of a piece of paper before discarding it.",
+     "key": "+"
+    },
+    {
+     "text": "Picked up litter.",
+     "key": "+"
+    },
+    {
+     "text": "Recycled one or more items.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Housekeeping",
+   "alpha": 0.75,
+   "items": [
+    {
+     "text": "Washed dishes.",
+     "key": "+"
+    },
+    {
+     "text": "Made a bed.",
+     "key": "+"
+    },
+    {
+     "text": "Cleaned the house.",
+     "key": "+"
+    },
+    {
+     "text": "Ironed linens or clothes.",
+     "key": "+"
+    },
+    {
+     "text": "Cooked a meal.",
+     "key": "+"
+    },
+    {
+     "text": "Baked a cake, pie, cookies, or bread.",
+     "key": "+"
+    },
+    {
+     "text": "Knitted, quilted, sewed, or crocheted.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Music",
+   "alpha": 0.77,
+   "items": [
+    {
+     "text": "Listened to music on the radio.",
+     "key": "+"
+    },
+    {
+     "text": "Listened to music while working.",
+     "key": "+"
+    },
+    {
+     "text": "Downloaded music from the Internet.",
+     "key": "+"
+    },
+    {
+     "text": "Traded music with a friend.",
+     "key": "+"
+    },
+    {
+     "text": "Purchased a musical album.",
+     "key": "+"
+    },
+    {
+     "text": "Shopped in a music store.",
+     "key": "+"
+    },
+    {
+     "text": "Read music-related news.",
+     "key": "+"
+    },
+    {
+     "text": "Used an mp3 player or",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Partying",
+   "alpha": 0.82,
+   "items": [
+    {
+     "text": "Had someone over for dinner.",
+     "key": "+"
+    },
+    {
+     "text": "Went to a small party.",
+     "key": "+"
+    },
+    {
+     "text": "Went to a large party.",
+     "key": "+"
+    },
+    {
+     "text": "Planned a party.",
+     "key": "+"
+    },
+    {
+     "text": "Entertained six or more people.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Pets",
+   "alpha": 0.84,
+   "items": [
+    {
+     "text": "Played with a pet animal.",
+     "key": "+"
+    },
+    {
+     "text": "Fed a pet animal.",
+     "key": "+"
+    },
+    {
+     "text": "Cared for a pet animal.",
+     "key": "+"
+    },
+    {
+     "text": "Bathed or groomed a pet animal.",
+     "key": "+"
+    },
+    {
+     "text": "Purchased a pet animal.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Political/Organizational",
+   "alpha": 0.7,
+   "items": [
+    {
+     "text": "Signed a petition.",
+     "key": "+"
+    },
+    {
+     "text": "Attended a rally or demonstration.",
+     "key": "+"
+    },
+    {
+     "text": "Donated money to charity.",
+     "key": "+"
+    },
+    {
+     "text": "Donated money to a political campaign or cause.",
+     "key": "+"
+    },
+    {
+     "text": "Volunteered for a club or organization.",
+     "key": "+"
+    },
+    {
+     "text": "Attended a town meeting.",
+     "key": "+"
+    },
+    {
+     "text": "Wrote a letter to a newspaper or politician.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Reading",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Read a book.",
+     "key": "+"
+    },
+    {
+     "text": "Bought a book.",
+     "key": "+"
+    },
+    {
+     "text": "Read in bed before going to sleep.",
+     "key": "+"
+    },
+    {
+     "text": "Read an entire book in one sitting.",
+     "key": "+"
+    },
+    {
+     "text": "Visited a public library.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Religious/Spiritual Practices",
+   "alpha": 0.89,
+   "items": [
+    {
+     "text": "Discussed religion or spirituality.",
+     "key": "+"
+    },
+    {
+     "text": "Prayed (not including blessings at meals).",
+     "key": "+"
+    },
+    {
+     "text": "Read the Bible or other sacred text.",
+     "key": "+"
+    },
+    {
+     "text": "Gave a blessing at a meal.",
+     "key": "+"
+    },
+    {
+     "text": "Attended a church or religious service.",
+     "key": "+"
+    },
+    {
+     "text": "Listened to a religious program on the radio or TV.",
+     "key": "+"
+    },
+    {
+     "text": "Read a book about religion or spirituality.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Romance",
+   "alpha": 0.57,
+   "items": [
+    {
+     "text": "Wrote a love letter.",
+     "key": "+"
+    },
+    {
+     "text": "Went on a date.",
+     "key": "+"
+    },
+    {
+     "text": "Went dancing.",
+     "key": "+"
+    },
+    {
+     "text": "Dined by candle light.",
+     "key": "+"
+    },
+    {
+     "text": "Attended a formal dance.",
+     "key": "+"
+    },
+    {
+     "text": "Wore formal clothing.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Self-Improvement",
+   "alpha": 0.66,
+   "items": [
+    {
+     "text": "Read a self-help book.",
+     "key": "+"
+    },
+    {
+     "text": "Bought a self-help book.",
+     "key": "+"
+    },
+    {
+     "text": "Studied some subject.",
+     "key": "+"
+    },
+    {
+     "text": "Learned a new skill.",
+     "key": "+"
+    },
+    {
+     "text": "Enrolled in a course of study.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Shopping",
+   "alpha": 0.66,
+   "items": [
+    {
+     "text": "Spent 10 minutes or more in a non-grocery store.",
+     "key": "+"
+    },
+    {
+     "text": "Spent an hour or more in a non-grocery store.",
+     "key": "+"
+    },
+    {
+     "text": "Bought something other than groceries.",
+     "key": "+"
+    },
+    {
+     "text": "Checked the sales ads in a newspaper.",
+     "key": "+"
+    },
+    {
+     "text": "Read newspaper ads for non-grocery items.",
+     "key": "+"
+    },
+    {
+     "text": "Shopped on the web.",
+     "key": "+"
+    },
+    {
+     "text": "Used eBay to buy or sell something.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Social-Networking",
+   "alpha": 0.69,
+   "items": [
+    {
+     "text": "Used a computer for social networking.",
+     "key": "+"
+    },
+    {
+     "text": "Read someone’s personal web-page.",
+     "key": "+"
+    },
+    {
+     "text": "Made an entry on a personal web-page.",
+     "key": "+"
+    },
+    {
+     "text": "Participated in an online discussion group.",
+     "key": "+"
+    },
+    {
+     "text": "Used instant messaging to chat online.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Sports",
+   "alpha": 0.79,
+   "items": [
+    {
+     "text": "Discussed sports.",
+     "key": "+"
+    },
+    {
+     "text": "Watched a televised sports event.",
+     "key": "+"
+    },
+    {
+     "text": "Attended an athletic event.",
+     "key": "+"
+    },
+    {
+     "text": "Played a team sport.",
+     "key": "+"
+    },
+    {
+     "text": "Played basketball.",
+     "key": "+"
+    },
+    {
+     "text": "Played tennis or golf.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Summer Activities",
+   "alpha": 0.74,
+   "items": [
+    {
+     "text": "Went on a picnic.",
+     "key": "+"
+    },
+    {
+     "text": "Went on a hike.",
+     "key": "+"
+    },
+    {
+     "text": "Walked on a beach.",
+     "key": "+"
+    },
+    {
+     "text": "Went swimming.",
+     "key": "+"
+    },
+    {
+     "text": "Went backpacking or camping.",
+     "key": "+"
+    },
+    {
+     "text": "Went boating or rafting.",
+     "key": "+"
+    },
+    {
+     "text": "Went fishing or hunting.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Travel",
+   "alpha": 0.79,
+   "items": [
+    {
+     "text": "Took a trip.",
+     "key": "+"
+    },
+    {
+     "text": "Went sightseeing.",
+     "key": "+"
+    },
+    {
+     "text": "Took travel photographs.",
+     "key": "+"
+    },
+    {
+     "text": "Stayed in a hotel, motel, or resort.",
+     "key": "+"
+    },
+    {
+     "text": "Traveled by train or plane.",
+     "key": "+"
+    },
+    {
+     "text": "Went on a cruise or tour.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "TV",
+   "alpha": 0.61,
+   "items": [
+    {
+     "text": "Watched television.",
+     "key": "+"
+    },
+    {
+     "text": "Watched television news.",
+     "key": "+"
+    },
+    {
+     "text": "Watched a television soap opera.",
+     "key": "+"
+    },
+    {
+     "text": "Watched a television talk show.",
+     "key": "+"
+    },
+    {
+     "text": "Watched a television reality show.",
+     "key": "+"
+    },
+    {
+     "text": "Recorded a television program.",
+     "key": "+"
+    },
+    {
+     "text": "Watched too much television.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Understanding",
+   "alpha": 0.61,
+   "items": [
+    {
+     "text": "Read a news magazine.",
+     "key": "+"
+    },
+    {
+     "text": "Watched an educational channel on TV.",
+     "key": "+"
+    },
+    {
+     "text": "Looked up a word in a dictionary.",
+     "key": "+"
+    },
+    {
+     "text": "Read the editorial page of a newspaper.",
+     "key": "+"
+    },
+    {
+     "text": "Looked something up in an encyclopedia.",
+     "key": "+"
+    },
+    {
+     "text": "Read poetry.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Vehicles",
+   "alpha": 0.5,
+   "items": [
+    {
+     "text": "Rode a motorcycle.",
+     "key": "+"
+    },
+    {
+     "text": "Read a car magazine or book.",
+     "key": "+"
+    },
+    {
+     "text": "Bought a car, truck or motorcycle.",
+     "key": "+"
+    },
+    {
+     "text": "Raced a car, truck or motorcycle.",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Writing/Remembering",
+   "alpha": 0.69,
+   "items": [
+    {
+     "text": "Made an entry in a diary or journal.",
+     "key": "+"
+    },
+    {
+     "text": "Wrote a postcard.",
+     "key": "+"
+    },
+    {
+     "text": "Wrote a handwritten letter.",
+     "key": "+"
+    },
+    {
+     "text": "Wrote poetry.",
+     "key": "+"
+    },
+    {
+     "text": "Wrote a thank-you note.",
+     "key": "+"
+    },
+    {
+     "text": "Put pictures in a photo album.",
+     "key": "+"
+    },
+    {
+     "text": "Worked on a scrap book.",
+     "key": "+"
+    }
+   ]
+  }
+ ],
+ "ORVIS": [
+  {
+   "name": "Leadership",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Make important things happen",
+     "key": "+"
+    },
+    {
+     "text": "Lead other people",
+     "key": "+"
+    },
+    {
+     "text": "Be a sales or marketing director",
+     "key": "+"
+    },
+    {
+     "text": "Be the chief executive of a large company",
+     "key": "+"
+    },
+    {
+     "text": "Organize a political campaign",
+     "key": "+"
+    },
+    {
+     "text": "Be the master of ceremonies at a meeting",
+     "key": "+"
+    },
+    {
+     "text": "Plan an advertising campaign",
+     "key": "+"
+    },
+    {
+     "text": "Debate topics in a public meeting",
+     "key": "+"
+    },
+    {
+     "text": "Persuade others to change their views",
+     "key": "+"
+    },
+    {
+     "text": "Be a state governor or senator",
+     "key": "+"
+    },
+    {
+     "text": "Run for political office",
+     "key": "+"
+    },
+    {
+     "text": "Make decisions that affect a lot of people",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Organization",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Be the financial officer for a company",
+     "key": "+"
+    },
+    {
+     "text": "Be an office manager",
+     "key": "+"
+    },
+    {
+     "text": "Plan budgets",
+     "key": "+"
+    },
+    {
+     "text": "Prepare financial contracts",
+     "key": "+"
+    },
+    {
+     "text": "Develop an office filing system",
+     "key": "+"
+    },
+    {
+     "text": "Supervise the work of others",
+     "key": "+"
+    },
+    {
+     "text": "Plan investment strategies",
+     "key": "+"
+    },
+    {
+     "text": "Establish time schedules",
+     "key": "+"
+    },
+    {
+     "text": "Monitor business expenses",
+     "key": "+"
+    },
+    {
+     "text": "Be a purchasing agent",
+     "key": "+"
+    },
+    {
+     "text": "Keep track of a company’s inventory",
+     "key": "+"
+    },
+    {
+     "text": "Manage a computer data base",
+     "key": "+"
+    },
+    {
+     "text": "Keep detailed records",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Altruism",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Help others learn new ideas",
+     "key": "+"
+    },
+    {
+     "text": "Care for sick people",
+     "key": "+"
+    },
+    {
+     "text": "Be an elementary-school teacher",
+     "key": "+"
+    },
+    {
+     "text": "Be a social worker",
+     "key": "+"
+    },
+    {
+     "text": "Be a minister, priest, rabbi or other religious teacher",
+     "key": "+"
+    },
+    {
+     "text": "Counsel persons who need help",
+     "key": "+"
+    },
+    {
+     "text": "Instruct parents on child care",
+     "key": "+"
+    },
+    {
+     "text": "Be a doctor or nurse",
+     "key": "+"
+    },
+    {
+     "text": "Be a physical therapist",
+     "key": "+"
+    },
+    {
+     "text": "Provide comfort and support to others",
+     "key": "+"
+    },
+    {
+     "text": "Participate in charity events",
+     "key": "+"
+    },
+    {
+     "text": "Help people make career decisions",
+     "key": "+"
+    },
+    {
+     "text": "Be a counselor or therapist",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Creativity",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Create works of art",
+     "key": "+"
+    },
+    {
+     "text": "Create new fashion designs",
+     "key": "+"
+    },
+    {
+     "text": "Be a professional dancer",
+     "key": "+"
+    },
+    {
+     "text": "Write short stories or novels",
+     "key": "+"
+    },
+    {
+     "text": "Play an instrument in a symphony",
+     "key": "+"
+    },
+    {
+     "text": "Redecorate one’s house",
+     "key": "+"
+    },
+    {
+     "text": "Select art works for a museum",
+     "key": "+"
+    },
+    {
+     "text": "Sing professionally",
+     "key": "+"
+    },
+    {
+     "text": "Be an actor or actress",
+     "key": "+"
+    },
+    {
+     "text": "Be an artist or architect",
+     "key": "+"
+    },
+    {
+     "text": "Act in a play",
+     "key": "+"
+    },
+    {
+     "text": "Design Internet web pages",
+     "key": "+"
+    },
+    {
+     "text": "Write songs",
+     "key": "+"
+    },
+    {
+     "text": "Paint or draw",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Analysis",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Be a chemist",
+     "key": "+"
+    },
+    {
+     "text": "Design a laboratory experiment",
+     "key": "+"
+    },
+    {
+     "text": "Be a mathematician",
+     "key": "+"
+    },
+    {
+     "text": "Explain scientific concepts to others",
+     "key": "+"
+    },
+    {
+     "text": "Be a physicist",
+     "key": "+"
+    },
+    {
+     "text": "Carry out medical research",
+     "key": "+"
+    },
+    {
+     "text": "Be a scientific reporter",
+     "key": "+"
+    },
+    {
+     "text": "Solve complex puzzles",
+     "key": "+"
+    },
+    {
+     "text": "Develop a computer program",
+     "key": "+"
+    },
+    {
+     "text": "Be a statistician",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Production",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Care for cattle or horses",
+     "key": "+"
+    },
+    {
+     "text": "Be a farmer",
+     "key": "+"
+    },
+    {
+     "text": "Construct new buildings",
+     "key": "+"
+    },
+    {
+     "text": "Be a forest ranger",
+     "key": "+"
+    },
+    {
+     "text": "Cultivate plants",
+     "key": "+"
+    },
+    {
+     "text": "Go on nature walks",
+     "key": "+"
+    },
+    {
+     "text": "Do woodworking",
+     "key": "+"
+    },
+    {
+     "text": "Raise flowers",
+     "key": "+"
+    },
+    {
+     "text": "Repair cars or trucks",
+     "key": "+"
+    },
+    {
+     "text": "Work with tools and machinery",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Adventure",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Be a professional athlete",
+     "key": "+"
+    },
+    {
+     "text": "Engage in exciting adventures",
+     "key": "+"
+    },
+    {
+     "text": "Survive in the wilderness",
+     "key": "+"
+    },
+    {
+     "text": "Be a racing car driver",
+     "key": "+"
+    },
+    {
+     "text": "Face physical danger",
+     "key": "+"
+    },
+    {
+     "text": "Be a military officer",
+     "key": "+"
+    },
+    {
+     "text": "Compete in athletic events",
+     "key": "+"
+    },
+    {
+     "text": "Be a bounty hunter",
+     "key": "+"
+    },
+    {
+     "text": "Be a long-distance bicycle rider",
+     "key": "+"
+    },
+    {
+     "text": "Be a police officer",
+     "key": "+"
+    }
+   ]
+  },
+  {
+   "name": "Erudition",
+   "alpha": null,
+   "items": [
+    {
+     "text": "Be a translator or interpreter",
+     "key": "+"
+    },
+    {
+     "text": "Be a librarian",
+     "key": "+"
+    },
+    {
+     "text": "Be a professor of English",
+     "key": "+"
+    },
+    {
+     "text": "Make up word puzzles",
+     "key": "+"
+    },
+    {
+     "text": "Edit a newspaper",
+     "key": "+"
+    },
+    {
+     "text": "Know many languages",
+     "key": "+"
+    },
+    {
+     "text": "Be a foreign correspondent",
+     "key": "+"
+    },
+    {
+     "text": "Speak fluently on any subject",
+     "key": "+"
+    },
+    {
+     "text": "Read many books",
+     "key": "+"
+    },
+    {
+     "text": "Keep a diary or journal",
+     "key": "+"
+    }
+   ]
+  }
+ ],
  "SingleConstructs": [
   {
    "name": "Cognitive Failures",
@@ -13931,11 +15527,11 @@
    "alpha": 0.9,
    "items": [
     {
-     "text": "Drove or rode somewhere without remembering later what happened�during all or part of the trip.",
+     "text": "Drove or rode somewhere without remembering later what happened during all or part of the trip.",
      "key": "+"
     },
     {
-     "text": "Was listening to someone talk and suddenly realized I did not hear�part or all of what was said.",
+     "text": "Was listening to someone talk and suddenly realized I did not hear part or all of what was said.",
      "key": "+"
     },
     {
@@ -13947,35 +15543,35 @@
      "key": "+"
     },
     {
-     "text": "Found new things among my belongings that I didn't remember�buying.",
+     "text": "Found new things among my belongings that I didn't remember buying.",
      "key": "+"
     },
     {
-     "text": "Was approached by someone I didn't know who called me by another�name or who insisted that he or she had met me before.",
+     "text": "Was approached by someone I didn't know who called me by another name or who insisted that he or she had met me before.",
      "key": "+"
     },
     {
-     "text": "Had the experience of feeling as though I was standing next to�myself, or watching myself as if I was looking at a different�person.",
+     "text": "Had the experience of feeling as though I was standing next to myself, or watching myself as if I was looking at a different person.",
      "key": "+"
     },
     {
-     "text": "Was told that I sometimes do not recognize a friend or family�member.",
+     "text": "Was told that I sometimes do not recognize a friend or family member.",
      "key": "+"
     },
     {
-     "text": "Found that I had no memory for some important event in my life�(for example, a wedding or graduation).",
+     "text": "Found that I had no memory for some important event in my life (for example, a wedding or graduation).",
      "key": "+"
     },
     {
-     "text": "Had the experience of being accused of lying when I did not think�I had lied.",
+     "text": "Had the experience of being accused of lying when I did not think I had lied.",
      "key": "+"
     },
     {
-     "text": "Had the experience of looking in a mirror and not recognizing�myself.",
+     "text": "Had the experience of looking in a mirror and not recognizing myself.",
      "key": "+"
     },
     {
-     "text": "Had the experience of feeling that other people, objects, and the�world around me were not real.",
+     "text": "Had the experience of feeling that other people, objects, and the world around me were not real.",
      "key": "+"
     },
     {
@@ -13983,23 +15579,23 @@
      "key": "+"
     },
     {
-     "text": "Had the experience of remembering a past event so vividly that it�felt like I was reliving that event.",
+     "text": "Had the experience of remembering a past event so vividly that it felt like I was reliving that event.",
      "key": "+"
     },
     {
-     "text": "Had the experience of not being sure whether things I remember�happening really did happen, or whether I just dreamed them.",
+     "text": "Had the experience of not being sure whether things I remember happening really did happen, or whether I just dreamed them.",
      "key": "+"
     },
     {
-     "text": "Had the experience of being in a familiar place but finding it�strange and unfamiliar.",
+     "text": "Had the experience of being in a familiar place but finding it strange and unfamiliar.",
      "key": "+"
     },
     {
-     "text": "Found that when I was watching television or a movie I became so�absorbed in the story that I was unaware of other events�happening around me.",
+     "text": "Found that when I was watching television or a movie I became so absorbed in the story that I was unaware of other events happening around me.",
      "key": "+"
     },
     {
-     "text": "Found that I became so involved in a fantasy or daydream that it�felt like it was really happening to me.",
+     "text": "Found that I became so involved in a fantasy or daydream that it felt like it was really happening to me.",
      "key": "+"
     },
     {
@@ -14007,7 +15603,7 @@
      "key": "+"
     },
     {
-     "text": "Find that I sometimes sit starting off into space, thinking of�nothing, and am not aware of the passage of time.",
+     "text": "Find that I sometimes sit starting off into space, thinking of nothing, and am not aware of the passage of time.",
      "key": "+"
     },
     {
@@ -14015,31 +15611,31 @@
      "key": "+"
     },
     {
-     "text": "Find that in one situation I act so differently from when I'm in another situation that I feel almost as if I were two different�people.",
+     "text": "Find that in one situation I act so differently from when I'm in another situation that I feel almost as if I were two different people.",
      "key": "+"
     },
     {
-     "text": "Find that in certain situations I am able to do things with�amazing ease and spontaneity that would usually be difficult�for me.",
+     "text": "Find that in certain situations I am able to do things with amazing ease and spontaneity that would usually be difficult for me.",
      "key": "+"
     },
     {
-     "text": "Found that I could not remember whether I had done something or�had just thought about doing that thing.",
+     "text": "Found that I could not remember whether I had done something or had just thought about doing that thing.",
      "key": "+"
     },
     {
-     "text": "Found evidence that I had done things that I did not remember�doing.",
+     "text": "Found evidence that I had done things that I did not remember doing.",
      "key": "+"
     },
     {
-     "text": "Found writings, drawings, or notes among my belongings that I must�have done but cannot remember doing.",
+     "text": "Found writings, drawings, or notes among my belongings that I must have done but cannot remember doing.",
      "key": "+"
     },
     {
-     "text": "Found that I heard voices inside my head that told me to do things�or commented on things that I was doing.",
+     "text": "Found that I heard voices inside my head that told me to do things or commented on things that I was doing.",
      "key": "+"
     },
     {
-     "text": "Felt as though I was looking at the world through a fog so that�people and objects appeared far away or unclear.",
+     "text": "Felt as though I was looking at the world through a fog so that people and objects appeared far away or unclear.",
      "key": "+"
     },
     {
@@ -14061,15 +15657,15 @@
    "alpha": 0.89,
    "items": [
     {
-     "text": "Had the experience of feeling as though I was standing next to�myself, or watching myself as if I was looking at a different�person.",
+     "text": "Had the experience of feeling as though I was standing next to myself, or watching myself as if I was looking at a different person.",
      "key": "+"
     },
     {
-     "text": "Had the experience of looking in a mirror and not recognizing�myself.",
+     "text": "Had the experience of looking in a mirror and not recognizing myself.",
      "key": "+"
     },
     {
-     "text": "Had the experience of feeling that other people, objects, and the�world around me were not real.",
+     "text": "Had the experience of feeling that other people, objects, and the world around me were not real.",
      "key": "+"
     },
     {
@@ -14077,47 +15673,47 @@
      "key": "+"
     },
     {
-     "text": "Had the experience of remembering a past event so vividly that it�felt like I was reliving that event.",
+     "text": "Had the experience of remembering a past event so vividly that it felt like I was reliving that event.",
      "key": "+"
     },
     {
-     "text": "Had the experience of not being sure whether things I remember�happening really did happen, or whether I just dreamed them.",
+     "text": "Had the experience of not being sure whether things I remember happening really did happen, or whether I just dreamed them.",
      "key": "+"
     },
     {
-     "text": "Had the experience of being in a familiar place but finding it�strange and unfamiliar.",
+     "text": "Had the experience of being in a familiar place but finding it strange and unfamiliar.",
      "key": "+"
     },
     {
-     "text": "Found that I became so involved in a fantasy or daydream that it�felt like it was really happening to me.",
+     "text": "Found that I became so involved in a fantasy or daydream that it felt like it was really happening to me.",
      "key": "+"
     },
     {
-     "text": "Find that I sometimes sit starting off into space, thinking of�nothing, and am not aware of the passage of time.",
+     "text": "Find that I sometimes sit starting off into space, thinking of nothing, and am not aware of the passage of time.",
      "key": "+"
     },
     {
-     "text": "Find that in one situation I act so differently from when I'm in another situation that I feel almost as if I were two different�people.",
+     "text": "Find that in one situation I act so differently from when I'm in another situation that I feel almost as if I were two different people.",
      "key": "+"
     },
     {
-     "text": "Find that in certain situations I am able to do things with�amazing ease and spontaneity that would usually be difficult�for me.",
+     "text": "Find that in certain situations I am able to do things with amazing ease and spontaneity that would usually be difficult for me.",
      "key": "+"
     },
     {
-     "text": "Found that I could not remember whether I had done something or�had just thought about doing that thing.",
+     "text": "Found that I could not remember whether I had done something or had just thought about doing that thing.",
      "key": "+"
     },
     {
-     "text": "Found evidence that I had done things that I did not remember�doing.",
+     "text": "Found evidence that I had done things that I did not remember doing.",
      "key": "+"
     },
     {
-     "text": "Found that I heard voices inside my head that told me to do things�or commented on things that I was doing.",
+     "text": "Found that I heard voices inside my head that told me to do things or commented on things that I was doing.",
      "key": "+"
     },
     {
-     "text": "Felt as though I was looking at the world through a fog so that�people and objects appeared far away or unclear.",
+     "text": "Felt as though I was looking at the world through a fog so that people and objects appeared far away or unclear.",
      "key": "+"
     },
     {
@@ -14135,15 +15731,15 @@
    "alpha": 0.88,
    "items": [
     {
-     "text": "Had the experience of feeling as though I was standing next to�myself, or watching myself as if I was looking at a different�person.",
+     "text": "Had the experience of feeling as though I was standing next to myself, or watching myself as if I was looking at a different person.",
      "key": "+"
     },
     {
-     "text": "Had the experience of looking in a mirror and not recognizing�myself.",
+     "text": "Had the experience of looking in a mirror and not recognizing myself.",
      "key": "+"
     },
     {
-     "text": "Had the experience of feeling that other people, objects, and the�world around me were not real.",
+     "text": "Had the experience of feeling that other people, objects, and the world around me were not real.",
      "key": "+"
     },
     {
@@ -14151,11 +15747,11 @@
      "key": "+"
     },
     {
-     "text": "Found that I heard voices inside my head that told me to do things�or commented on things that I was doing.",
+     "text": "Found that I heard voices inside my head that told me to do things or commented on things that I was doing.",
      "key": "+"
     },
     {
-     "text": "Felt as though I was looking at the world through a fog so that�people and objects appeared far away or unclear.",
+     "text": "Felt as though I was looking at the world through a fog so that people and objects appeared far away or unclear.",
      "key": "+"
     },
     {
@@ -14173,15 +15769,15 @@
    "alpha": 0.75,
    "items": [
     {
-     "text": "Had the experience of remembering a past event so vividly that it�felt like I was reliving that event.",
+     "text": "Had the experience of remembering a past event so vividly that it felt like I was reliving that event.",
      "key": "+"
     },
     {
-     "text": "Found that when I was watching television or a movie I became so�absorbed in the story that I was unaware of other events�happening around me.",
+     "text": "Found that when I was watching television or a movie I became so absorbed in the story that I was unaware of other events happening around me.",
      "key": "+"
     },
     {
-     "text": "Found that I became so involved in a fantasy or daydream that it�felt like it was really happening to me.",
+     "text": "Found that I became so involved in a fantasy or daydream that it felt like it was really happening to me.",
      "key": "+"
     },
     {
@@ -14189,7 +15785,7 @@
      "key": "+"
     },
     {
-     "text": "Find that I sometimes sit starting off into space, thinking of�nothing, and am not aware of the passage of time.",
+     "text": "Find that I sometimes sit starting off into space, thinking of nothing, and am not aware of the passage of time.",
      "key": "+"
     },
     {
@@ -14197,11 +15793,11 @@
      "key": "+"
     },
     {
-     "text": "Find that in certain situations I am able to do things with�amazing ease and spontaneity that would usually be difficult�for me.",
+     "text": "Find that in certain situations I am able to do things with amazing ease and spontaneity that would usually be difficult for me.",
      "key": "+"
     },
     {
-     "text": "Found that I could not remember whether I had done something or�had just thought about doing that thing.",
+     "text": "Found that I could not remember whether I had done something or had just thought about doing that thing.",
      "key": "+"
     }
    ]
@@ -14211,19 +15807,19 @@
    "alpha": 0.69,
    "items": [
     {
-     "text": "Found new things among my belongings that I didn't remember�buying.",
+     "text": "Found new things among my belongings that I didn't remember buying.",
      "key": "+"
     },
     {
-     "text": "Was told that I sometimes do not recognize a friend or family�member.",
+     "text": "Was told that I sometimes do not recognize a friend or family member.",
      "key": "+"
     },
     {
-     "text": "Found that I had no memory for some important event in my life�(for example, a wedding or graduation).",
+     "text": "Found that I had no memory for some important event in my life (for example, a wedding or graduation).",
      "key": "+"
     },
     {
-     "text": "Found evidence that I had done things that I did not remember�doing.",
+     "text": "Found evidence that I had done things that I did not remember doing.",
      "key": "+"
     },
     {

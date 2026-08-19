@@ -23,6 +23,11 @@ interface Translated {
   bands: { from: number; label: string; text: string }[];
   selfHelp: string[];
   items: { text: string; key: "+" | "-" }[];
+  /**
+   * Опросник интересов спрашивает не «похоже ли это на вас», а «насколько вам
+   * это нравится»: шкала ответов и инструкция у него свои.
+   */
+  kind?: "agreement" | "interest";
 }
 
 const OPTIONS = [
@@ -32,6 +37,21 @@ const OPTIONS = [
   { text: "Скорее про меня", value: 3 },
   { text: "Точно про меня", value: 4 },
 ];
+
+/** Шкала интересов — как в уже опубликованном тесте на профориентацию. */
+const INTEREST_OPTIONS = [
+  { text: "Совсем не нравится", value: 0 },
+  { text: "Скорее не нравится", value: 1 },
+  { text: "Скорее нравится", value: 2 },
+  { text: "Очень нравится", value: 3 },
+];
+
+const INSTRUCTION = {
+  agreement:
+    "Оцените, насколько каждое утверждение описывает вас. Отвечайте не задумываясь — первое впечатление обычно точнее.",
+  interest:
+    "Оценивайте, насколько вам нравится такая деятельность, независимо от того, умеете вы это или нет и сколько за это платят.",
+};
 
 /** Транслитерация конструкта в slug: адрес должен читаться на латинице. */
 const MAP: Record<string, string> = {
@@ -66,8 +86,21 @@ export function scaleName(construct: string): string {
   return construct.split(/\s+как\s+/)[0];
 }
 
-function build(t: Translated, alpha: number | null) {
+/**
+ * Часть страниц пула — самостоятельные опросники со своей публикацией. Назвать
+ * их в паспорте точнее и честнее, чем сослаться на пул вообще.
+ */
+const INSTRUMENTS: Record<string, string> = {
+  ORVIS:
+    "Шкала опросника профессиональных интересов ORVIS (Oregon Vocational Interest Scales; Pozzebon, Visser, Ashton, Lee & Goldberg, 2010) из международного пула пунктов IPIP",
+  ORAIS:
+    "Шкала опросника внепрофессиональных интересов ORAIS (Oregon Avocational Interest Scales) из международного пула пунктов IPIP",
+};
+
+function build(t: Translated, alpha: number | null, page?: string) {
   const slug = slugFromConstruct(t.construct);
+  const interest = t.kind === "interest";
+  const options = interest ? INTEREST_OPTIONS : OPTIONS;
 
   return {
     slug,
@@ -75,12 +108,15 @@ function build(t: Translated, alpha: number | null) {
     title: t.title,
     seoTitle: t.seoTitle,
     description: t.description,
-    category: "personality" as const,
-    ctaCluster: "self" as const,
+    category: interest ? ("career" as const) : ("personality" as const),
+    ctaCluster: interest ? ("career" as const) : ("self" as const),
     minutes: Math.max(2, Math.round(t.items.length / 4)),
     passport: {
       measures: t.measures,
-      origin: `Шкала из международного пула пунктов IPIP (International Personality Item Pool), измеряющая конструкт «${t.construct}». Русский перевод выполнен для этого проекта.`,
+      origin: `${
+        (page && INSTRUMENTS[page]) ||
+        "Шкала из международного пула пунктов IPIP (International Personality Item Pool)"
+      }, измеряющая конструкт «${t.construct}». Русский перевод выполнен для этого проекта.`,
       rightsBasis: "public_domain" as const,
       rightsNote:
         "Пункты IPIP находятся в общественном достоянии с 1999 года, коммерческое использование разрешено явно. Перевод — собственная работа проекта.",
@@ -91,12 +127,12 @@ function build(t: Translated, alpha: number | null) {
               : ""
           }. Русский перевод независимой психометрической проверки не проходил, поэтому относитесь к результату как к ориентиру, а не к измерению.`
         : "Ни коэффициент надёжности англоязычного оригинала, ни проверка русского перевода не опубликованы — относитесь к результату как к поводу подумать, а не к измерению.",
-      limitations:
-        "Шкала измеряет одну черту и описывает привычный способ вести себя, а не способности и не потолок возможностей. Результат зависит от состояния в момент прохождения, а нормы российской выборки не собраны: вы видите процент от максимума шкалы, а не сравнение с другими людьми.",
+      limitations: interest
+        ? "Шкала показывает интерес, а не способности и не пригодность к профессии: нравится — не то же самое, что получается. Нормы российской выборки не собраны, вы видите процент от максимума шкалы, а не сравнение с другими людьми, поэтому читайте результат как повод присмотреться к направлению, а не как рекомендацию по выбору работы."
+        : "Шкала измеряет одну черту и описывает привычный способ вести себя, а не способности и не потолок возможностей. Результат зависит от состояния в момент прохождения, а нормы российской выборки не собраны: вы видите процент от максимума шкалы, а не сравнение с другими людьми.",
     },
-    instruction:
-      "Оцените, насколько каждое утверждение описывает вас. Отвечайте не задумываясь — первое впечатление обычно точнее.",
-    options: OPTIONS,
+    instruction: interest ? INSTRUCTION.interest : INSTRUCTION.agreement,
+    options,
     scales: [
       {
         id: "total",
@@ -183,7 +219,7 @@ function main() {
         continue;
       }
 
-      const test = build(t, resolved.alpha);
+      const test = build(t, resolved.alpha, resolved.key.split("/")[0]);
       const parsed = testSchema.safeParse(test);
       if (!parsed.success) {
         console.error(`✗ ${t.scale}: ${parsed.error.issues[0]?.path.join(".")} — ${parsed.error.issues[0]?.message}`);
