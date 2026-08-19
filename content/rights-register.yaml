@@ -1,0 +1,36 @@
+# Реестр прав на методики. Публикация теста без записи здесь запрещена —
+# проверяется в scripts/validate-content.ts и падает в CI.
+# basis: public_domain | own_work | license
+big-five:
+  basis: public_domain
+  source: International Personality Item Pool (IPIP), Mini-IPIP (Donnellan et al., 2006)
+  evidence: https://ipip.ori.org/ — пул пунктов в общественном достоянии с 1999 г., коммерческое использование разрешено явно
+  translation: собственный перевод проекта
+  commercial: allowed
+  verified: 2026-08-19
+self-esteem:
+  basis: public_domain
+  source: Rosenberg Self-Esteem Scale (M. Rosenberg, 1965)
+  evidence: https://socy.umd.edu/about-us/using-rosenberg-self-esteem-scale — свободное использование при указании авторства
+  translation: собственный перевод проекта
+  commercial: allowed
+  note: Для коммерческого использования источники рекомендуют уточнение у Princeton University Press — вопрос в списке LEGAL REVIEW (docs/psychometrics/rights-matrix.md)
+  verified: 2026-08-19
+burnout:
+  basis: own_work
+  source: собственная разработка на основе трёхкомпонентной модели выгорания
+  evidence: пункты написаны с нуля; MBI и другие защищённые опросники не использовались
+  commercial: allowed
+  verified: 2026-08-19
+stress:
+  basis: own_work
+  source: собственная разработка
+  evidence: пункты написаны с нуля; клинические шкалы (GAD-7, DASS, PSS) не воспроизводились
+  commercial: allowed
+  verified: 2026-08-19
+attachment:
+  basis: own_work
+  source: собственная разработка на основе двухмерной модели привязанности
+  evidence: пункты написаны с нуля; ECR-R не воспроизводился
+  commercial: allowed
+  verified: 2026-08-19

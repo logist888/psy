@@ -1,0 +1,61 @@
+import Link from "next/link";
+import { getAllTests, CATEGORIES } from "@/lib/content";
+import type { Test } from "@/lib/engine/schema";
+
+export default function HomePage() {
+  const tests = getAllTests();
+  const byCategory = tests.reduce<Record<string, Test[]>>((acc, test) => {
+    (acc[test.category] ||= []).push(test);
+    return acc;
+  }, {});
+
+  return (
+    <>
+      <h1>Психологические тесты с открытой методологией</h1>
+      <p className="lead">
+        У каждого теста написано, что он измеряет, откуда взят и чего не показывает. Бесплатно, анонимно,
+        без регистрации — мы не спрашиваем имя и не звоним.
+      </p>
+
+      {Object.entries(byCategory).map(([category, items]) => {
+        const meta = CATEGORIES[category as Test["category"]];
+        return (
+          <section key={category}>
+            <h2>{meta.title}</h2>
+            <div className="grid">
+              {items.map((test) => (
+                <Link key={test.slug} href={`/tests/${test.slug}`} className="card">
+                  <h3>{test.title}</h3>
+                  <p className="small muted" style={{ margin: 0 }}>
+                    {test.questions.length} утверждений · {test.minutes} мин
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+
+      <section>
+        <h2>Почему тестам здесь можно доверять больше, чем среднему сайту</h2>
+        <ul className="clean">
+          <li>
+            <strong>Видно происхождение.</strong> Для каждой методики указано, кто автор, на чём она основана и на
+            каком правовом основании мы её используем.
+          </li>
+          <li>
+            <strong>Честно про ограничения.</strong> Мы пишем, чего тест не может — это важнее списка того, что он
+            «определяет».
+          </li>
+          <li>
+            <strong>Ничего не сохраняем.</strong> Ответы не хранятся на сервере: результат живёт в ссылке, которую
+            получаете только вы.
+          </li>
+          <li>
+            <strong>Без диагнозов.</strong> Ни один онлайн-опросник не ставит диагноз — и мы этого не делаем.
+          </li>
+        </ul>
+      </section>
+    </>
+  );
+}
