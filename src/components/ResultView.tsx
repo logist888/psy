@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import type { Test } from "@/lib/engine/schema";
 import { decodeAnswers, score } from "@/lib/engine/score";
 import { CRISIS_CONTACTS, CTA_COPY, SITE, platformLink } from "@/lib/site";
 import RelatedTests from "./RelatedTests";
+import { track } from "@/lib/analytics";
 
 /**
  * Результат считается в браузере из токена в адресе: ответы никогда не уходят
@@ -17,8 +18,15 @@ export default function ResultView({ test, related = [] }: { test: Test; related
   const params = useSearchParams();
   const token = params.get("r");
   const answers = token ? decodeAnswers(test, token) : null;
+  const result = answers ? score(test, answers) : null;
 
-  if (!answers) {
+  useEffect(() => {
+    if (!result) return;
+    track({ name: "result_view", test: test.slug });
+    if (result.crisis) track({ name: "crisis_shown", test: test.slug });
+  }, [result, test.slug]);
+
+  if (!answers || !result) {
     return (
       <>
         <h1>Ссылка не открылась</h1>
@@ -35,7 +43,6 @@ export default function ResultView({ test, related = [] }: { test: Test; related
     );
   }
 
-  const result = score(test, answers);
   const cta = CTA_COPY[test.ctaCluster];
   const sensitive = test.ctaCluster === "burnout" || test.ctaCluster === "anxiety";
   const shareUrl = typeof window === "undefined" ? "" : window.location.href;
@@ -106,7 +113,14 @@ export default function ResultView({ test, related = [] }: { test: Test; related
         <h2>{cta.title}</h2>
         <p>{cta.body}</p>
         <p>
-          <a className="btn" href={platformLink({ campaign: test.slug, content: "result_cta" })} rel="noopener">
+          <a
+            className="btn"
+            href={platformLink({ campaign: test.slug, content: "result_cta" })}
+            rel="noopener"
+            onClick={() =>
+              track({ name: "cta_click", test: test.slug, cluster: test.ctaCluster, placement: "result" })
+            }
+          >
             {cta.button}
           </a>
         </p>
@@ -121,7 +135,7 @@ export default function ResultView({ test, related = [] }: { test: Test; related
         Мы не храним ответы: результат существует только в этой ссылке. Сохраните её, если хотите вернуться к
         результату или сравнить состояние через месяц-другой.
       </p>
-      <CopyLink url={shareUrl} sensitive={sensitive} />
+      <CopyLink url={shareUrl} sensitive={sensitive} onCopied={() => track({ name: "result_share", test: test.slug })} />
 
       <RelatedTests tests={related} title="Пройдите также" />
 
@@ -134,7 +148,7 @@ export default function ResultView({ test, related = [] }: { test: Test; related
   );
 }
 
-function CopyLink({ url, sensitive }: { url: string; sensitive: boolean }) {
+function CopyLink({ url, sensitive, onCopied }: { url: string; sensitive: boolean; onCopied?: () => void }) {
   const [copied, setCopied] = useState(false);
   return (
     <p>
@@ -144,6 +158,7 @@ function CopyLink({ url, sensitive }: { url: string; sensitive: boolean }) {
           try {
             await navigator.clipboard.writeText(url);
             setCopied(true);
+            onCopied?.();
             setTimeout(() => setCopied(false), 2500);
           } catch {
             setCopied(false);

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { Test } from "@/lib/engine/schema";
 import { encodeAnswers, type Answers } from "@/lib/engine/score";
+import { track, trackTestStart } from "@/lib/analytics";
 
 const BATCH = 5;
 
@@ -13,6 +14,7 @@ export default function TestRunner({ test }: { test: Test }) {
   const [answers, setAnswers] = useState<Answers>({});
   const [batch, setBatch] = useState(0);
   const [restored, setRestored] = useState(false);
+  const [startTracked, setStartTracked] = useState(false);
 
   // Автосохранение прогресса в sessionStorage: ничего не уходит на сервер.
   useEffect(() => {
@@ -53,15 +55,23 @@ export default function TestRunner({ test }: { test: Test }) {
   const isLast = batch === batches.length - 1;
 
   function choose(questionId: string, value: number) {
+    // Старт засчитывается по первому ответу, а не по открытию страницы:
+    // иначе completion rate считается от случайных заходов.
+    if (!startTracked) {
+      trackTestStart(test.slug);
+      setStartTracked(true);
+    }
     setAnswers((prev) => ({ ...prev, [questionId]: value }));
   }
 
   function next() {
     if (!isLast) {
       setBatch((b) => b + 1);
+      track({ name: "test_progress", test: test.slug, percent });
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
+    track({ name: "test_complete", test: test.slug });
     const token = encodeAnswers(test, answers);
     try {
       sessionStorage.removeItem(storageKey);

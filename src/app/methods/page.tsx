@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getAllTests } from "@/lib/content";
 import { SITE, platformLink } from "@/lib/site";
+import ExpertCta from "@/components/ExpertCta";
 
 export const metadata: Metadata = {
   title: "Научные паспорта методик",
@@ -43,9 +44,9 @@ export default function MethodsPage() {
           можно вести консультации: профиль со специализацией, онлайн-запись и оплата, никаких откликов за деньги.
         </p>
         <p>
-          <a className="btn" href={platformLink({ campaign: "methods_index", content: "expert" })} rel="noopener">
+          <ExpertCta href={platformLink({ campaign: "methods_index", content: "expert" })} placement="methods_index">
             Как вести практику на {SITE.platform.name}
-          </a>
+          </ExpertCta>
         </p>
       </div>
     </>
