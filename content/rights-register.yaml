@@ -34,3 +34,51 @@ attachment:
   evidence: пункты написаны с нуля; ECR-R не воспроизводился
   commercial: allowed
   verified: 2026-08-19
+personality-type:
+  basis: own_work
+  source: собственная разработка на основе юнгианской модели предпочтений
+  evidence: пункты написаны с нуля; опросник MBTI, его формулировки и товарные знаки The Myers-Briggs Company не использовались
+  commercial: allowed
+  verified: 2026-08-19
+temperament:
+  basis: own_work
+  source: собственная разработка на основе классической типологии темперамента
+  evidence: пункты написаны с нуля; опросники Айзенка и производные не воспроизводились
+  commercial: allowed
+  verified: 2026-08-19
+procrastination:
+  basis: own_work
+  source: собственная разработка
+  evidence: пункты написаны с нуля; проприетарные шкалы прокрастинации не воспроизводились
+  commercial: allowed
+  verified: 2026-08-19
+career-interests:
+  basis: own_work
+  source: собственная реализация модели RIASEC (Холланд)
+  evidence: пункты написаны с нуля; проприетарный Self-Directed Search (PAR) не воспроизводился; модель RIASEC как концепция не охраняется
+  commercial: allowed
+  verified: 2026-08-19
+emotional-intelligence:
+  basis: own_work
+  source: собственная разработка на основе четырёхкомпонентной модели EQ
+  evidence: пункты написаны с нуля; MSCEIT и EQ-i (MHS) не использовались
+  commercial: allowed
+  verified: 2026-08-19
+impostor:
+  basis: own_work
+  source: собственная разработка на основе описания феномена самозванца
+  evidence: пункты написаны с нуля; Clance Impostor Phenomenon Scale не воспроизводилась
+  commercial: allowed
+  verified: 2026-08-19
+loneliness:
+  basis: own_work
+  source: собственная разработка
+  evidence: пункты написаны с нуля; UCLA Loneliness Scale и производные не воспроизводились
+  commercial: allowed
+  verified: 2026-08-19
+dark-triad:
+  basis: own_work
+  source: собственная разработка на основе концепции тёмной триады
+  evidence: пункты написаны с нуля; SD3 (Jones & Paulhus) требует согласия авторов на коммерческое использование и не использовался
+  commercial: allowed
+  verified: 2026-08-19
