@@ -154,7 +154,9 @@ questions:
     scales:
       - scale: total
         reverse: true
-crisis: []
+crisis:
+  - question: q19
+    minValue: 4
 selfHelp:
   - >-
     Возьмите одну застрявшую ситуацию и напишите два столбца: что в ней зависит от меня и что нет; на этой неделе

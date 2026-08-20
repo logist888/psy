@@ -104,7 +104,11 @@ questions:
     scales:
       - scale: total
         reverse: true
-crisis: []
+crisis:
+  - question: q3
+    minValue: 4
+  - question: q5
+    minValue: 4
 selfHelp:
   - >-
     В момент перегруза сузьте горизонт до одного действия на ближайшие десять минут и произнесите его вслух. Паника

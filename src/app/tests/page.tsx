@@ -4,6 +4,7 @@ import { getAllTests, CATEGORIES, CATEGORY_PAGES, COLLECTIONS } from "@/lib/cont
 import type { Test } from "@/lib/engine/schema";
 import { SITE } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import TestSearch from "@/components/TestSearch";
 
 export const metadata: Metadata = {
   title: "Все психологические тесты",
@@ -27,6 +28,17 @@ export default function AllTestsPage() {
         {tests.length} методик. У каждой указано, что она измеряет, откуда взята и чего не показывает — это на
         странице научного паспорта.
       </p>
+
+      <TestSearch
+        items={tests.map((t) => ({
+          slug: t.slug,
+          title: t.title,
+          description: t.description,
+          category: t.category,
+          questions: t.questions.length,
+          minutes: t.minutes,
+        }))}
+      />
 
       <div className="note">
         <h3 style={{ marginTop: 0 }}>Подборки</h3>

@@ -19,6 +19,9 @@ export type AnalyticsEvent =
   | { name: "second_test_start"; test: string }
   | { name: "cta_click"; test: string; cluster: string; placement: string }
   | { name: "expert_cta_click"; placement: string }
+  // Текст запроса не уходит: он свободный, и человек может набрать в нём что
+  // угодно. Полезное здесь — доля поисков без результата, а не сами слова.
+  | { name: "catalog_search"; found: boolean }
   | { name: "consent"; granted: boolean };
 
 const CONSENT_KEY = "analytics-consent";
