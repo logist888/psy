@@ -120,3 +120,7 @@ ul.clean li { margin-bottom: 8px; }
 .search input { width: 100%; padding: 10px 12px; font: inherit; color: inherit; background: var(--bg);
   border: 1px solid var(--border); border-radius: var(--radius); }
 .search input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+/* Тач-цель ссылки не может быть тоньше пальца: строка в 14px даёт 16px высоты,
+   а требование доступности — 24px. Отступ добавляет высоту, не двигая вёрстку. */
+.small a { display: inline-block; padding: 4px 0; }

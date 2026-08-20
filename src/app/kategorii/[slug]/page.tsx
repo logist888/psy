@@ -67,7 +67,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       <p className="lead">{page.intro}</p>
 
       <div className="note">
-        <h3 style={{ marginTop: 0 }}>{tests.length} {plural(tests.length, "тест", "теста", "тестов")} в разделе</h3>
+        <h2 style={{ marginTop: 0 }}>{tests.length} {plural(tests.length, "тест", "теста", "тестов")} в разделе</h2>
         <ul className="clean" style={{ marginBottom: 0 }}>
           {tests.map((test) => (
             <li key={test.slug}>

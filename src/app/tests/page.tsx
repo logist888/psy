@@ -41,7 +41,7 @@ export default function AllTestsPage() {
       />
 
       <div className="note">
-        <h3 style={{ marginTop: 0 }}>Подборки</h3>
+        <h2 style={{ marginTop: 0 }}>Подборки</h2>
         <ul className="clean" style={{ marginBottom: 0 }}>
           {COLLECTIONS.map((c) => (
             <li key={c.slug}>

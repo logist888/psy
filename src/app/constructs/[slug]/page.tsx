@@ -56,7 +56,7 @@ export default async function ConstructPage({ params }: { params: Promise<{ slug
 
       {tests.length > 0 && (
         <div className="note">
-          <h3 style={{ marginTop: 0 }}>Проверить себя</h3>
+          <h2 style={{ marginTop: 0 }}>Проверить себя</h2>
           <ul className="clean" style={{ marginBottom: 0 }}>
             {tests.map((test) => (
               <li key={test.slug}>
