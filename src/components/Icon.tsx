@@ -24,7 +24,13 @@ export type IconName =
   | "lifebuoy"
   | "arrow"
   | "spark"
-  | "scales";
+  | "scales"
+  | "copy"
+  | "grid"
+  | "link"
+  | "chevron"
+  | "chevron-left"
+  | "chevron-right";
 
 const PATHS: Record<IconName, React.ReactNode> = {
   // Личность — человек в профиль: черта описывает того, кто отвечает
@@ -141,6 +147,30 @@ const PATHS: Record<IconName, React.ReactNode> = {
       <path d="M20 7.5l-2.2 5h4.4z" />
     </>
   ),
+  copy: (
+    <>
+      <rect x="9" y="9" width="11" height="11" rx="2.5" />
+      <path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1" />
+    </>
+  ),
+  grid: (
+    <>
+      <rect x="4" y="4" width="7" height="7" rx="1.6" />
+      <rect x="13" y="4" width="7" height="7" rx="1.6" />
+      <rect x="4" y="13" width="7" height="7" rx="1.6" />
+      <rect x="13" y="13" width="7" height="7" rx="1.6" />
+    </>
+  ),
+  link: (
+    <>
+      <path d="M9 15l6-6" />
+      <path d="M11 7l1-1a3.5 3.5 0 0 1 5 5l-1 1" />
+      <path d="M13 17l-1 1a3.5 3.5 0 0 1-5-5l1-1" />
+    </>
+  ),
+  chevron: <path d="M6 9l6 6 6-6" />,
+  "chevron-left": <path d="M15 6l-6 6 6 6" />,
+  "chevron-right": <path d="M9 6l6 6-6 6" />,
 };
 
 export default function Icon({

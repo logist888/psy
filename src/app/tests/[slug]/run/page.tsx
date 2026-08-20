@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getAllTests, getTest } from "@/lib/content";
 import TestRunner from "@/components/TestRunner";
+import Icon from "@/components/Icon";
 
 export function generateStaticParams() {
   return getAllTests().map((t) => ({ slug: t.slug }));
@@ -21,10 +23,13 @@ export default async function RunPage({ params }: { params: Promise<{ slug: stri
 
   return (
     <>
-      <h1 style={{ fontSize: 22 }}>{test.title}</h1>
-      <p className="muted">{test.instruction}</p>
+      <div className="crumbs">
+        <Link href={`/tests/${test.slug}`}><Icon name="chevron-left" className="icon-inline" size={15} />{test.title}</Link>
+      </div>
+      <h1 style={{ fontSize: 30, marginBottom: 12 }}>{test.title}</h1>
+      <div className="note info" style={{ marginBottom: 22 }}>{test.instruction}</div>
       <TestRunner test={test} />
-      <p className="small muted" style={{ marginTop: 28 }}>
+      <p className="small faint" style={{ marginTop: 26, textAlign: "center" }}>
         Ответы не отправляются на сервер и не сохраняются: результат посчитается и будет доступен только по вашей ссылке.
       </p>
     </>

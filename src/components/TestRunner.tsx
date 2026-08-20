@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import { useRouter } from "next/navigation";
 import type { Test } from "@/lib/engine/schema";
 import { encodeAnswers, type Answers } from "@/lib/engine/score";
 import { track, trackTestStart } from "@/lib/analytics";
+import Icon from "@/components/Icon";
 
 const BATCH = 5;
 
@@ -53,6 +54,8 @@ export default function TestRunner({ test }: { test: Test }) {
   const answeredTotal = Object.keys(answers).length;
   const percent = Math.round((answeredTotal / test.questions.length) * 100);
   const isLast = batch === batches.length - 1;
+  const from = Math.min(batch * BATCH + 1, test.questions.length);
+  const to = Math.min((batch + 1) * BATCH, test.questions.length);
 
   function choose(questionId: string, value: number) {
     // Старт засчитывается по первому ответу, а не по открытию страницы:
@@ -83,20 +86,19 @@ export default function TestRunner({ test }: { test: Test }) {
 
   return (
     <>
-      <div className="progress">
+      <div className="run-progress">
         <div className="label">
-          Вопрос {Math.min(batch * BATCH + 1, test.questions.length)}–
-          {Math.min((batch + 1) * BATCH, test.questions.length)} из {test.questions.length}
+          <span>Утверждения {from}–{to} из {test.questions.length}</span>
+          <b>{percent}% пройдено</b>
         </div>
-        <div className="bar">
-          <i style={{ width: `${percent}%` }} />
-        </div>
+        <div className="bar"><i style={{ width: `${percent}%` }} /></div>
       </div>
 
-      {current.map((question) => (
+      {current.map((question, i) => (
         <div className="q" key={question.id}>
+          <div className="q-num">{String(from + i).padStart(2, "0")}</div>
           <p className="text">{question.text}</p>
-          <div className="opts">
+          <div className="opts" style={{ "--n": test.options.length } as CSSProperties}>
             {test.options.map((option) => {
               const checked = answers[question.id] === option.value;
               return (
@@ -107,6 +109,7 @@ export default function TestRunner({ test }: { test: Test }) {
                     checked={checked}
                     onChange={() => choose(question.id, option.value)}
                   />
+                  <span className="radio" aria-hidden="true" />
                   <span>{option.text}</span>
                 </label>
               );
@@ -115,23 +118,15 @@ export default function TestRunner({ test }: { test: Test }) {
         </div>
       ))}
 
-      <p style={{ marginTop: 24 }}>
-        <button className="btn block" onClick={next} disabled={!answeredInBatch}>
-          {isLast ? "Показать результат" : "Дальше"}
+      <div className="run-nav">
+        <button className="btn secondary" onClick={() => setBatch((b) => b - 1)} disabled={batch === 0}>
+          <Icon name="chevron-left" size={17} /> Назад
         </button>
-      </p>
-      {!answeredInBatch && (
-        <p className="small muted" style={{ textAlign: "center" }}>
-          Ответьте на все утверждения на этом экране
-        </p>
-      )}
-      {batch > 0 && (
-        <p style={{ textAlign: "center" }}>
-          <button className="btn secondary" onClick={() => setBatch((b) => b - 1)}>
-            Назад
-          </button>
-        </p>
-      )}
+        {!answeredInBatch && <p className="hint">Ответьте на все утверждения на этом экране</p>}
+        <button className="btn" onClick={next} disabled={!answeredInBatch}>
+          {isLast ? "Показать результат" : "Дальше"} <Icon name="arrow" size={17} />
+        </button>
+      </div>
     </>
   );
 }

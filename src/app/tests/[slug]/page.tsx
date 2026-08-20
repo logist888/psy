@@ -1,10 +1,18 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getAllTests, getTest, getRelatedTests, getConstructsForTest } from "@/lib/content";
+import { getAllTests, getTest, getRelatedTests, getConstructsForTest, CATEGORIES, CATEGORY_PAGES } from "@/lib/content";
+import type { Test } from "@/lib/engine/schema";
 import { SITE } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import RelatedTests from "@/components/RelatedTests";
+import Icon, { type IconName } from "@/components/Icon";
+
+const CATEGORY_ICON: Record<Test["category"], IconName> = {
+  personality: "personality", wellbeing: "wellbeing", relationships: "relationships", career: "career", values: "values",
+};
+const CATEGORY_CLASS: Record<Test["category"], string> = {
+  personality: "cat-personality", wellbeing: "cat-wellbeing", relationships: "cat-relationships", career: "cat-career", values: "cat-values",
+};
 
 export function generateStaticParams() {
   return getAllTests().map((t) => ({ slug: t.slug }));
@@ -29,6 +37,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
 
   const related = getRelatedTests(test.slug);
   const hubs = getConstructsForTest(test.slug);
+  const category = CATEGORIES[test.category];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -46,69 +55,87 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
       <Breadcrumbs
         items={[
           { name: "Главная", href: "/" },
+          { name: category.title, href: `/kategorii/${CATEGORY_PAGES[test.category].slug}` },
           { name: test.title, href: `/tests/${test.slug}` },
         ]}
       />
-      <h1>{test.title}</h1>
-      <div className="meta">
-        <span>{test.questions.length} утверждений</span>
-        <span>≈ {test.minutes} мин</span>
-        <span>Бесплатно и анонимно</span>
+
+      <div className={`detail ${CATEGORY_CLASS[test.category]}`}>
+        <div className="main">
+          <div className="badges">
+            <span className="chip cat">{category.title}</span>
+            <span className="chip success"><Icon name="scales" size={14} /> Открытый научный паспорт</span>
+          </div>
+          <h1>{test.title}</h1>
+          <p className="lead">{test.description}</p>
+
+          <div className="panel">
+            <h2>Что измеряет</h2>
+            <p style={{ marginBottom: 20 }}>{test.passport.measures}</p>
+            {test.scales.map((s) => (
+              <div className="measure" key={s.id}>
+                <span className="m-name">{s.name}</span>
+                <span className="m-track"><i style={{ width: "100%" }} /></span>
+                <span className="m-poles">{s.low} ↔ {s.high}</span>
+              </div>
+            ))}
+            <p className="hint">Каждая шкала — спектр между двумя полюсами. Результат покажет ваше положение на нём.</p>
+          </div>
+
+          <div className="panel">
+            <h3>Откуда методика</h3>
+            <p>{test.passport.origin}</p>
+            <p className="small muted" style={{ marginBottom: 14 }}>{test.passport.rightsNote}</p>
+            <Link href={`/methods/${test.slug}`}>Полный научный паспорт <Icon name="arrow" size={15} /></Link>
+          </div>
+
+          <div className="panel">
+            <h3>Насколько результату можно верить</h3>
+            <p style={{ margin: 0 }}>{test.passport.reliability}</p>
+          </div>
+
+          <div className="note warn">
+            <b>Чего этот тест не делает.</b> {test.passport.limitations}
+          </div>
+
+          {hubs.length > 0 && (
+            <p className="small" style={{ marginTop: 18 }}>
+              Разбор темы:{" "}
+              {hubs.map((hub, i) => (
+                <span key={hub.slug}>
+                  {i > 0 && ", "}
+                  <Link href={`/constructs/${hub.slug}`}>{hub.title}</Link>
+                </span>
+              ))}
+            </p>
+          )}
+        </div>
+
+        <aside>
+          <div className="card launch">
+            <div className="art"><Icon name={CATEGORY_ICON[test.category]} size={80} /></div>
+            <div className="facts">
+              <span className="f"><Icon name="list" size={17} /> {test.questions.length} утверждений</span>
+              <span className="f"><Icon name="clock" size={17} /> ≈ {test.minutes} минут</span>
+              <span className="f"><Icon name="shield" size={17} /> Анонимно</span>
+              <span className="f"><Icon name="spark" size={17} /> Бесплатно</span>
+            </div>
+            <Link href={`/tests/${test.slug}/run`} className="btn block lg">Начать тест <Icon name="arrow" size={18} /></Link>
+            <p className="caption">Прогресс сохраняется на этом устройстве</p>
+          </div>
+
+          {related.length > 0 && (
+            <div className="card also">
+              <h3>Пройдите также</h3>
+              {related.map((r) => (
+                <Link key={r.slug} href={`/tests/${r.slug}`}>
+                  {r.title} <span>{r.questions.length} утв.</span>
+                </Link>
+              ))}
+            </div>
+          )}
+        </aside>
       </div>
-      <p className="lead">{test.description}</p>
-
-      <p>
-        <Link href={`/tests/${test.slug}/run`} className="btn">
-          Начать тест
-        </Link>
-      </p>
-
-      <h2>Что измеряет</h2>
-      <p>{test.passport.measures}</p>
-
-      <h2>Шкалы</h2>
-      <ul className="clean">
-        {test.scales.map((s) => (
-          <li key={s.id}>
-            <strong>{s.name}</strong> — от «{s.low}» до «{s.high}».
-          </li>
-        ))}
-      </ul>
-
-      <h2>Откуда методика</h2>
-      <p>{test.passport.origin}</p>
-      <p className="small muted">{test.passport.rightsNote}</p>
-
-      <h2>Насколько результату можно верить</h2>
-      <p>{test.passport.reliability}</p>
-
-      <div className="note warn">
-        <h3>Чего этот тест не делает</h3>
-        <p style={{ margin: 0 }}>{test.passport.limitations}</p>
-      </div>
-
-      <p style={{ marginTop: 28 }}>
-        <Link href={`/tests/${test.slug}/run`} className="btn">
-          Начать тест
-        </Link>
-      </p>
-      <p className="small muted">
-        Подробный научный паспорт методики — на <Link href={`/methods/${test.slug}`}>отдельной странице</Link>.
-      </p>
-
-      {hubs.length > 0 && (
-        <p className="small">
-          Разбор темы:{" "}
-          {hubs.map((hub, i) => (
-            <span key={hub.slug}>
-              {i > 0 && ", "}
-              <Link href={`/constructs/${hub.slug}`}>{hub.title}</Link>
-            </span>
-          ))}
-        </p>
-      )}
-
-      <RelatedTests tests={related} />
     </>
   );
 }
