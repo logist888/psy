@@ -34,6 +34,11 @@ export default function HomePage() {
     return acc;
   }, {});
 
+  // Static export is served under a basePath on GitHub Pages (/psy). Next only
+  // rewrites basePath for <Link>/next/image, NOT raw <img>, so prefix it here.
+  // Resolved at build time in this Server Component.
+  const basePath = process.env.BASE_PATH ?? "";
+
   return (
     <>
       <section className="home-hero">
@@ -56,7 +61,7 @@ export default function HomePage() {
         <div className="hero-visual">
           <img
             className="hero-img"
-            src="/hero-brain.png"
+            src={`${basePath}/hero-brain.png`}
             width={690}
             height={440}
             alt=""
