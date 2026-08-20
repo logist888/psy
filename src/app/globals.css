@@ -249,7 +249,9 @@ main > .wrap { padding: 34px 24px 64px; }
 footer.site { margin-top: 40px; border-top: 1px solid var(--line-2); background: color-mix(in srgb, var(--surface) 60%, transparent); color: var(--muted); font-size: 14px; }
 footer.site .wrap { padding: 30px 24px; }
 footer.site p { margin: 0 0 10px; }
-footer.site a { color: var(--muted); margin-right: 16px; }
+/* inline-block: JSX съедает пробелы между <Link>, без атомарных боксов
+   ссылки склеиваются в неразрывную строку и вылезают за экран. */
+footer.site a { display: inline-block; color: var(--muted); margin-right: 16px; }
 footer.site a:hover { color: var(--accent); }
 footer.site .small { color: var(--faint); }
 
@@ -338,7 +340,7 @@ footer.site .small { color: var(--faint); }
 .pill:hover { border-color: var(--accent); color: var(--ink); }
 .pill.active { background: var(--grad); color: #fff; border-color: transparent; box-shadow: 0 8px 18px rgb(94 102 241 / .28); }
 .empty { text-align: center; color: var(--muted); padding: 50px 0; }
-.pager { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 26px; }
+.pager { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin-top: 26px; }
 .pager .pg { min-width: 40px; height: 40px; border-radius: var(--pill); border: 1px solid var(--border); background: var(--surface); color: var(--muted); display: grid; place-items: center; cursor: pointer; font: inherit; font-weight: 600; }
 .pager .pg.active { background: var(--grad); color: #fff; border-color: transparent; }
 .pager .pg:disabled { opacity: .4; cursor: default; }
@@ -420,8 +422,11 @@ footer.site .small { color: var(--faint); }
   .cat-strip { grid-template-columns: repeat(2, 1fr); }
   .trust { grid-template-columns: 1fr 1fr; }
   .catalog { grid-template-columns: 1fr; }
-  .filters { position: static; flex-direction: row; flex-wrap: wrap; }
-  .filter-box { flex: 1 1 220px; }
+  /* min-width: 0 снимает авто-минимум grid-элементов: без него колонка
+     не сжимается уже вьюпорта и каталог уезжает за правый край. */
+  .catalog > *, .detail > * { min-width: 0; }
+  .filters { position: static; flex-direction: row; flex-wrap: wrap; min-width: 0; }
+  .filter-box { flex: 1 1 220px; min-width: 0; }
   .detail { grid-template-columns: 1fr; }
   .launch { position: static; order: -1; }
   .two-col { grid-template-columns: 1fr; }
@@ -439,6 +444,11 @@ footer.site .small { color: var(--faint); }
   .test-card .thumb { width: 60px; height: 60px; }
   .test-card .aside { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: space-between; border-left: 0; border-top: 1px solid var(--line-2); padding: 14px 0 0; min-width: 0; }
   .result-head { flex-direction: column; }
+  /* Шкалы «Что измеряет»: фиксированные колонки 180px+160px шире экрана,
+     поэтому в столбик — название, полоса, полюса. */
+  .measure { grid-template-columns: 1fr; gap: 6px; margin-bottom: 18px; }
+  .measure .m-poles { order: 3; }
+  .pager .n { flex-basis: 100%; text-align: center; margin-left: 0; }
   .run-progress { top: 0; }
   .brand span.word { display: none; }
   details.nav > nav { left: 16px; right: 16px; }
