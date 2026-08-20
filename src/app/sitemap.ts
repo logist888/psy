@@ -1,7 +1,7 @@
 export const dynamic = "force-static";
 
 import type { MetadataRoute } from "next";
-import { getAllTests, getAllConstructs, CATEGORY_PAGES } from "@/lib/content";
+import { getAllTests, getAllConstructs, CATEGORY_PAGES, COLLECTIONS } from "@/lib/content";
 import { SITE } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -22,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.8,
+    })),
+    ...COLLECTIONS.map((c) => ({
+      url: `${SITE.url}/podborki/${c.slug}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
     })),
     ...constructs.map((c) => ({
       url: `${SITE.url}/constructs/${c.slug}`,

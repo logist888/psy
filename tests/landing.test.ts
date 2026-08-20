@@ -3,7 +3,9 @@ import {
   getAllTests,
   getAllConstructs,
   CATEGORY_PAGES,
+  COLLECTIONS,
   getCategoryBySlug,
+  getCollection,
   getTestsByCategory,
 } from "../src/lib/content";
 import type { Test } from "../src/lib/engine/schema";
@@ -85,5 +87,43 @@ describe("тематические хабы", () => {
       if (hit) offenders.push(`${hub.slug}: «${hit[0]}»`);
     }
     expect(offenders, `пустые обороты:\n${offenders.join("\n")}`).toEqual([]);
+  });
+});
+
+describe("подборки", () => {
+  it("подборка не бывает пустой", () => {
+    // Подборка собирается по признаку, а не руками: правка контента может
+    // обнулить условие отбора, и страница тихо станет пустой
+    for (const c of COLLECTIONS) {
+      const collection = getCollection(c.slug);
+      expect(collection, `${c.slug} не находится по адресу`).toBeDefined();
+      expect(collection!.tests.length, `подборка ${c.slug} пуста`).toBeGreaterThanOrEqual(3);
+    }
+  });
+
+  it("адреса и заголовки подборок уникальны и не сталкиваются с разделами", () => {
+    const slugs = COLLECTIONS.map((c) => c.slug);
+    expect(new Set(slugs).size).toBe(slugs.length);
+    const titles = COLLECTIONS.map((c) => c.seoTitle);
+    expect(new Set(titles).size).toBe(titles.length);
+    const categorySlugs = new Set(Object.values(CATEGORY_PAGES).map((p) => p.slug));
+    for (const slug of slugs) expect(categorySlugs.has(slug), `${slug} дублирует адрес раздела`).toBe(false);
+  });
+
+  it("описания подборок укладываются в сниппет", () => {
+    for (const c of COLLECTIONS) {
+      expect(c.seoTitle.length, `${c.slug}: длинный seoTitle`).toBeLessThanOrEqual(70);
+      expect(c.description.length, `${c.slug}: короткое описание`).toBeGreaterThan(70);
+      expect(c.description.length, `${c.slug}: длинное описание`).toBeLessThanOrEqual(220);
+    }
+  });
+
+  it("подборка «с проверенной надёжностью» действительно фильтрует по альфе", () => {
+    // Обещание в заголовке должно выполняться содержимым, иначе это обман
+    const collection = getCollection("s-nauchnoy-osnovoy")!;
+    for (const test of collection.tests) {
+      const alpha = Number(/α ≈ ([0-9.]+)/.exec(test.passport.reliability)?.[1] ?? 0);
+      expect(alpha, `${test.slug}: α ${alpha} ниже обещанных 0,80`).toBeGreaterThanOrEqual(0.8);
+    }
   });
 });
