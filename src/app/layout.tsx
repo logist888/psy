@@ -1,9 +1,24 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
 import Icon from "@/components/Icon";
 import Analytics from "@/components/Analytics";
 import "./globals.css";
+
+/**
+ * Golos Text — кириллическое лицо, а не латинское с дорисованной кириллицей.
+ * next/font подставляет запасной шрифт с подогнанными метриками, поэтому при
+ * подмене текст не прыгает: вёрстка сейчас даёт нулевой сдвиг, и терять его
+ * ради шрифта не стоит.
+ */
+const golos = localFont({
+  src: "../fonts/golos-text.woff2",
+  display: "swap",
+  weight: "400 900",
+  variable: "--font-golos",
+  fallback: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -15,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ru">
+    <html lang="ru" className={golos.variable}>
       <body>
         <header className="site">
           <div className="wrap">

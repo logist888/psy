@@ -11,6 +11,7 @@ import type { Test } from "@/lib/engine/schema";
 import { SITE } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Icon, { type IconName } from "@/components/Icon";
+import Motif from "@/components/Motif";
 
 const CATEGORY_ICON: Record<Test["category"], IconName> = {
   personality: "personality",
@@ -72,11 +73,16 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         ]}
       />
 
-      <h1 className="with-icon">
-        <Icon name={CATEGORY_ICON[category]} size={28} />
-        {page.h1}
-      </h1>
-      <p className="lead">{page.intro}</p>
+      <div className="hero">
+        <div>
+          <h1 className="with-icon">
+            <Icon name={CATEGORY_ICON[category]} size={28} />
+            {page.h1}
+          </h1>
+          <p className="lead">{page.intro}</p>
+        </div>
+        <Motif seed={page.slug} bars={5} width={200} className="hero-motif" />
+      </div>
 
       <div className="note">
         <h2 className="with-icon" style={{ marginTop: 0 }}>

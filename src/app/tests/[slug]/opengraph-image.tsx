@@ -16,5 +16,6 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   return ogCard({
     title: test.title,
     subtitle: `${test.questions.length} утверждений · ${test.minutes} мин · бесплатно, без регистрации`,
+    seed: test.slug,
   });
 }
