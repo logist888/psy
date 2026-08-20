@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getAllTests, CATEGORIES } from "@/lib/content";
+import { getAllTests, CATEGORIES, CATEGORY_PAGES } from "@/lib/content";
 import type { Test } from "@/lib/engine/schema";
 import { SITE } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -30,7 +30,12 @@ export default function AllTestsPage() {
 
       {Object.entries(byCategory).map(([category, items]) => (
         <section key={category}>
-          <h2>{CATEGORIES[category as Test["category"]].title}</h2>
+          <h2>
+            <Link href={`/kategorii/${CATEGORY_PAGES[category as Test["category"]].slug}`}>
+              {CATEGORIES[category as Test["category"]].title}
+            </Link>
+          </h2>
+          <p className="muted small">{CATEGORIES[category as Test["category"]].description}</p>
           <ul className="clean">
             {items.map((test) => (
               <li key={test.slug}>

@@ -1,14 +1,14 @@
 export const dynamic = "force-static";
 
 import type { MetadataRoute } from "next";
-import { getAllTests, getAllConstructs } from "@/lib/content";
+import { getAllTests, getAllConstructs, CATEGORY_PAGES } from "@/lib/content";
 import { SITE } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const tests = getAllTests();
   const constructs = getAllConstructs();
-  const staticPages = ["", "/tests", "/methods", "/constructs", "/about", "/privacy", "/terms"];
+  const staticPages = ["", "/tests", "/methods", "/constructs", "/psihologam", "/about", "/privacy", "/terms"];
 
   return [
     ...staticPages.map((path) => ({
@@ -16,6 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: path === "" ? 1 : 0.6,
+    })),
+    ...Object.values(CATEGORY_PAGES).map((page) => ({
+      url: `${SITE.url}/kategorii/${page.slug}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
     })),
     ...constructs.map((c) => ({
       url: `${SITE.url}/constructs/${c.slug}`,

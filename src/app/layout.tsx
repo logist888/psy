@@ -25,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/tests">Тесты</Link>
               <Link href="/constructs">Темы</Link>
               <Link href="/methods">Методики</Link>
+              <Link href="/psihologam">Психологам</Link>
               <Link href="/my">Мои тесты</Link>
               <Link href="/about">О проекте</Link>
             </nav>
@@ -39,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/privacy">Конфиденциальность</Link>
               <Link href="/terms">Условия</Link>
               <Link href="/about">Методология</Link>
-              <a href={platformLink({ campaign: "footer", content: "expert" })}>Для специалистов</a>
+              <Link href="/psihologam">Для специалистов</Link>
             </p>
             <p className="small">
               Тесты на этом сайте — инструмент самонаблюдения и образования. Они не являются медицинской услугой,
