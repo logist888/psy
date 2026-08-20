@@ -104,7 +104,9 @@ questions:
     scales:
       - scale: total
         reverse: true
-crisis: []
+crisis:
+  - question: q6
+    minValue: 4
 selfHelp:
   - >-
     Планируйте по одному маленькому делу в день с видимым результатом — помыть окно, дописать письмо. При сниженном

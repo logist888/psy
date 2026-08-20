@@ -40,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/privacy">Конфиденциальность</Link>
               <Link href="/terms">Условия</Link>
               <Link href="/about">Методология</Link>
+              <Link href="/kontakty">Контакты</Link>
               <Link href="/psihologam">Для специалистов</Link>
             </p>
             <p className="small">

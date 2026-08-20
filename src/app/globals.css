@@ -113,3 +113,10 @@ ul.clean li { margin-bottom: 8px; }
 .consent .actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 0; }
 .consent .btn { padding: 10px 18px; font-size: 15px; }
 .scale .delta { color: var(--accent); font-weight: 500; }
+
+/* Поиск по каталогу */
+.search { margin: 20px 0; }
+.search label { display: block; margin-bottom: 6px; }
+.search input { width: 100%; padding: 10px 12px; font: inherit; color: inherit; background: var(--bg);
+  border: 1px solid var(--border); border-radius: var(--radius); }
+.search input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
