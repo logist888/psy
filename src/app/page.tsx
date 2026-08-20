@@ -53,23 +53,16 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="hero-visual" aria-hidden="true">
-          <div className="hero-orb" />
-          <span className="hero-spark" style={{ width: 8, height: 8, top: "24%", left: "30%" }} />
-          <span className="hero-spark" style={{ width: 5, height: 5, top: "62%", left: "26%" }} />
-          <span className="hero-spark" style={{ width: 6, height: 6, top: "34%", right: "24%" }} />
-          <div className="float-card tl cat-personality">
-            <div className="fc-label">Личность</div>
-            <div className="donut" style={{ "--p": 68, "--c": "var(--cat)" } as React.CSSProperties} />
-          </div>
-          <div className="float-card br cat-values">
-            <div className="fc-label">Ценности</div>
-            <div className="mini-bars">
-              <i className="on" style={{ width: "80%" }} />
-              <i style={{ width: "55%" }} />
-              <i className="on" style={{ width: "68%" }} />
-            </div>
-          </div>
+        <div className="hero-visual">
+          <img
+            className="hero-img"
+            src="/hero-brain.png"
+            width={690}
+            height={440}
+            alt=""
+            fetchPriority="high"
+            decoding="async"
+          />
         </div>
       </section>
 
