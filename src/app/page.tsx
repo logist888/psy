@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllTests, getAllConstructs, CATEGORIES } from "@/lib/content";
+import { getAllTests, getAllConstructs, CATEGORIES, CATEGORY_PAGES } from "@/lib/content";
 import type { Test } from "@/lib/engine/schema";
 
 export default function HomePage() {
@@ -22,7 +22,9 @@ export default function HomePage() {
         const meta = CATEGORIES[category as Test["category"]];
         return (
           <section key={category}>
-            <h2>{meta.title}</h2>
+            <h2>
+              <Link href={`/kategorii/${CATEGORY_PAGES[category as Test["category"]].slug}`}>{meta.title}</Link>
+            </h2>
             <div className="grid">
               {items.slice(0, 6).map((test) => (
                 <Link key={test.slug} href={`/tests/${test.slug}`} className="card">
@@ -35,7 +37,9 @@ export default function HomePage() {
             </div>
             {items.length > 6 && (
               <p className="small">
-                <Link href="/tests">Ещё {items.length - 6} в этой категории</Link>
+                <Link href={`/kategorii/${CATEGORY_PAGES[category as Test["category"]].slug}`}>
+                  Ещё {items.length - 6} в этом разделе
+                </Link>
               </p>
             )}
           </section>
