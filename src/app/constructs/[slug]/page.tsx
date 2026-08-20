@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { getAllConstructs, getConstruct, getTest } from "@/lib/content";
 import { SITE, platformLink } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Icon from "@/components/Icon";
 
 export function generateStaticParams() {
   return getAllConstructs().map((c) => ({ slug: c.slug }));
@@ -51,12 +52,18 @@ export default async function ConstructPage({ params }: { params: Promise<{ slug
         ]}
       />
 
-      <h1>{construct.seoTitle}</h1>
+      <h1 className="with-icon">
+        <Icon name="topic" size={28} />
+        {construct.seoTitle}
+      </h1>
       <p className="lead">{construct.intro}</p>
 
       {tests.length > 0 && (
         <div className="note">
-          <h2 style={{ marginTop: 0 }}>Проверить себя</h2>
+          <h2 className="with-icon" style={{ marginTop: 0 }}>
+            <Icon name="spark" />
+            Проверить себя
+          </h2>
           <ul className="clean" style={{ marginBottom: 0 }}>
             {tests.map((test) => (
               <li key={test.slug}>

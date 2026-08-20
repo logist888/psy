@@ -4,6 +4,7 @@ import { getAllTests, getAllConstructs } from "@/lib/content";
 import { SITE, platformLink } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ExpertCta from "@/components/ExpertCta";
+import Icon from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: "Психологам: методики с ключами, нормами и правовым основанием",
@@ -66,7 +67,10 @@ export default function ForPsychologistsPage() {
       </p>
 
       <section>
-        <h2>Что здесь есть</h2>
+        <h2 className="with-icon">
+          <Icon name="scales" />
+          Что здесь есть
+        </h2>
         <ul>
           <li>
             <strong>{publicDomain.length} методик из пула IPIP</strong> — общественное достояние с 1999 года,
@@ -89,7 +93,10 @@ export default function ForPsychologistsPage() {
       </section>
 
       <section>
-        <h2>Чего здесь нет</h2>
+        <h2 className="with-icon">
+          <Icon name="shield" />
+          Чего здесь нет
+        </h2>
         <p>
           Нет СМИЛ, Кеттелла, Люшера, Айзенка, Роршаха и других защищённых или лицензируемых инструментов — ни в
           оригинале, ни «по мотивам». Это не осторожность, а условие: сайт используется коммерчески, и переопубликация
@@ -118,7 +125,10 @@ export default function ForPsychologistsPage() {
 
       {constructs.length > 0 && (
         <section>
-          <h2>Разборы тем</h2>
+          <h2 className="with-icon">
+            <Icon name="topic" />
+            Разборы тем
+          </h2>
           <p className="muted small">
             Эти страницы можно давать клиентам между встречами — они написаны без обещаний и без диагнозов.
           </p>
@@ -141,7 +151,10 @@ export default function ForPsychologistsPage() {
       ))}
 
       <div className="cta">
-        <h2>Вести консультации на {SITE.platform.name}</h2>
+        <h2 className="with-icon">
+          <Icon name="experts" />
+          Вести консультации на {SITE.platform.name}
+        </h2>
         <p>
           Люди приходят сюда с конкретным вопросом о себе и с результатом на руках — часть из них ищет специалиста в
           тот же день. На {SITE.platform.name} у вас профиль со специализацией, онлайн-запись и оплата; комиссия с

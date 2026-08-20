@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { track } from "@/lib/analytics";
+import Icon from "@/components/Icon";
 
 type Item = { slug: string; title: string; description: string; category: string; questions: number; minutes: number };
 
@@ -28,6 +29,7 @@ export default function TestSearch({ items }: { items: Item[] }) {
   return (
     <div className="search">
       <label className="small muted" htmlFor="test-search">
+        <Icon name="search" className="icon-inline" />
         Поиск по названию и описанию
       </label>
       <input

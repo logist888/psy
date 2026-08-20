@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE, platformLink } from "@/lib/site";
+import { SITE } from "@/lib/site";
+import Icon from "@/components/Icon";
 import Analytics from "@/components/Analytics";
 import "./globals.css";
 
@@ -21,14 +22,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" className="logo">
               {SITE.name}
             </Link>
-            <nav>
-              <Link href="/tests">Тесты</Link>
-              <Link href="/constructs">Темы</Link>
-              <Link href="/methods">Методики</Link>
-              <Link href="/psihologam">Психологам</Link>
-              <Link href="/my">Мои тесты</Link>
-              <Link href="/about">О проекте</Link>
-            </nav>
+            {/*
+              Меню на <details>, а не на состоянии React: раскрытие работает без
+              JavaScript, экранный диктор сам сообщает «свёрнуто/развёрнуто», и
+              на первый экран не приезжает ни байта скрипта. На широком экране
+              кнопка скрыта, а список разворачивается стилями независимо от
+              атрибута open.
+            */}
+            <details className="nav">
+              <summary aria-label="Меню">
+                <Icon name="menu" size={22} />
+              </summary>
+              <nav>
+                <Link href="/tests">Тесты</Link>
+                <Link href="/constructs">Темы</Link>
+                <Link href="/methods">Методики</Link>
+                <Link href="/psihologam">Психологам</Link>
+                <Link href="/my">Мои тесты</Link>
+                <Link href="/about">О проекте</Link>
+              </nav>
+            </details>
           </div>
         </header>
         <main>

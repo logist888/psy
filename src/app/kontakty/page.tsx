@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SITE, CRISIS_CONTACTS, platformLink } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Icon from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: "Контакты",
@@ -29,7 +30,10 @@ export default function ContactsPage() {
       </p>
 
       <div className="note crisis">
-        <h2 style={{ marginTop: 0 }}>Если нужна помощь прямо сейчас</h2>
+        <h2 className="with-icon" style={{ marginTop: 0 }}>
+          <Icon name="lifebuoy" />
+          Если нужна помощь прямо сейчас
+        </h2>
         <p>
           Мы не служба психологической помощи и не отвечаем на обращения круглосуточно. Если сейчас по-настоящему
           тяжело, звоните тем, кто может помочь немедленно — бесплатно и без записи:
@@ -64,7 +68,10 @@ export default function ContactsPage() {
       </section>
 
       <section>
-        <h2>Правообладателям методик</h2>
+        <h2 className="with-icon">
+          <Icon name="shield" />
+          Правообладателям методик
+        </h2>
         <p>
           Мы публикуем только методики с проверяемым правовым основанием: пункты из международного пула IPIP
           (общественное достояние с 1999 года) и собственные разработки. Основание указано в паспорте каждой
@@ -78,7 +85,10 @@ export default function ContactsPage() {
       </section>
 
       <section>
-        <h2>Психологам и консультантам</h2>
+        <h2 className="with-icon">
+          <Icon name="experts" />
+          Психологам и консультантам
+        </h2>
         <p>
           Что здесь есть для практики и на каких условиях — на странице{" "}
           <Link href="/psihologam">для специалистов</Link>. Там же о том, чего у нас нет и почему. Вопросы о ведении

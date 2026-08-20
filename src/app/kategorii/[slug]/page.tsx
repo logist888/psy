@@ -10,6 +10,15 @@ import {
 import type { Test } from "@/lib/engine/schema";
 import { SITE } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Icon, { type IconName } from "@/components/Icon";
+
+const CATEGORY_ICON: Record<Test["category"], IconName> = {
+  personality: "personality",
+  wellbeing: "wellbeing",
+  relationships: "relationships",
+  career: "career",
+  values: "values",
+};
 
 export function generateStaticParams() {
   return Object.values(CATEGORY_PAGES).map((page) => ({ slug: page.slug }));
@@ -63,11 +72,17 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         ]}
       />
 
-      <h1>{page.h1}</h1>
+      <h1 className="with-icon">
+        <Icon name={CATEGORY_ICON[category]} size={28} />
+        {page.h1}
+      </h1>
       <p className="lead">{page.intro}</p>
 
       <div className="note">
-        <h2 style={{ marginTop: 0 }}>{tests.length} {plural(tests.length, "тест", "теста", "тестов")} в разделе</h2>
+        <h2 className="with-icon" style={{ marginTop: 0 }}>
+          <Icon name="list" />
+          {tests.length} {plural(tests.length, "тест", "теста", "тестов")} в разделе
+        </h2>
         <ul className="clean" style={{ marginBottom: 0 }}>
           {tests.map((test) => (
             <li key={test.slug}>
@@ -89,7 +104,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
       {hubs.length > 0 && (
         <section>
-          <h2>Разборы по темам</h2>
+          <h2 className="with-icon">
+            <Icon name="topic" />
+            Разборы по темам
+          </h2>
           <p className="muted small">
             Если нужен не тест, а понимание — эти страницы разбирают темы раздела подробно.
           </p>

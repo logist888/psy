@@ -5,12 +5,21 @@ import type { Test } from "@/lib/engine/schema";
 import { SITE } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TestSearch from "@/components/TestSearch";
+import Icon, { type IconName } from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: "Все психологические тесты",
   description:
     "Полный каталог бесплатных психологических тестов с открытой методологией: личность, состояние, отношения, карьера.",
   alternates: { canonical: `${SITE.url}/tests` },
+};
+
+const CATEGORY_ICON: Record<Test["category"], IconName> = {
+  personality: "personality",
+  wellbeing: "wellbeing",
+  relationships: "relationships",
+  career: "career",
+  values: "values",
 };
 
 export default function AllTestsPage() {
@@ -41,7 +50,10 @@ export default function AllTestsPage() {
       />
 
       <div className="note">
-        <h2 style={{ marginTop: 0 }}>Подборки</h2>
+        <h2 className="with-icon" style={{ marginTop: 0 }}>
+          <Icon name="spark" />
+          Подборки
+        </h2>
         <ul className="clean" style={{ marginBottom: 0 }}>
           {COLLECTIONS.map((c) => (
             <li key={c.slug}>
@@ -53,7 +65,8 @@ export default function AllTestsPage() {
 
       {Object.entries(byCategory).map(([category, items]) => (
         <section key={category}>
-          <h2>
+          <h2 className="with-icon">
+            <Icon name={CATEGORY_ICON[category as Test["category"]]} />
             <Link href={`/kategorii/${CATEGORY_PAGES[category as Test["category"]].slug}`}>
               {CATEGORIES[category as Test["category"]].title}
             </Link>
