@@ -1,32 +1,40 @@
 :root {
-  --bg: #ffffff;
-  --surface: #f7f8fa;
-  --border: #e4e7ec;
-  --text: #16181d;
-  --muted: #5f6672;
-  --accent: #2f6f5e;
-  --accent-soft: #e8f2ef;
-  --warn-bg: #fff6e8;
-  --warn-border: #f0c98a;
-  --crisis-bg: #fdeeee;
-  --crisis-border: #e5a3a3;
-  --radius: 10px;
+  /* Бумага и чернила: тёплый нейтральный фон, почти чёрный текст и один
+     акцент. Пары проверены на контраст — все выше 4,5 к фону и к подложке. */
+  --bg: #fdfcfa;
+  --surface: #f4f1ec;
+  --border: #e3ddd4;
+  --text: #1c1a20;
+  --muted: #5a545f;
+  --accent: #6d2f5b;
+  --accent-strong: #55234a;
+  --accent-soft: #f7ecf3;
+  --warn-bg: #fdf3e3;
+  --warn-border: #e0c193;
+  --crisis-bg: #fdecec;
+  --crisis-border: #dda2a2;
+  --shadow-1: 0 1px 2px rgb(28 26 32 / 0.06);
+  --shadow-2: 0 10px 28px rgb(28 26 32 / 0.10);
+  --radius: 12px;
   --maxw: 720px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #14161a;
-    --surface: #1b1e24;
-    --border: #2c313a;
-    --text: #eef0f3;
-    --muted: #a2aab7;
-    --accent: #6bbfa5;
-    --accent-soft: #1e2b28;
-    --warn-bg: #2a2318;
-    --warn-border: #5c4a2a;
-    --crisis-bg: #2c1c1c;
-    --crisis-border: #6b3b3b;
+    --bg: #16151a;
+    --surface: #1f1d24;
+    --border: #332f3b;
+    --text: #efedf2;
+    --muted: #a9a3b2;
+    --accent: #e3a5cd;
+    --accent-strong: #f0c2de;
+    --accent-soft: #2a1f28;
+    --warn-bg: #2b2318;
+    --warn-border: #5a4830;
+    --crisis-bg: #2c1b1c;
+    --crisis-border: #6a3a3c;
+    --shadow-1: 0 1px 2px rgb(0 0 0 / 0.4);
+    --shadow-2: 0 10px 28px rgb(0 0 0 / 0.5);
   }
 }
 
@@ -36,26 +44,31 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font: 17px/1.6 var(--font-golos), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 a { color: var(--accent); }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 header.site { border-bottom: 1px solid var(--border); padding: 14px 0; }
 header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-header.site a.logo { font-weight: 650; color: var(--text); text-decoration: none; font-size: 18px; }
+header.site a.logo { font-weight: 700; letter-spacing: -0.01em; color: var(--text); text-decoration: none; font-size: 18px; }
 header.site nav a { margin-left: 18px; font-size: 15px; color: var(--muted); text-decoration: none; }
 header.site nav a:hover { color: var(--text); }
 main { padding: 28px 0 56px; }
-h1 { font-size: 28px; line-height: 1.25; margin: 0 0 12px; letter-spacing: -0.02em; }
-h2 { font-size: 21px; margin: 32px 0 12px; letter-spacing: -0.01em; }
-h3 { font-size: 17px; margin: 22px 0 8px; }
+/* Golos держит плотный кегль лучше системного лица: заголовкам идёт вес 700
+   и отрицательный трекинг, а balance не даёт висячему слову в одну строку. */
+h1 { font-size: 30px; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.025em; font-weight: 700; text-wrap: balance; }
+h2 { font-size: 22px; margin: 34px 0 12px; letter-spacing: -0.015em; font-weight: 700; text-wrap: balance; }
+h3 { font-size: 17px; margin: 22px 0 8px; font-weight: 650; }
 p { margin: 0 0 14px; }
 .lead { font-size: 18px; color: var(--muted); }
 .muted { color: var(--muted); }
 .small { font-size: 14px; }
 
-.card { display: block; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; text-decoration: none; color: inherit; background: var(--bg); }
-.card:hover { border-color: var(--accent); }
+.card { display: block; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px;
+  text-decoration: none; color: inherit; background: var(--bg); box-shadow: var(--shadow-1);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+.card:hover { border-color: var(--accent); box-shadow: var(--shadow-2); transform: translateY(-2px); }
+@media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
 .card h3 { margin: 0 0 6px; }
 .grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
 @media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
@@ -178,3 +191,12 @@ details.nav[open] > summary { color: var(--text); background: var(--surface); }
 /* Мета-строка карточки: два факта в ряд, на узком экране переносятся */
 .meta { display: flex; flex-wrap: wrap; gap: 4px 16px; }
 .meta > span { display: inline-flex; align-items: center; }
+
+/* ── Шапка страницы с графикой ──────────────────────────────────────────── */
+/* Мотив стоит сбоку от заголовка и уходит на узком экране: на телефоне важнее
+   первый экран текста, чем рисунок. */
+.hero { display: flex; align-items: flex-start; gap: 28px; }
+.hero > div:first-child { flex: 1 1 auto; min-width: 0; }
+.motif { flex: none; color: var(--accent); }
+.hero-motif { margin-top: 8px; opacity: 0.85; }
+@media (max-width: 639px) { .hero-motif { display: none; } }

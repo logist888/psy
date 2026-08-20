@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getAllTests, getAllConstructs, CATEGORIES, CATEGORY_PAGES } from "@/lib/content";
 import type { Test } from "@/lib/engine/schema";
 import Icon, { type IconName } from "@/components/Icon";
+import Motif from "@/components/Motif";
 
 /** Глиф раздела: он и в каталоге, и на странице раздела — узнаётся один и тот же. */
 const CATEGORY_ICON: Record<Test["category"], IconName> = {
@@ -22,11 +23,16 @@ export default function HomePage() {
 
   return (
     <>
-      <h1>Психологические тесты с открытой методологией</h1>
-      <p className="lead">
-        У каждого теста написано, что он измеряет, откуда взят и чего не показывает. Бесплатно, анонимно,
-        без регистрации — мы не спрашиваем имя и не звоним.
-      </p>
+      <div className="hero">
+        <div>
+          <h1>Психологические тесты с открытой методологией</h1>
+          <p className="lead">
+            У каждого теста написано, что он измеряет, откуда взят и чего не показывает. Бесплатно, анонимно,
+            без регистрации — мы не спрашиваем имя и не звоним.
+          </p>
+        </div>
+        <Motif seed="psytests-home" bars={5} width={210} className="hero-motif" />
+      </div>
 
       {Object.entries(byCategory).map(([category, items]) => {
         const meta = CATEGORIES[category as Test["category"]];

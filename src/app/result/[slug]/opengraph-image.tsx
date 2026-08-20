@@ -19,5 +19,5 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   const { slug } = await params;
   const test = getTest(slug);
   if (!test) return ogCard({ title: "Результат теста", subtitle: "Психологические тесты с открытой методологией" });
-  return ogCard({ title: test.title, subtitle: "результат прохождения · пройти самому бесплатно" });
+  return ogCard({ title: test.title, subtitle: "результат прохождения · пройти самому бесплатно", seed: test.slug });
 }

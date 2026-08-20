@@ -5,6 +5,7 @@ import { getAllConstructs, getConstruct, getTest } from "@/lib/content";
 import { SITE, platformLink } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Icon from "@/components/Icon";
+import Motif from "@/components/Motif";
 
 export function generateStaticParams() {
   return getAllConstructs().map((c) => ({ slug: c.slug }));
@@ -52,11 +53,16 @@ export default async function ConstructPage({ params }: { params: Promise<{ slug
         ]}
       />
 
-      <h1 className="with-icon">
-        <Icon name="topic" size={28} />
-        {construct.seoTitle}
-      </h1>
-      <p className="lead">{construct.intro}</p>
+      <div className="hero">
+        <div>
+          <h1 className="with-icon">
+            <Icon name="topic" size={28} />
+            {construct.seoTitle}
+          </h1>
+          <p className="lead">{construct.intro}</p>
+        </div>
+        <Motif seed={construct.slug} bars={5} width={200} className="hero-motif" />
+      </div>
 
       {tests.length > 0 && (
         <div className="note">

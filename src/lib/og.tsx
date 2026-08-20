@@ -9,10 +9,15 @@ export const OG_CONTENT_TYPE = "image/png";
 /**
  * ImageResponse рисует картинку собственным движком и системными шрифтами не
  * пользуется: без файла шрифта кириллица превращается в пустые прямоугольники.
- * Файлы лежат в assets/fonts — см. README рядом с ними.
+ * Берём то же начертание, что и сайт, — карточка должна выглядеть его частью.
  */
-function font(name: string): Buffer {
-  return fs.readFileSync(path.join(process.cwd(), "assets", "fonts", name));
+/**
+ * Движок картинок не понимает woff2 и вариативные оси, поэтому рядом с
+ * вариативным файлом сайта лежат два статических начертания — они участвуют
+ * только в сборке карточек и посетителю не отдаются.
+ */
+function font(weight: 400 | 700): Buffer {
+  return fs.readFileSync(path.join(process.cwd(), "src", "fonts", `golos-${weight}.ttf`));
 }
 
 /**
@@ -20,7 +25,32 @@ function font(name: string): Buffer {
  * другу (journey J2), и без превью она выглядит как случайный адрес — это
  * единственное место, где оформление напрямую влияет на воронку.
  */
-export function ogCard({ title, subtitle }: { title: string; subtitle: string }) {
+/** djb2 — как в Motif: рисунок карточки выводится из слага и не меняется между сборками. */
+function bars(seed: string, count: number): number[] {
+  let h = 5381;
+  for (let i = 0; i < seed.length; i += 1) h = ((h << 5) + h + seed.charCodeAt(i)) >>> 0;
+  let state = h || 1;
+  return Array.from({ length: count }, () => {
+    state = (state * 1664525 + 1013904223) >>> 0;
+    return 0.3 + (state % 1000) / 1000 * 0.7;
+  });
+}
+
+/**
+ * Карточка для мессенджеров и соцсетей. Ссылку на результат человек отправляет
+ * другу (journey J2), и без превью она выглядит как случайный адрес — это
+ * единственное место, где оформление напрямую влияет на воронку.
+ *
+ * Рисунок — тот же профиль по шкалам, что в шапке разделов и на иконке сайта:
+ * карточка должна узнаваться до того, как её прочитают.
+ */
+export function ogCard({ title, subtitle, seed = "psytests" }: { title: string; subtitle: string; seed?: string }) {
+  const paper = "#fdfcfa";
+  const ink = "#1c1a20";
+  const muted = "#5a545f";
+  const accent = "#6d2f5b";
+  const rows = bars(seed, 6);
+
   return new ImageResponse(
     (
       <div
@@ -28,30 +58,73 @@ export function ogCard({ title, subtitle }: { title: string; subtitle: string })
           height: "100%",
           width: "100%",
           display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          background: "#ffffff",
-          padding: "64px 72px",
-          fontFamily: "Liberation Sans",
+          background: paper,
+          fontFamily: "Golos Text",
         }}
       >
-        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-          <div style={{ fontSize: 30, color: "#5b6472", letterSpacing: 1 }}>{SITE.name.toUpperCase()}</div>
-          <div style={{ fontSize: title.length > 46 ? 62 : 74, fontWeight: 700, color: "#12151a", lineHeight: 1.15 }}>
-            {title}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            flex: 1,
+            padding: "64px 0 64px 72px",
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "column", gap: 26 }}>
+            <div style={{ fontSize: 27, color: muted, letterSpacing: 3, fontWeight: 500 }}>
+              {SITE.name.toUpperCase()}
+            </div>
+            <div
+              style={{
+                fontSize: title.length > 44 ? 60 : 72,
+                fontWeight: 700,
+                color: ink,
+                lineHeight: 1.12,
+                letterSpacing: -1.5,
+                maxWidth: 740,
+              }}
+            >
+              {title}
+            </div>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            <div style={{ height: 5, width: 132, background: accent, borderRadius: 3 }} />
+            <div style={{ fontSize: 30, color: muted }}>{subtitle}</div>
           </div>
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-          <div style={{ height: 6, width: 160, background: "#2f6f4f" }} />
-          <div style={{ fontSize: 32, color: "#5b6472" }}>{subtitle}</div>
+
+        {/* Профиль по шкалам: полосы упираются в правый край, как в результате */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: 18,
+            width: 300,
+            paddingRight: 72,
+          }}
+        >
+          {rows.map((share, i) => (
+            <div
+              key={i}
+              style={{
+                height: 16,
+                width: Math.round(228 * share),
+                borderRadius: 8,
+                background: accent,
+                opacity: 0.92 - i * 0.11,
+              }}
+            />
+          ))}
         </div>
       </div>
     ),
     {
       ...OG_SIZE,
       fonts: [
-        { name: "Liberation Sans", data: font("LiberationSans-Regular.ttf"), weight: 400, style: "normal" },
-        { name: "Liberation Sans", data: font("LiberationSans-Bold.ttf"), weight: 700, style: "normal" },
+        { name: "Golos Text", data: font(400), weight: 400, style: "normal" },
+        { name: "Golos Text", data: font(700), weight: 700, style: "normal" },
       ],
     }
   );
