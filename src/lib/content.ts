@@ -29,10 +29,5 @@ export function getTest(slug: string): Test | undefined {
   return getAllTests().find((t) => t.slug === slug);
 }
 
-export const CATEGORIES: Record<Test["category"], { title: string; description: string }> = {
-  personality: { title: "Личность", description: "Черты, самооценка, характер" },
-  wellbeing: { title: "Состояние", description: "Напряжение, выгорание, ресурс" },
-  relationships: { title: "Отношения", description: "Привязанность и близость" },
-  career: { title: "Работа и призвание", description: "Интересы и профессиональный выбор" },
-  values: { title: "Ценности", description: "Что для вас важно" },
-};
+// Category labels live in a pure module so client components can import them too.
+export { CATEGORIES, CATEGORY_ORDER } from "./categories";
