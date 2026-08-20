@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getAllTests, CATEGORIES, CATEGORY_PAGES } from "@/lib/content";
+import { getAllTests, CATEGORIES, CATEGORY_PAGES, COLLECTIONS } from "@/lib/content";
 import type { Test } from "@/lib/engine/schema";
 import { SITE } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -27,6 +27,17 @@ export default function AllTestsPage() {
         {tests.length} методик. У каждой указано, что она измеряет, откуда взята и чего не показывает — это на
         странице научного паспорта.
       </p>
+
+      <div className="note">
+        <h3 style={{ marginTop: 0 }}>Подборки</h3>
+        <ul className="clean" style={{ marginBottom: 0 }}>
+          {COLLECTIONS.map((c) => (
+            <li key={c.slug}>
+              <Link href={`/podborki/${c.slug}`}>{c.h1}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       {Object.entries(byCategory).map(([category, items]) => (
         <section key={category}>
