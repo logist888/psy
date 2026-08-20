@@ -1,6 +1,16 @@
 import Link from "next/link";
 import { getAllTests, getAllConstructs, CATEGORIES, CATEGORY_PAGES } from "@/lib/content";
 import type { Test } from "@/lib/engine/schema";
+import Icon, { type IconName } from "@/components/Icon";
+
+/** Глиф раздела: он и в каталоге, и на странице раздела — узнаётся один и тот же. */
+const CATEGORY_ICON: Record<Test["category"], IconName> = {
+  personality: "personality",
+  wellbeing: "wellbeing",
+  relationships: "relationships",
+  career: "career",
+  values: "values",
+};
 
 export default function HomePage() {
   const tests = getAllTests();
@@ -22,15 +32,23 @@ export default function HomePage() {
         const meta = CATEGORIES[category as Test["category"]];
         return (
           <section key={category}>
-            <h2>
+            <h2 className="with-icon">
+              <Icon name={CATEGORY_ICON[category as Test["category"]]} />
               <Link href={`/kategorii/${CATEGORY_PAGES[category as Test["category"]].slug}`}>{meta.title}</Link>
             </h2>
             <div className="grid">
               {items.slice(0, 6).map((test) => (
                 <Link key={test.slug} href={`/tests/${test.slug}`} className="card">
                   <h3>{test.title}</h3>
-                  <p className="small muted" style={{ margin: 0 }}>
-                    {test.questions.length} утверждений · {test.minutes} мин
+                  <p className="small muted meta" style={{ margin: 0 }}>
+                    <span>
+                      <Icon name="list" className="icon-inline" />
+                      {test.questions.length} утверждений
+                    </span>
+                    <span>
+                      <Icon name="clock" className="icon-inline" />
+                      {test.minutes} мин
+                    </span>
                   </p>
                 </Link>
               ))}
@@ -54,7 +72,10 @@ export default function HomePage() {
 
       {constructs.length > 0 && (
         <section>
-          <h2>Разборы тем</h2>
+          <h2 className="with-icon">
+            <Icon name="topic" />
+            Разборы тем
+          </h2>
           <p className="muted">
             Что стоит за состоянием: как устроено, чем отличается от похожего, что помогает и когда пора к
             специалисту.

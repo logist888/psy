@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { COLLECTIONS, getCollection, CATEGORY_PAGES } from "@/lib/content";
 import { SITE } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Icon from "@/components/Icon";
 
 export function generateStaticParams() {
   return COLLECTIONS.map((c) => ({ slug: c.slug }));
@@ -50,7 +51,10 @@ export default async function CollectionPage({ params }: { params: Promise<{ slu
         ]}
       />
 
-      <h1>{collection.h1}</h1>
+      <h1 className="with-icon">
+        <Icon name="spark" size={28} />
+        {collection.h1}
+      </h1>
       <p className="lead">{collection.intro}</p>
 
       <div className="note">
